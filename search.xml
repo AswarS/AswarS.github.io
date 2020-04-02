@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>虚拟存储器</title>
+    <url>/2020/04/02/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
+    <content><![CDATA[<h2 id="虚拟存储器"><a href="#虚拟存储器" class="headerlink" title="虚拟存储器"></a>虚拟存储器</h2><p><em>由于计算机只能执行和访问存储在主存中的数据，为了执行比主存更大的数据需要使用虚拟存储器</em></p>
+<a id="more"></a>
+
+<ul>
+<li>页式虚拟存储器</li>
+<li>段式虚拟存储器</li>
+<li>段页式虚拟存储器</li>
+</ul>
+<h5 id="页式存储器"><a href="#页式存储器" class="headerlink" title="页式存储器"></a>页式存储器</h5><ul>
+<li>虚拟地址：虚页号 + 页偏移量<ul>
+<li>页偏移量：与物理页大小相关</li>
+<li>虚页号：与页表项数相关</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>举个例子</p>
+<p>若主存页大小（物理页大小）为4K， 虚存大小为4GB， 则：</p>
+<p>​    页偏移量 = 12位（4 K =  2^12 ）</p>
+<p>​    虚拟页号 = 32 - 12 = 20位 → 页表有2^20项</p>
+</blockquote>
+<ul>
+<li>逻辑地址与物理地址的转换<ul>
+<li>由页表寄存器（MMU）作为基地址指示页表在主存中的起始地址</li>
+<li>CPU给出虚地址，虚地址有两部分：虚拟页号（VPN）+ 页内偏移（VPO）</li>
+<li>根据<strong>虚页号</strong>在页表中找到对应页表项的<strong>物理页号</strong>，若有效位为<strong>1</strong>，则将其取出并与<strong>页内偏移</strong>拼接，形成<strong>物理地址</strong></li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机基本原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Cache基本原理</title>
+    <url>/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
+    <content><![CDATA[<h2 id="Cache基本原理"><a href="#Cache基本原理" class="headerlink" title="Cache基本原理"></a>Cache基本原理</h2><h3 id="CPU-←（字）→-Cache-←（数据块-行）→-主存"><a href="#CPU-←（字）→-Cache-←（数据块-行）→-主存" class="headerlink" title="CPU ←（字）→ Cache ←（数据块/行）→ 主存"></a>CPU ←（字）→ Cache ←（数据块/行）→ 主存</h3><p><em>主存中的块与cache的行容量相同</em></p>
+<a id="more"></a>
+
+<ul>
+<li><p>读操作：</p>
+<p>​    CPU →地址→Cache</p>
+<pre><code>- 找到 → 命中
+- 缺失 → 主存将地址的内容直接传输给cpu + 将该数据所在数据块搬迁至Cache中</code></pre></li>
+<li><p>写操作：</p>
+<p>​    × 写穿：将数据同时写入Cache和主存中</p>
+<p>​    √ 写回：将数据写入Cache，等到CPU不再进行写操作了再由Cache将数据写入主存中</p>
+</li>
+<li><p>Cache<strong>地址映射</strong></p>
+<ul>
+<li><strong>主存地址 = 块地址 + 偏移地址 = Tag + Index + 偏移地址</strong></li>
+</ul>
+</li>
+<li><p>Cache<strong>基本结构</strong></p>
+<p>​    Cache分为若干行，每行大小与主存快相同：</p>
+<pre><code>- Tag ：判断数据是否在Cache中
+- Data ：与主存交换的数据
+- Vaild ：Cache中数据是否有效
+- Dirty ：主存中数据是否为最新</code></pre></li>
+<li><p>Cache<strong>地址映射法</strong></p>
+<ul>
+<li><p><strong>全相联（适用于小容量cache）</strong></p>
+<ul>
+<li><p>主存分块，Cache分行，二者大小相同</p>
+</li>
+<li><p>主存地址：<strong>块号</strong> + <strong>块内偏移地址</strong></p>
+<p>Cache：<strong>Tag</strong> + <strong>数据</strong></p>
+<p>块号 与 Tag 进行比对，若相同则去该Tag所在的数据行进行查找，根据偏移地址找到所需数据。若没找到，则将主存中该块数据载入cache该行。</p>
+</li>
+<li><p>主存数据可以映射到Cache中任何位置（只要是空闲的）</p>
+</li>
+</ul>
+</li>
+<li><p><strong>直接相联（适用于大容量cache）</strong></p>
+<ul>
+<li><p>主存分块，Cache分行，根据Cache行数，将主存分区，<strong>每个区的块数</strong>与Cache<strong>行数</strong>相同</p>
+</li>
+<li><p>主存地址：<strong>区号</strong> + <strong>区内块号（cache的行号）</strong> + <strong>块内地址</strong></p>
+<p>Cache： <strong>Tag</strong> + <strong>数据</strong></p>
+</li>
+<li><p>映射方法为：将区号与<strong>区内块号</strong>相同的<strong>行</strong>的Tag进行比对</p>
+<p>即，Cache的第<strong>i</strong>行只能保存每个区中第<strong>i</strong>各块的数据。</p>
+<blockquote>
+<p>​    举个例子，假如cache一共4行，主存一共20块。则，主存可以分为5个区，每区4个块。则，</p>
+<p>​    若要查找第3个区第2行的数据，将区号与cache第二行的Tag进行比对；</p>
+<p>​    若要查找第2个区第4行的数据，将区号于cache第四行的Tag进行比对。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>组相联</strong></p>
+<ul>
+<li>结合了上述两种方法的特点。</li>
+<li>主存分块，cache分行，同时cache分成 j 组，每组中包含 k 行。（k可以随意设定）主存分组，每组有 j 个块。</li>
+<li>即 cache 的组数 与 主存每组的个数 相同。</li>
+<li>主存地址：<strong>主存组号</strong> + <strong>组内块号（cache组号）</strong> + <strong>块内地址</strong></li>
+<li>映射方法为：主存 与 组号和组内块号相同的组cache进行映射， 对组内哪一行不做要求，可以映射到组内的任意行。  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>计算机基本原理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2020/04/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -19,6 +130,24 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>替换算法</title>
+    <url>/2020/04/02/%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h2><p><em>cache数据区满时，采取的替换方案</em></p>
+<a id="more"></a>
+
+<h4 id="先进先出（FIFO）："><a href="#先进先出（FIFO）：" class="headerlink" title="先进先出（FIFO）："></a>先进先出（FIFO）：</h4><p>​        设计计数器用来判断cache中各数据的<strong>载入顺序</strong>。</p>
+<p>​        一旦cache满，计数器<strong>最大</strong>的数据被删除</p>
+<h4 id="最不经常使用（LFU）："><a href="#最不经常使用（LFU）：" class="headerlink" title="最不经常使用（LFU）："></a>最不经常使用（LFU）：</h4><p>​        设计计数器用来计算cache中各数据<strong>被命中的次数</strong>。</p>
+<p>​        一旦cache满，计数器最小的数据被删除，计数相同时先入先出</p>
+<h4 id="近期最少使用（LRU）："><a href="#近期最少使用（LRU）：" class="headerlink" title="近期最少使用（LRU）："></a>近期最少使用（LRU）：</h4><p>​        设计计数器用来计算cache中每块数据的<strong>闲置度</strong></p>
+<p>​        新载入的数据计数为0，每经过一个 t（时钟单元）， 计数+1， 一旦命中计数 <strong>清零</strong></p>
+<p>​        一旦cache满，将计数最大的数据删除 </p>
+]]></content>
+      <tags>
+        <tag>计算机基本原理</tag>
+      </tags>
   </entry>
   <entry>
     <title>java | 包</title>
@@ -40,5 +169,8 @@
 <p>​                如 <em>java tom.jiafei.test</em></p>
 <h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
 ]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
   </entry>
 </search>
