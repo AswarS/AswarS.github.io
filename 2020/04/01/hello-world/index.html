@@ -1,86 +1,103 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="theme-color" content=#838383>
-  <title>Hello World | AswarS</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="AswarS">
-  <meta name="keywords" content="">
-  <meta name="description" content="">
-  <script id="hexo-configurations">
-  var CONFIG = {
-    root: '/',
-    theme: 'hexo-theme-lx-master',
-    version: '0.3.9',
-    localsearch:{
-      "enable": false,
-      "trigger": "auto",
-      "top_n_per_article": 1,
-      "unescape": false,
-      "preload": false
-      },
-    path: 'null'
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="author" content="AswarS"><meta name="renderer" content="webkit"><meta name="copyright" content="AswarS"><meta name="keywords" content="AswarS"><meta name="description" content=""><meta name="Cache-Control" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Hello World · AswarS' Blog</title><link rel="stylesheet" href="/css/style.css?v=2018.7.9"><link rel="stylesheet" href="/css/animation.css?v=2018.7.9"><link rel="icon" href="/img/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><!-- scripts--><script>(function( w ){
+  "use strict";
+  // rel=preload support test
+  if( !w.loadCSS ){
+    w.loadCSS = function(){};
+  }
+  // define on the loadCSS obj
+  var rp = loadCSS.relpreload = {};
+  // rel=preload feature support test
+  // runs once and returns a function for compat purposes
+  rp.support = (function(){
+    var ret;
+    try {
+      ret = w.document.createElement( "link" ).relList.supports( "preload" );
+    } catch (e) {
+      ret = false;
+    }
+    return function(){
+      return ret;
+    };
+  })();
+
+  // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+  // then change that media back to its intended value on load
+  rp.bindMediaToggle = function( link ){
+    // remember existing media attr for ultimate state, or default to 'all'
+    var finalMedia = link.media || "all";
+
+    function enableStylesheet(){
+      link.media = finalMedia;
+    }
+
+    // bind load handlers to enable media
+    if( link.addEventListener ){
+      link.addEventListener( "load", enableStylesheet );
+    } else if( link.attachEvent ){
+      link.attachEvent( "onload", enableStylesheet );
+    }
+
+    // Set rel and non-applicable media type to start an async request
+    // note: timeout allows this to happen async to let rendering continue in IE
+    setTimeout(function(){
+      link.rel = "stylesheet";
+      link.media = "only x";
+    });
+    // also enable media after 3 seconds,
+    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+    setTimeout( enableStylesheet, 3000 );
   };
-</script>
 
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
-  <style type="text/css">
-    pre,
-    code {
-      font-family: 'Fira Code', monospace;
+  // loop through link elements in DOM
+  rp.poly = function(){
+    // double check this to prevent external calls from running
+    if( rp.support() ){
+      return;
     }
-    html {
-      font-family: sans-serif;
+    var links = w.document.getElementsByTagName( "link" );
+    for( var i = 0; i < links.length; i++ ){
+      var link = links[ i ];
+      // qualify links to those with rel=preload and as=style attrs
+      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+        // prevent rerunning on link
+        link.setAttribute( "data-loadcss", true );
+        // bind listeners to toggle media back
+        rp.bindMediaToggle( link );
+      }
     }
-    body {
-      font-family: sans-serif;
-    }
-    h1, h2, h3, h4, h5, figure {
-      font-family: sans-serif;
-    }
-    .menu-container{
-      font-family: sans-serif;
-    }
-  </style>
+  };
 
-  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
-	<script>
-	$(document).ready(function(){
-	$(".menu-container").jSideMenu({
-	    jSidePosition: "position-right",
-	    jSideSticky: true,
-	    jSideSkin: "moonlit",
-	     });
-	}); 
-	</script>
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
-<meta name="generator" content="Hexo 4.2.0"></head>
-<body>
-<div class="single">
+  // if unsupported, run the polyfill
+  if( !rp.support() ){
+    // run once at least
+    rp.poly();
 
-<div id="page">
-<div id="lx-aside" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/post_cover.jpeg)" data-stellar-background-ratio="0.5">
-  <div class="overlay">
-  <div class="page-title">
-    <div class="avatar"><a href="/"><img src="/images/head.jpg"></a></div>
-    <span>2020-04-01</span>
-    <h2>Hello World</h2>
-    
-    </div>
-</div>
-</div>
+    // rerun poly on an interval until onload
+    var run = w.setInterval( rp.poly, 500 );
+    if( w.addEventListener ){
+      w.addEventListener( "load", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    } else if( w.attachEvent ){
+      w.attachEvent( "onload", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    }
+  }
 
-<div id="lx-main-content">
-  <div class="lx-post">
-    <div class="lx-entry padding">
-      <div>
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.loadCSS = loadCSS;
+  }
+  else {
+    w.loadCSS = loadCSS;
+  }
+}( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 4.2.0"></head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/avater.jpeg"></div><!--.profile-saying
+  i.fa.fa-comment
+  .saying--><div class="cxo-profile-inner"><div class="profile-name">AswarS</div><div class="profile-signature">一个默默无闻的人</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/cover.jpg);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">AswarS' Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">Hello World</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-calendar"></i><span>2020-04-01</span></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
 
 <h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
@@ -95,123 +112,4 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      </div>
-    </div>
-  </div>
-</div>
-<div class="lx-navigation">
-	<div class="lx-cover prev lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-l.jpeg)">
-		<div class="overlay"></div>
-		<a class="copy" href="/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
-			<div class="display-t">
-				<div class="display-tc">
-					<div>
-						<span>Next</span>
-						<h3>java | 包</h3>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-        <div class="lx-cover next lx-cover-sm" style="background-image: url(//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/images/footer-r.jpeg)">
-		<div class="overlay"></div>
-		<a class="copy" href="#">
-			<div class="display-t">
-				<div class="display-tc">
-					<div>
-						<span>Prev</span>
-						<h3>No older post</h3>
-					</div>
-				</div>
-			</div>
-		</a>
-	</div>
-</div>
-
-</div>
-
-<footer>
-  <div>
-  Copyright &copy; 2019.<a href="/">AswarS</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
-  </div>
-</footer>
-
-</div>
-
-<button class="hamburger hamburger--arrow-r" type="button">
-    <div class="hamburger-box">
-      <div class="hamburger-inner"></div>
-    </div>
-</button> 
-<div class="menu visibility">
-  <div class="menu-head">
-    <span class="layer">
-      <div class="col">
-        <div class="row for-pic">
-          <div class="profile-pic">
-            <a href="/"><img src="/images/head.jpg" alt="AswarS"/></a>
-          </div>
-        </div>
-        <div class="row for-name">
-          <p>AswarS</p>
-          <span class="tagline">Hey.</span>
-        </div>
-      </div>
-    </span>
-  </div>
-  <nav class="menu-container">
-  <ul class="menu-items">
-    <li><a href="/"><i class="fa fa-home fa-fw"></i>Home</a></li>
-    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
-    
-    <li class="has-sub"><span class="dropdown-heading">
-      <i class="fa fa-bookmark fa-fw"></i>Pages</span>
-        <ul>
-          <li><a href="/guestbook/">Guestbook</a></li>
-        <li><a href="/about/">About</a></li>
-        </ul>
-    </li>
-    <li class="has-sub"><span class="dropdown-heading">
-      <i class="fa fa-link fa-fw"></i>Friends</span>
-        <ul>
-          <li> <a href="https://lx.js.org" target="_blank">Theme-Lx</a></li>
-        </ul>
-    </li>
-  </ul>
-  </nav>
-</div>
-
-<div class="gototop js-top">
-  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
-</div>
-<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
-<script>
-(function () {
-	"use strict";
-	var goToTop = function() {
-		$(".js-gotop").on("click", function(event){
-			event.preventDefault();
-			$("html, body").animate({
-				scrollTop: $("html").offset().top
-			}, 500, "easeInOutExpo");
-			return false;
-		});
-		$(window).scroll(function(){
-			var $win = $(window);
-			if ($win.scrollTop() > 200) {
-				$(".js-top").addClass("active");
-			} else {
-				$(".js-top").removeClass("active");
-			}
-		});
-	};
-	$(function(){
-		goToTop();
-	});
-}());
-</script>
-
-
-</body>
-</html>
+</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="https://AswarS.github.io.git">AswarS</a></p><p> <span>Link:  </span><a href="https://aswars.github.io.git/2020/04/01/hello-world/">https://aswars.github.io.git/2020/04/01/hello-world/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/3.0" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="prevSlogan" href="/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" title="java | 包"><span>< PreviousPost</span><br><span class="prevTitle">java | 包</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span> | theme </span><a href="https://github.com/Longlongyu/hexo-theme-Cxo" target="_blank" rel="noopener"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AswarS"><span class="toc-number">1.</span> <span class="toc-text">AswarS</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
