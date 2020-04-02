@@ -13,6 +13,11 @@
     
 
     
+        <meta name="description" content="包的声明​                package 包名;
+​                作为源文件的第一条语句；
+包中文件的存储​                源文件的存储路径为 …\包名
+​                如    源文件中使用了包语句 package tom.jia"/>
+    
 
     <!--Author-->
     
@@ -21,10 +26,15 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="AswarS"/>
+        <meta property="og:title" content="java | 包"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="包的声明​                package 包名;
+​                作为源文件的第一条语句；
+包中文件的存储​                源文件的存储路径为 …\包名
+​                如    源文件中使用了包语句 package tom.jia"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +42,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -51,7 +61,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2020 - AswarS</title>
+    <title>java | 包 - AswarS</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -155,62 +165,72 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('http://pic1.win4000.com/wallpaper/b/579731019afb1.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2020</h1>
+                <div class="post-heading">
+                    <h1>java | 包</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-04-02
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2020/04/02/第一篇文章/">
-        <h1 class="post-title archive">
-            java | 包
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-02
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
+<p>​                作为源文件的第一条语句；</p>
+<h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
+<p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
+<p>​                那么，该源文件的存储路径应为 <strong>…\tom\jiafei</strong></p>
+<h3 id="包中源文件的编译"><a href="#包中源文件的编译" class="headerlink" title="包中源文件的编译"></a>包中源文件的编译</h3><p>​                对包中源文件进行编译时，要在其包的父目录运行cmd进行编译</p>
+<p>​                如    源文件存储路径为 <strong>D\Code\tom\jiafei</strong></p>
+<p>​                那么，应在  <strong>D\Code</strong> 目录下运行cmd进行编译，编译时要给出全路径，</p>
+<p>​                格式为：<em>javac 包名\主类名.java</em></p>
+<p>​                如    <em>javac tom\jiafei\test.java</em></p>
+<h3 id="包文件的运行"><a href="#包文件的运行" class="headerlink" title="包文件的运行"></a>包文件的运行</h3><p>​                运行时，同样要求在父目录下运行，执行java命令时给出包名</p>
+<p>​                格式为：<em>java 包名.主类名</em></p>
+<p>​                如 <em>java tom.jiafei.test</em></p>
+<h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2020/04/01/hello-world/">
-        <h1 class="post-title archive">
-            Hello World
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2020-04-01
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
