@@ -1,103 +1,229 @@
-<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="author" content="AswarS"><meta name="renderer" content="webkit"><meta name="copyright" content="AswarS"><meta name="keywords" content="AswarS"><meta name="description" content=""><meta name="Cache-Control" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>CSS| float · AswarS' Blog</title><link rel="stylesheet" href="/css/style.css?v=2018.7.9"><link rel="stylesheet" href="/css/animation.css?v=2018.7.9"><link rel="icon" href="/img/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><!-- scripts--><script>(function( w ){
-  "use strict";
-  // rel=preload support test
-  if( !w.loadCSS ){
-    w.loadCSS = function(){};
-  }
-  // define on the loadCSS obj
-  var rp = loadCSS.relpreload = {};
-  // rel=preload feature support test
-  // runs once and returns a function for compat purposes
-  rp.support = (function(){
-    var ret;
-    try {
-      ret = w.document.createElement( "link" ).relList.supports( "preload" );
-    } catch (e) {
-      ret = false;
-    }
-    return function(){
-      return ret;
-    };
-  })();
+<!DOCTYPE html>
+<html lang="zh-cn">
 
-  // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
-  // then change that media back to its intended value on load
-  rp.bindMediaToggle = function( link ){
-    // remember existing media attr for ultimate state, or default to 'all'
-    var finalMedia = link.media || "all";
+<!-- Head tag -->
+<head>
 
-    function enableStylesheet(){
-      link.media = finalMedia;
-    }
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    // bind load handlers to enable media
-    if( link.addEventListener ){
-      link.addEventListener( "load", enableStylesheet );
-    } else if( link.attachEvent ){
-      link.attachEvent( "onload", enableStylesheet );
-    }
+    <!--Description-->
 
-    // Set rel and non-applicable media type to start an async request
-    // note: timeout allows this to happen async to let rendering continue in IE
-    setTimeout(function(){
-      link.rel = "stylesheet";
-      link.media = "only x";
-    });
-    // also enable media after 3 seconds,
-    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
-    setTimeout( enableStylesheet, 3000 );
-  };
+    
 
-  // loop through link elements in DOM
-  rp.poly = function(){
-    // double check this to prevent external calls from running
-    if( rp.support() ){
-      return;
-    }
-    var links = w.document.getElementsByTagName( "link" );
-    for( var i = 0; i < links.length; i++ ){
-      var link = links[ i ];
-      // qualify links to those with rel=preload and as=style attrs
-      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
-        // prevent rerunning on link
-        link.setAttribute( "data-loadcss", true );
-        // bind listeners to toggle media back
-        rp.bindMediaToggle( link );
-      }
-    }
-  };
+    
+        <meta name="description" content="CSS | float标准文档流​        文档流指的是元素排版布局过程中，元素会默认自动从左往右，从上往下的流式排列方式。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。
 
-  // if unsupported, run the polyfill
-  if( !rp.support() ){
-    // run once at least
-    rp.poly();
+标准文档流等级
+块级元素：
+独占一行，不与其他元素并列
+可以设置width、height
+若不设置wi"/>
+    
 
-    // rerun poly on an interval until onload
-    var run = w.setInterval( rp.poly, 500 );
-    if( w.addEventListener ){
-      w.addEventListener( "load", function(){
-        rp.poly();
-        w.clearInterval( run );
-      } );
-    } else if( w.attachEvent ){
-      w.attachEvent( "onload", function(){
-        rp.poly();
-        w.clearInterval( run );
-      } );
-    }
-  }
+    <!--Author-->
+    
+        <meta name="author" content="AswarS"/>
+    
+
+    <!--Open Graph Title-->
+    
+        <meta property="og:title" content="CSS| float"/>
+    
+
+    <!--Open Graph Description-->
+    
+        <meta property="og:description" content="CSS | float标准文档流​        文档流指的是元素排版布局过程中，元素会默认自动从左往右，从上往下的流式排列方式。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。
+
+标准文档流等级
+块级元素：
+独占一行，不与其他元素并列
+可以设置width、height
+若不设置wi"/>
+    
+
+    <!--Open Graph Site Name-->
+        <meta property="og:site_name" content="AswarS"/>
+
+    <!--Type page-->
+    
+        <meta property="og:type" content="article"/>
+    
+
+    <!--Page Cover-->
+    
+    
+        <meta property="og:image" content="https://AswarS.github.io.githttp://m.qpic.cn/psc?/V11iNCuq3VgMfi/AAqA*OLIGuMLp9aQ5B1ShGX31jzHvgViBfFVbqwIOOeFEHBGrD*kkR5N0H.yCAG43pZyPXtv0KfF*YeTPjSiQQ!!/b&amp;bo=wAY4BAAAAAARB8o!&amp;rf=viewer_4"/>
+    
+
+        <meta name="twitter:card" content="summary_large_image"/>
+
+    
+
+    
+        <meta name="twitter:image" content="https://AswarS.github.io.githttp://m.qpic.cn/psc?/V11iNCuq3VgMfi/AAqA*OLIGuMLp9aQ5B1ShGX31jzHvgViBfFVbqwIOOeFEHBGrD*kkR5N0H.yCAG43pZyPXtv0KfF*YeTPjSiQQ!!/b&amp;bo=wAY4BAAAAAARB8o!&amp;rf=viewer_4"/>
+    
+
+    <!-- Title -->
+    
+    <title>CSS| float - AswarS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/style.css">
 
 
-  // commonjs
-  if( typeof exports !== "undefined" ){
-    exports.loadCSS = loadCSS;
-  }
-  else {
-    w.loadCSS = loadCSS;
-  }
-}( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 4.2.0"></head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/avater.jpeg"></div><!--.profile-saying
-  i.fa.fa-comment
-  .saying--><div class="cxo-profile-inner"><div class="profile-name">AswarS</div><div class="profile-signature">一个默默无闻的人</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/cover.jpg);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">AswarS' Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">CSS| float</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-edit"></i><span>2020-04-03</span></span><span class="post-intro-tags"><a class="intro-tag fa fa-tag" href="javascript:void(0)" date-tags="CSS"> CSS</a></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
+    <!-- Custom Fonts -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Gallery -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+    <!-- Google Analytics -->
+    
+
+
+    <!-- favicon -->
+    
+    <link rel="icon" href="img/favicon.ico"/>
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+
+<body>
+
+    <!-- Menu -->
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">主页</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                
+                    <li>
+                        <a href="/">
+                            
+                                Home
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/archives">
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/tags">
+                            
+                                Tags
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/categories">
+                            
+                                Categories
+                            
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="https://github.com/AswarS" target="_blank" rel="noopener">
+                            
+                                <i class="fa fa-github fa-stack-2x"></i>
+                            
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <!-- Main Content -->
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
+
+<header class="intro-header" style="background-image: url('http://m.qpic.cn/psc?/V11iNCuq3VgMfi/AAqA*OLIGuMLp9aQ5B1ShGX31jzHvgViBfFVbqwIOOeFEHBGrD*kkR5N0H.yCAG43pZyPXtv0KfF*YeTPjSiQQ!!/b&bo=wAY4BAAAAAARB8o!&rf=viewer_4')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>CSS| float</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2020-04-03
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/CSS/">#CSS</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                </div>
+            
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
 <ul>
 <li><h3 id="标准文档流等级"><a href="#标准文档流等级" class="headerlink" title="标准文档流等级"></a>标准文档流等级</h3><ul>
 <li><h4 id="块级元素："><a href="#块级元素：" class="headerlink" title="块级元素："></a>块级元素：</h4><ol>
@@ -158,4 +284,77 @@
 <li>float属性不要单独一个元素使用</li>
 <li>浮动是相对于父元素浮动的，即该元素只在父元素之中浮动，不会跳出父元素的范围，因此父元素的宽高一定要合适</li>
 </ul>
-</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="https://AswarS.github.io.git">AswarS</a></p><p> <span>Link:  </span><a href="https://aswars.github.io.git/2020/04/03/2020-04-03-CSS-float/">https://aswars.github.io.git/2020/04/03/2020-04-03-CSS-float/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/3.0" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="prevSlogan" href="/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/" title="CSS | 四种居中div的方法"><span>< PreviousPost</span><br><span class="prevTitle">CSS | 四种居中div的方法</span></a><a class="nextSlogan" href="/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/" title="Cache基本原理"><span>NextPost ></span><br><span class="nextTitle">Cache基本原理</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span> | theme </span><a href="https://github.com/Longlongyu/hexo-theme-Cxo" target="_blank" rel="noopener"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-float"><span class="toc-number">1.</span> <span class="toc-text">CSS | float</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#标准文档流"><span class="toc-number">1.1.</span> <span class="toc-text">标准文档流</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标准文档流等级"><span class="toc-number">1.1.1.</span> <span class="toc-text">标准文档流等级</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#块级元素："><span class="toc-number">1.1.1.1.</span> <span class="toc-text">块级元素：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#行内元素："><span class="toc-number">1.1.1.2.</span> <span class="toc-text">行内元素：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#块级元素与行内元素相互转换"><span class="toc-number">1.1.2.</span> <span class="toc-text">块级元素与行内元素相互转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#脱离标准文档流"><span class="toc-number">1.1.3.</span> <span class="toc-text">脱离标准文档流</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#float四大性质"><span class="toc-number">1.2.</span> <span class="toc-text">float四大性质</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#浮动元素脱标"><span class="toc-number">1.2.0.0.1.</span> <span class="toc-text">浮动元素脱标</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#浮动的元素互相贴靠"><span class="toc-number">1.2.0.0.2.</span> <span class="toc-text">浮动的元素互相贴靠</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#“字围”效果"><span class="toc-number">1.2.0.0.3.</span> <span class="toc-text">“字围”效果</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#收缩"><span class="toc-number">1.2.0.0.4.</span> <span class="toc-text">收缩</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注意事项"><span class="toc-number">1.3.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
+
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
+            
+        </div>
+    </div>
+</article>
+
+    <!-- Footer -->
+    <hr />
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+
+                    
+
+                    
+                        <li>
+                            <a href="https://github.com/AswarS" target="_blank">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    
+
+                    
+
+                    
+
+                    
+                </ul>
+                <p class="copyright text-muted">&copy; 2020 AswarS<br></p>
+                <p class="copyright text-muted">Original Theme <a target="_blank" href="http://startbootstrap.com/template-overviews/clean-blog/">Clean Blog</a> from <a href="http://startbootstrap.com/" target="_blank">Start Bootstrap</a></p>
+                <p class="copyright text-muted">Adapted for <a target="_blank" href="https://hexo.io/">Hexo</a> by <a href="http://www.codeblocq.com/" target="_blank">Jonathan Klughertz</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- After footer scripts -->
+    
+<!-- jQuery -->
+<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<!-- Bootstrap -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Gallery -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/featherlight/1.3.5/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
+<!-- Disqus Comments -->
+
+
+
+</body>
+
+</html>

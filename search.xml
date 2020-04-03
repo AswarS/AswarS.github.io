@@ -70,61 +70,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS | 四种居中div的方法</title>
-    <url>/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="CSS-四种居中div的方法"><a href="#CSS-四种居中div的方法" class="headerlink" title="CSS | 四种居中div的方法"></a>CSS | 四种居中div的方法</h1><ul>
-<li><h3 id="Flex-layout"><a href="#Flex-layout" class="headerlink" title="Flex layout"></a>Flex layout</h3><p>在父容器中添加以下样式</p>
-<blockquote>
-<p>display: flex;</p>
-<p>justify-content: center;</p>
-<p>align-items: center;</p>
-</blockquote>
-</li>
-<li><h3 id="Margin-auto"><a href="#Margin-auto" class="headerlink" title="Margin auto"></a>Margin auto</h3><p>在子容器中添加以下样式</p>
-<blockquote>
-<p>margin: 0 auto;</p>
-</blockquote>
-</li>
-<li><h3 id="Text-align-和-Inline-block"><a href="#Text-align-和-Inline-block" class="headerlink" title="Text-align 和 Inline-block"></a>Text-align 和 Inline-block</h3><p>在父容器中添加以下样式</p>
-<blockquote>
-<p>text-align: center;</p>
-</blockquote>
-<p>在子容器中添加以下样式</p>
-<blockquote>
-<p>display: inline-block;</p>
-</blockquote>
-</li>
-<li><h3 id="2D-Transform"><a href="#2D-Transform" class="headerlink" title="2D Transform"></a>2D Transform</h3><p>在子容器中添加以下样式</p>
-<blockquote>
-<p>position: absolute;</p>
-<p>top: 50%;</p>
-<p>left: 50%;</p>
-<p>transform: translate(-50%, -50%);</p>
-</blockquote>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>替换算法</title>
-    <url>/2020/04/02/%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h1><p><em>cache数据区满时，采取的替换方案</em></p>
-<h4 id="先进先出（FIFO）："><a href="#先进先出（FIFO）：" class="headerlink" title="先进先出（FIFO）："></a>先进先出（FIFO）：</h4><p>​        设计计数器用来判断cache中各数据的<strong>载入顺序</strong>。</p>
-<p>​        一旦cache满，计数器<strong>最大</strong>的数据被删除</p>
-<h4 id="最不经常使用（LFU）："><a href="#最不经常使用（LFU）：" class="headerlink" title="最不经常使用（LFU）："></a>最不经常使用（LFU）：</h4><p>​        设计计数器用来计算cache中各数据<strong>被命中的次数</strong>。</p>
-<p>​        一旦cache满，计数器最小的数据被删除，计数相同时先入先出</p>
-<h4 id="近期最少使用（LRU）："><a href="#近期最少使用（LRU）：" class="headerlink" title="近期最少使用（LRU）："></a>近期最少使用（LRU）：</h4><p>​        设计计数器用来计算cache中每块数据的<strong>闲置度</strong></p>
-<p>​        新载入的数据计数为0，每经过一个 t（时钟单元）， 计数+1， 一旦命中计数 <strong>清零</strong></p>
-<p>​        一旦cache满，将计数最大的数据删除 </p>
-]]></content>
-      <tags>
-        <tag>计算机基本原理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS 定位</title>
     <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
     <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
@@ -171,6 +116,120 @@
 ]]></content>
       <tags>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS | 四种居中div的方法</title>
+    <url>/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="CSS-四种居中div的方法"><a href="#CSS-四种居中div的方法" class="headerlink" title="CSS | 四种居中div的方法"></a>CSS | 四种居中div的方法</h1><ul>
+<li><h3 id="Flex-layout"><a href="#Flex-layout" class="headerlink" title="Flex layout"></a>Flex layout</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>display: flex;</p>
+<p>justify-content: center;</p>
+<p>align-items: center;</p>
+</blockquote>
+</li>
+<li><h3 id="Margin-auto"><a href="#Margin-auto" class="headerlink" title="Margin auto"></a>Margin auto</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>margin: 0 auto;</p>
+</blockquote>
+</li>
+<li><h3 id="Text-align-和-Inline-block"><a href="#Text-align-和-Inline-block" class="headerlink" title="Text-align 和 Inline-block"></a>Text-align 和 Inline-block</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>text-align: center;</p>
+</blockquote>
+<p>在子容器中添加以下样式</p>
+<blockquote>
+<p>display: inline-block;</p>
+</blockquote>
+</li>
+<li><h3 id="2D-Transform"><a href="#2D-Transform" class="headerlink" title="2D Transform"></a>2D Transform</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>position: absolute;</p>
+<p>top: 50%;</p>
+<p>left: 50%;</p>
+<p>transform: translate(-50%, -50%);</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ASM 灵活寻址</title>
+    <url>/2020/04/03/ASM-%E7%81%B5%E6%B4%BB%E5%AF%BB%E5%9D%80/</url>
+    <content><![CDATA[<h1 id="ASM-灵活定位内存地址的方法"><a href="#ASM-灵活定位内存地址的方法" class="headerlink" title="ASM | 灵活定位内存地址的方法"></a>ASM | 灵活定位内存地址的方法</h1><h3 id="bx-idata"><a href="#bx-idata" class="headerlink" title="[bx+idata]"></a>[bx+idata]</h3><p>[bx+idata]表示一个内存单元，偏移地址为 bx + idata</p>
+<blockquote>
+<p>mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)</p>
+<p>该指令还有以下几种写法：</p>
+<ul>
+<li>mov ax,200[bx] → 类似于数组的表示方法200为数组首地址，bx为脚标</li>
+<li>mov ax,[bx].200</li>
+</ul>
+</blockquote>
+<h3 id="si-和-di"><a href="#si-和-di" class="headerlink" title="si 和 di"></a>si 和 di</h3><p>si、di是8086CPU中和bx功能相似的寄存器</p>
+<p><strong>不可以分成两个8位寄存器来使用</strong></p>
+<blockquote>
+<p>复制数据时，si指向需要复制的数据地址，di指向存放数据的地址</p>
+</blockquote>
+<h3 id="bx-si-di-idata"><a href="#bx-si-di-idata" class="headerlink" title="[bx + si/di + idata]"></a>[bx + si/di + idata]</h3><blockquote>
+<p>mov ax,[bx+si/di] = (as) = ((ds)*16 + bx + si/di + idata)</p>
+<p>也可以写成以下形式：</p>
+<ul>
+<li><p>mov ax,[bx].(idata)[cx]</p>
+</li>
+<li><p>mov ax【bx】[cx].idata</p>
+</li>
+</ul>
+</blockquote>
+<h3 id="and-和-or"><a href="#and-和-or" class="headerlink" title="and 和 or"></a>and 和 or</h3><p><strong>and</strong>：按位与运算</p>
+<blockquote>
+<p>and al, 00110011B</p>
+</blockquote>
+<p>可用于将某位 置<strong>0</strong></p>
+<p><strong>or</strong>：按位或运算</p>
+<blockquote>
+<p>or al, 00110011B</p>
+</blockquote>
+<p>可用于将某位 置<strong>1</strong></p>
+<h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><p>如将’abc’、’dfe’、’ghe’三个字符串改为大写，以下是循环部分：</p>
+<blockquote>
+<p>​        mov cx, 3</p>
+<p>s0:    mov si,0</p>
+<p>​        mov cx, 3</p>
+<p>s1:    mov al, [bx + si]</p>
+<p>​        and al,11011111b</p>
+<p>​        mov [bx+si], al        </p>
+<p>​        inc si</p>
+<p>​        loop s1</p>
+<p>​        add bx, 3</p>
+<p>​        loop s0</p>
+</blockquote>
+<p>注意，此循环中有两个循环，但却只使用了一个循环计数器cx</p>
+<p>本来我们希望他可以循环9次,但实际上只循环了3次，外部循环只执行了一次</p>
+<p>为了实现二重循环，我们要将外部循环的cx提前保存起来，等到内部循环结束后再将其恢复</p>
+<blockquote>
+<p>如在s0处先使用 mov dx, cx进行保存，然后在loop s0前再使用mov cx,dx恢复</p>
+</blockquote>
+<p>但这种方法显然不适用于更多层的循环，毕竟可供我们操作的寄存器并不多</p>
+<p>而嵌套循环这种层次结构很适合于栈（cx 先进后出），因此，我们用栈来保存每个loop的cx</p>
+<blockquote>
+<p>在指令前，先分配一段内存空间用来保存cx，内存大小和循环数量相同</p>
+<p>此例中有两个循环，就分配两个字节空间即可，循环部分代码如下：</p>
+<p>​        mov cx, 3</p>
+<p>s0:    push cx</p>
+<p>​        mov cx, 3</p>
+<p>s1:        …</p>
+<p>​        loop s1</p>
+<p>​            …</p>
+<p>​        pop cx</p>
+<p>​        loop s0</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>ASM</tag>
       </tags>
   </entry>
   <entry>
@@ -272,28 +331,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java | 包</title>
-    <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
-<p>​                作为源文件的第一条语句；</p>
-<h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
-<p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
-<p>​                那么，该源文件的存储路径应为 <strong>…\tom\jiafei</strong></p>
-<h3 id="包中源文件的编译"><a href="#包中源文件的编译" class="headerlink" title="包中源文件的编译"></a>包中源文件的编译</h3><p>​                对包中源文件进行编译时，要在其包的父目录运行cmd进行编译</p>
-<p>​                如    源文件存储路径为 <strong>D\Code\tom\jiafei</strong></p>
-<p>​                那么，应在  <strong>D\Code</strong> 目录下运行cmd进行编译，编译时要给出全路径，</p>
-<p>​                格式为：<em>javac 包名\主类名.java</em></p>
-<p>​                如    <em>javac tom\jiafei\test.java</em></p>
-<h3 id="包文件的运行"><a href="#包文件的运行" class="headerlink" title="包文件的运行"></a>包文件的运行</h3><p>​                运行时，同样要求在父目录下运行，执行java命令时给出包名</p>
-<p>​                格式为：<em>java 包名.主类名</em></p>
-<p>​                如 <em>java tom.jiafei.test</em></p>
-<h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/04/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -312,6 +349,22 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>替换算法</title>
+    <url>/2020/04/02/%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h1><p><em>cache数据区满时，采取的替换方案</em></p>
+<h4 id="先进先出（FIFO）："><a href="#先进先出（FIFO）：" class="headerlink" title="先进先出（FIFO）："></a>先进先出（FIFO）：</h4><p>​        设计计数器用来判断cache中各数据的<strong>载入顺序</strong>。</p>
+<p>​        一旦cache满，计数器<strong>最大</strong>的数据被删除</p>
+<h4 id="最不经常使用（LFU）："><a href="#最不经常使用（LFU）：" class="headerlink" title="最不经常使用（LFU）："></a>最不经常使用（LFU）：</h4><p>​        设计计数器用来计算cache中各数据<strong>被命中的次数</strong>。</p>
+<p>​        一旦cache满，计数器最小的数据被删除，计数相同时先入先出</p>
+<h4 id="近期最少使用（LRU）："><a href="#近期最少使用（LRU）：" class="headerlink" title="近期最少使用（LRU）："></a>近期最少使用（LRU）：</h4><p>​        设计计数器用来计算cache中每块数据的<strong>闲置度</strong></p>
+<p>​        新载入的数据计数为0，每经过一个 t（时钟单元）， 计数+1， 一旦命中计数 <strong>清零</strong></p>
+<p>​        一旦cache满，将计数最大的数据删除 </p>
+]]></content>
+      <tags>
+        <tag>计算机基本原理</tag>
+      </tags>
   </entry>
   <entry>
     <title>虚拟存储器</title>
@@ -346,6 +399,28 @@
 ]]></content>
       <tags>
         <tag>计算机基本原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java | 包</title>
+    <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
+<p>​                作为源文件的第一条语句；</p>
+<h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
+<p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
+<p>​                那么，该源文件的存储路径应为 <strong>…\tom\jiafei</strong></p>
+<h3 id="包中源文件的编译"><a href="#包中源文件的编译" class="headerlink" title="包中源文件的编译"></a>包中源文件的编译</h3><p>​                对包中源文件进行编译时，要在其包的父目录运行cmd进行编译</p>
+<p>​                如    源文件存储路径为 <strong>D\Code\tom\jiafei</strong></p>
+<p>​                那么，应在  <strong>D\Code</strong> 目录下运行cmd进行编译，编译时要给出全路径，</p>
+<p>​                格式为：<em>javac 包名\主类名.java</em></p>
+<p>​                如    <em>javac tom\jiafei\test.java</em></p>
+<h3 id="包文件的运行"><a href="#包文件的运行" class="headerlink" title="包文件的运行"></a>包文件的运行</h3><p>​                运行时，同样要求在父目录下运行，执行java命令时给出包名</p>
+<p>​                格式为：<em>java 包名.主类名</em></p>
+<p>​                如 <em>java tom.jiafei.test</em></p>
+<h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
 </search>
