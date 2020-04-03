@@ -97,7 +97,7 @@
   }
 }( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 4.2.0"></head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/avater.jpeg"></div><!--.profile-saying
   i.fa.fa-comment
-  .saying--><div class="cxo-profile-inner"><div class="profile-name">AswarS</div><div class="profile-signature">一个默默无闻的人</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/cover.jpg);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">AswarS' Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">Cache基本原理</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-edit"></i><span>2020-04-02</span></span><span class="post-intro-tags"><a class="intro-tag fa fa-tag" href="javascript:void(0)" date-tags="计算机基本原理"> 计算机基本原理</a></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><h2 id="Cache基本原理"><a href="#Cache基本原理" class="headerlink" title="Cache基本原理"></a>Cache基本原理</h2><h3 id="CPU-←（字）→-Cache-←（数据块-行）→-主存"><a href="#CPU-←（字）→-Cache-←（数据块-行）→-主存" class="headerlink" title="CPU ←（字）→ Cache ←（数据块/行）→ 主存"></a>CPU ←（字）→ Cache ←（数据块/行）→ 主存</h3><p><em>主存中的块与cache的行容量相同</em></p>
+  .saying--><div class="cxo-profile-inner"><div class="profile-name">AswarS</div><div class="profile-signature">一个默默无闻的人</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/cover.jpg);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">AswarS' Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">Cache基本原理</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-edit"></i><span>2020-04-03</span></span><span class="post-intro-tags"><a class="intro-tag fa fa-tag" href="javascript:void(0)" date-tags="计算机基本原理"> 计算机基本原理</a></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><h1 id="Cache基本原理"><a href="#Cache基本原理" class="headerlink" title="Cache基本原理"></a>Cache基本原理</h1><h3 id="CPU-←（字）→-Cache-←（数据块-行）→-主存"><a href="#CPU-←（字）→-Cache-←（数据块-行）→-主存" class="headerlink" title="CPU ←（字）→ Cache ←（数据块/行）→ 主存"></a>CPU ←（字）→ Cache ←（数据块/行）→ 主存</h3><p><em>主存中的块与cache的行容量相同</em></p>
 <a id="more"></a>
 
 <ul>
@@ -109,21 +109,17 @@
 <p>​    × 写穿：将数据同时写入Cache和主存中</p>
 <p>​    √ 写回：将数据写入Cache，等到CPU不再进行写操作了再由Cache将数据写入主存中</p>
 </li>
-<li><p>Cache<strong>地址映射</strong></p>
-<ul>
+<li><h3 id="Cache地址映射"><a href="#Cache地址映射" class="headerlink" title="Cache地址映射"></a>Cache<strong>地址映射</strong></h3><ul>
 <li><strong>主存地址 = 块地址 + 偏移地址 = Tag + Index + 偏移地址</strong></li>
 </ul>
 </li>
-<li><p>Cache<strong>基本结构</strong></p>
-<p>​    Cache分为若干行，每行大小与主存快相同：</p>
+<li><h3 id="Cache基本结构"><a href="#Cache基本结构" class="headerlink" title="Cache基本结构"></a>Cache<strong>基本结构</strong></h3><p>​    Cache分为若干行，每行大小与主存快相同：</p>
 <pre><code>- Tag ：判断数据是否在Cache中
 - Data ：与主存交换的数据
 - Vaild ：Cache中数据是否有效
 - Dirty ：主存中数据是否为最新</code></pre></li>
-<li><p>Cache<strong>地址映射法</strong></p>
-<ul>
-<li><p><strong>全相联（适用于小容量cache）</strong></p>
-<ul>
+<li><h3 id="Cache地址映射法"><a href="#Cache地址映射法" class="headerlink" title="Cache地址映射法"></a>Cache<strong>地址映射法</strong></h3><ul>
+<li><h3 id="全相联（适用于小容量cache）"><a href="#全相联（适用于小容量cache）" class="headerlink" title="全相联（适用于小容量cache）"></a><strong>全相联（适用于小容量cache）</strong></h3><ul>
 <li><p>主存分块，Cache分行，二者大小相同</p>
 </li>
 <li><p>主存地址：<strong>块号</strong> + <strong>块内偏移地址</strong></p>
@@ -134,8 +130,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong>直接相联（适用于大容量cache）</strong></p>
-<ul>
+<li><h3 id="直接相联（适用于大容量cache）"><a href="#直接相联（适用于大容量cache）" class="headerlink" title="直接相联（适用于大容量cache）"></a><strong>直接相联（适用于大容量cache）</strong></h3><ul>
 <li><p>主存分块，Cache分行，根据Cache行数，将主存分区，<strong>每个区的块数</strong>与Cache<strong>行数</strong>相同</p>
 </li>
 <li><p>主存地址：<strong>区号</strong> + <strong>区内块号（cache的行号）</strong> + <strong>块内地址</strong></p>
@@ -151,8 +146,7 @@
 </li>
 </ul>
 </li>
-<li><p><strong>组相联</strong></p>
-<ul>
+<li><h4 id="组相联"><a href="#组相联" class="headerlink" title="组相联"></a><strong>组相联</strong></h4><ul>
 <li>结合了上述两种方法的特点。</li>
 <li>主存分块，cache分行，同时cache分成 j 组，每组中包含 k 行。（k可以随意设定）主存分组，每组有 j 个块。</li>
 <li>即 cache 的组数 与 主存每组的个数 相同。</li>
@@ -163,4 +157,4 @@
 </ul>
 </li>
 </ul>
-</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="https://AswarS.github.io.git">AswarS</a></p><p> <span>Link:  </span><a href="https://aswars.github.io.git/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">https://aswars.github.io.git/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/3.0" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="nextSlogan" href="/2020/04/02/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/" title="虚拟存储器"><span>NextPost ></span><br><span class="nextTitle">虚拟存储器</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span> | theme </span><a href="https://github.com/Longlongyu/hexo-theme-Cxo" target="_blank" rel="noopener"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Cache基本原理"><span class="toc-number">1.</span> <span class="toc-text">Cache基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU-←（字）→-Cache-←（数据块-行）→-主存"><span class="toc-number">1.1.</span> <span class="toc-text">CPU ←（字）→ Cache ←（数据块&#x2F;行）→ 主存</span></a></li></ol></li></ol></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
+</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="https://AswarS.github.io.git">AswarS</a></p><p> <span>Link:  </span><a href="https://aswars.github.io.git/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/">https://aswars.github.io.git/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/3.0" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="nextSlogan" href="/2020/04/02/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/" title="虚拟存储器"><span>NextPost ></span><br><span class="nextTitle">虚拟存储器</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span> | theme </span><a href="https://github.com/Longlongyu/hexo-theme-Cxo" target="_blank" rel="noopener"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cache基本原理"><span class="toc-number">1.</span> <span class="toc-text">Cache基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#CPU-←（字）→-Cache-←（数据块-行）→-主存"><span class="toc-number">1.0.1.</span> <span class="toc-text">CPU ←（字）→ Cache ←（数据块&#x2F;行）→ 主存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cache地址映射"><span class="toc-number">1.0.2.</span> <span class="toc-text">Cache地址映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cache基本结构"><span class="toc-number">1.0.3.</span> <span class="toc-text">Cache基本结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cache地址映射法"><span class="toc-number">1.0.4.</span> <span class="toc-text">Cache地址映射法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#全相联（适用于小容量cache）"><span class="toc-number">1.0.5.</span> <span class="toc-text">全相联（适用于小容量cache）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#直接相联（适用于大容量cache）"><span class="toc-number">1.0.6.</span> <span class="toc-text">直接相联（适用于大容量cache）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#组相联"><span class="toc-number">1.0.6.1.</span> <span class="toc-text">组相联</span></a></li></ol></li></ol></li></ol></li></ol></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
