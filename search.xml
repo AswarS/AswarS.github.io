@@ -40,6 +40,55 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS 定位</title>
+    <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
+    <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
+<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
+</ul>
+<blockquote>
+<h4 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position : absolute"></a><em>position : absolute</em></h4></blockquote>
+<h4 id="绝对定位："><a href="#绝对定位：" class="headerlink" title="绝对定位："></a>绝对定位：</h4><ol>
+<li><p>使元素脱离标准文档流</p>
+</li>
+<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
+</li>
+<li><p>参考对象默认为body，也可以设置为别的元素</p>
+</li>
+<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
+<p>注意，此时position属性不可为<strong>static</strong></p>
+</li>
+<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
+<ul>
+<li>这种块级元素不独占一行</li>
+<li>宽度默认为0</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<h4 id="position-relative"><a href="#position-relative" class="headerlink" title="position : relative"></a><strong><em>position : relative</em></strong></h4></blockquote>
+<h4 id="相对定位："><a href="#相对定位：" class="headerlink" title="相对定位："></a>相对定位：</h4><ol>
+<li>元素不脱离标准文档流</li>
+<li>不会改变元素本身的特性（块内和行内）</li>
+<li>参考对象为不加position之前该元素的位置</li>
+<li>元素进行相对定位后，原本的空间依然存在于文档流中，文档流其他元素不会占用该空间</li>
+</ol>
+<blockquote>
+<h4 id="position-fixed"><a href="#position-fixed" class="headerlink" title="position : fixed"></a><strong><em>position : fixed</em></strong></h4></blockquote>
+<ul>
+<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
+<li><p>用来划分各元素之间的堆叠顺序，z-index默认为1</p>
+</li>
+<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS| float</title>
     <url>/2020/04/03/2020-04-03-CSS-float/</url>
     <content><![CDATA[<h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
@@ -109,74 +158,29 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS 定位</title>
-    <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
-    <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
-<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
-</ul>
-<blockquote>
-<h4 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position : absolute"></a><em>position : absolute</em></h4></blockquote>
-<h4 id="绝对定位："><a href="#绝对定位：" class="headerlink" title="绝对定位："></a>绝对定位：</h4><ol>
-<li><p>使元素脱离标准文档流</p>
-</li>
-<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
-</li>
-<li><p>参考对象默认为body，也可以设置为别的元素</p>
-</li>
-<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
-<p>注意，此时position属性不可为<strong>static</strong></p>
-</li>
-<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
-<ul>
-<li>这种块级元素不独占一行</li>
-<li>宽度默认为0</li>
-</ul>
-</li>
-</ol>
-<blockquote>
-<h4 id="position-relative"><a href="#position-relative" class="headerlink" title="position : relative"></a><strong><em>position : relative</em></strong></h4></blockquote>
-<h4 id="相对定位："><a href="#相对定位：" class="headerlink" title="相对定位："></a>相对定位：</h4><ol>
-<li>元素不脱离标准文档流</li>
-<li>不会改变元素本身的特性（块内和行内）</li>
-<li>参考对象为不加position之前该元素的位置</li>
-<li>元素进行相对定位后，原本的空间依然存在于文档流中，文档流其他元素不会占用该空间</li>
-</ol>
-<blockquote>
-<h4 id="position-fixed"><a href="#position-fixed" class="headerlink" title="position : fixed"></a><strong><em>position : fixed</em></strong></h4></blockquote>
-<ul>
-<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
-<li><p>用来划分各元素之间的堆叠顺序，z-index默认为1</p>
-</li>
-<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
-</li>
-</ul>
-</li>
-</ul>
+    <title>Hello World</title>
+    <url>/2020/04/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 ]]></content>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java | 错误：GBK编码GBK的不可映射字符</title>
-    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h2><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
-<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
-<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><ol>
-<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
-<li>将编辑器的默认编码格式改为ANSI</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
   </entry>
   <entry>
     <title>Cache基本原理</title>
     <url>/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h1 id="Cache基本原理"><a href="#Cache基本原理" class="headerlink" title="Cache基本原理"></a>Cache基本原理</h1><h3 id="CPU-←（字）→-Cache-←（数据块-行）→-主存"><a href="#CPU-←（字）→-Cache-←（数据块-行）→-主存" class="headerlink" title="CPU ←（字）→ Cache ←（数据块/行）→ 主存"></a>CPU ←（字）→ Cache ←（数据块/行）→ 主存</h3><p><em>主存中的块与cache的行容量相同</em></p>
-<a id="more"></a>
-
 <ul>
 <li><p>读操作：</p>
 <p>​    CPU →地址→Cache</p>
@@ -258,31 +262,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/04/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>替换算法</title>
     <url>/2020/04/02/%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h1><p><em>cache数据区满时，采取的替换方案</em></p>
-<a id="more"></a>
-
 <h4 id="先进先出（FIFO）："><a href="#先进先出（FIFO）：" class="headerlink" title="先进先出（FIFO）："></a>先进先出（FIFO）：</h4><p>​        设计计数器用来判断cache中各数据的<strong>载入顺序</strong>。</p>
 <p>​        一旦cache满，计数器<strong>最大</strong>的数据被删除</p>
 <h4 id="最不经常使用（LFU）："><a href="#最不经常使用（LFU）：" class="headerlink" title="最不经常使用（LFU）："></a>最不经常使用（LFU）：</h4><p>​        设计计数器用来计算cache中各数据<strong>被命中的次数</strong>。</p>
@@ -299,8 +281,6 @@
     <title>虚拟存储器</title>
     <url>/2020/04/02/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
     <content><![CDATA[<h1 id="虚拟存储器"><a href="#虚拟存储器" class="headerlink" title="虚拟存储器"></a>虚拟存储器</h1><p><em>由于计算机只能执行和访问存储在主存中的数据，为了执行比主存更大的数据需要使用虚拟存储器</em></p>
-<a id="more"></a>
-
 <ul>
 <li>页式虚拟存储器</li>
 <li>段式虚拟存储器</li>
@@ -335,9 +315,7 @@
   <entry>
     <title>java | 包</title>
     <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><a id="more"></a>
-
-<h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
+    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
 <p>​                作为源文件的第一条语句；</p>
 <h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
 <p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
@@ -351,6 +329,20 @@
 <p>​                格式为：<em>java 包名.主类名</em></p>
 <p>​                如 <em>java tom.jiafei.test</em></p>
 <h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java | 错误：GBK编码GBK的不可映射字符</title>
+    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h2><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
+<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
+<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><ol>
+<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
+<li>将编辑器的默认编码格式改为ANSI</li>
+</ol>
 ]]></content>
       <tags>
         <tag>java</tag>
