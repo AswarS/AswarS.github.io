@@ -1,6 +1,177 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS | 四种居中div的方法</title>
+    <url>/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="CSS-四种居中div的方法"><a href="#CSS-四种居中div的方法" class="headerlink" title="CSS | 四种居中div的方法"></a>CSS | 四种居中div的方法</h1><ul>
+<li><h3 id="Flex-layout"><a href="#Flex-layout" class="headerlink" title="Flex layout"></a>Flex layout</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>display: flex;</p>
+<p>justify-content: center;</p>
+<p>align-items: center;</p>
+</blockquote>
+</li>
+<li><h3 id="Margin-auto"><a href="#Margin-auto" class="headerlink" title="Margin auto"></a>Margin auto</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>margin: 0 auto;</p>
+</blockquote>
+</li>
+<li><h3 id="Text-align-和-Inline-block"><a href="#Text-align-和-Inline-block" class="headerlink" title="Text-align 和 Inline-block"></a>Text-align 和 Inline-block</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>text-align: center;</p>
+</blockquote>
+<p>在子容器中添加以下样式</p>
+<blockquote>
+<p>display: inline-block;</p>
+</blockquote>
+</li>
+<li><h3 id="2D-Transform"><a href="#2D-Transform" class="headerlink" title="2D Transform"></a>2D Transform</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>position: absolute;</p>
+<p>top: 50%;</p>
+<p>left: 50%;</p>
+<p>transform: translate(-50%, -50%);</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS| float</title>
+    <url>/2020/04/03/2020-04-03-CSS-float/</url>
+    <content><![CDATA[<h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
+<ul>
+<li><h3 id="标准文档流等级"><a href="#标准文档流等级" class="headerlink" title="标准文档流等级"></a>标准文档流等级</h3><ul>
+<li><h4 id="块级元素："><a href="#块级元素：" class="headerlink" title="块级元素："></a>块级元素：</h4><ol>
+<li>独占一行，不与其他元素并列</li>
+<li>可以设置width、height</li>
+<li>若不设置width，则默认为其父元素的width</li>
+</ol>
+</li>
+<li><h4 id="行内元素："><a href="#行内元素：" class="headerlink" title="行内元素："></a>行内元素：</h4><ol>
+<li>与其他元素并排</li>
+<li>不可设置width、height，默认width为文字宽度</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><h3 id="块级元素与行内元素相互转换"><a href="#块级元素与行内元素相互转换" class="headerlink" title="块级元素与行内元素相互转换"></a>块级元素与行内元素相互转换</h3><ul>
+<li>display: inline/block;<ul>
+<li>inline转化为行内元素</li>
+<li>block转化为块级元素</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="脱离标准文档流"><a href="#脱离标准文档流" class="headerlink" title="脱离标准文档流"></a>脱离标准文档流</h3><ul>
+<li>由于标准文档流限制过多，为了使网页设计更灵活，需要脱离标准流</li>
+<li>方法：<ul>
+<li>浮动</li>
+<li>绝对定位</li>
+<li>固定定位</li>
+</ul>
+</li>
+<li>脱离标准流的元素从流中删除，流中其余元素自动补齐，构成新的文档流。</li>
+</ul>
+</li>
+</ul>
+<h2 id="float四大性质"><a href="#float四大性质" class="headerlink" title="float四大性质"></a>float四大性质</h2><ol>
+<li><h5 id="浮动元素脱标"><a href="#浮动元素脱标" class="headerlink" title="浮动元素脱标"></a>浮动元素脱标</h5><ul>
+<li>使用float使该元素不受网页默认从左至右、从上至下的排列顺序</li>
+<li>使用float还可以使行内元素也拥有width和height属性</li>
+</ul>
+</li>
+<li><h5 id="浮动的元素互相贴靠"><a href="#浮动的元素互相贴靠" class="headerlink" title="浮动的元素互相贴靠"></a>浮动的元素互相贴靠</h5><ul>
+<li><p>使用float，改变浏览器窗口大小时，元素位置也会发生改变</p>
+<blockquote>
+<p>举个例子</p>
+<p>​        使用float : left， 当窗口无法完全显示该元素时，该元素会向<strong>邻近</strong>的元素贴近，或者向窗口最左侧贴近</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><h5 id="“字围”效果"><a href="#“字围”效果" class="headerlink" title="“字围”效果"></a>“字围”效果</h5></li>
+<li><h5 id="收缩"><a href="#收缩" class="headerlink" title="收缩"></a>收缩</h5><ul>
+<li>块级元素使用float后，若不设置width，则该元素width自动与内容对齐</li>
+</ul>
+</li>
+</ol>
+<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
+<li>float属性不要单独一个元素使用</li>
+<li>浮动是相对于父元素浮动的，即该元素只在父元素之中浮动，不会跳出父元素的范围，因此父元素的宽高一定要合适</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS 定位</title>
+    <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
+    <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
+<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
+</ul>
+<blockquote>
+<h4 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position : absolute"></a><em>position : absolute</em></h4></blockquote>
+<h4 id="绝对定位："><a href="#绝对定位：" class="headerlink" title="绝对定位："></a>绝对定位：</h4><ol>
+<li><p>使元素脱离标准文档流</p>
+</li>
+<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
+</li>
+<li><p>参考对象默认为body，也可以设置为别的元素</p>
+</li>
+<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
+<p>注意，此时position属性不可为<strong>static</strong></p>
+</li>
+<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
+<ul>
+<li>这种块级元素不独占一行</li>
+<li>宽度默认为0</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<h4 id="position-relative"><a href="#position-relative" class="headerlink" title="position : relative"></a><strong><em>position : relative</em></strong></h4></blockquote>
+<h4 id="相对定位："><a href="#相对定位：" class="headerlink" title="相对定位："></a>相对定位：</h4><ol>
+<li>元素不脱离标准文档流</li>
+<li>不会改变元素本身的特性（块内和行内）</li>
+<li>参考对象为不加position之前该元素的位置</li>
+<li>元素进行相对定位后，原本的空间依然存在于文档流中，文档流其他元素不会占用该空间</li>
+</ol>
+<blockquote>
+<h4 id="position-fixed"><a href="#position-fixed" class="headerlink" title="position : fixed"></a><strong><em>position : fixed</em></strong></h4></blockquote>
+<ul>
+<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
+<li><p>用来划分各元素之间的堆叠顺序，z-index默认为1</p>
+</li>
+<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java | 错误：GBK编码GBK的不可映射字符</title>
+    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h2><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
+<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
+<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><ol>
+<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
+<li>将编辑器的默认编码格式改为ANSI</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Cache基本原理</title>
     <url>/2020/04/02/Cache%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86/</url>
     <content><![CDATA[<h1 id="Cache基本原理"><a href="#Cache基本原理" class="headerlink" title="Cache基本原理"></a>Cache基本原理</h1><h3 id="CPU-←（字）→-Cache-←（数据块-行）→-主存"><a href="#CPU-←（字）→-Cache-←（数据块-行）→-主存" class="headerlink" title="CPU ←（字）→ Cache ←（数据块/行）→ 主存"></a>CPU ←（字）→ Cache ←（数据块/行）→ 主存</h3><p><em>主存中的块与cache的行容量相同</em></p>
@@ -87,74 +258,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS| float</title>
-    <url>/2020/04/03/2020-04-03-CSS-float/</url>
-    <content><![CDATA[<h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
-<ul>
-<li><h3 id="标准文档流等级"><a href="#标准文档流等级" class="headerlink" title="标准文档流等级"></a>标准文档流等级</h3><ul>
-<li><h4 id="块级元素："><a href="#块级元素：" class="headerlink" title="块级元素："></a>块级元素：</h4><ol>
-<li>独占一行，不与其他元素并列</li>
-<li>可以设置width、height</li>
-<li>若不设置width，则默认为其父元素的width</li>
-</ol>
-</li>
-<li><h4 id="行内元素："><a href="#行内元素：" class="headerlink" title="行内元素："></a>行内元素：</h4><ol>
-<li>与其他元素并排</li>
-<li>不可设置width、height，默认width为文字宽度</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><h3 id="块级元素与行内元素相互转换"><a href="#块级元素与行内元素相互转换" class="headerlink" title="块级元素与行内元素相互转换"></a>块级元素与行内元素相互转换</h3><ul>
-<li>display: inline/block;<ul>
-<li>inline转化为行内元素</li>
-<li>block转化为块级元素</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h3 id="脱离标准文档流"><a href="#脱离标准文档流" class="headerlink" title="脱离标准文档流"></a>脱离标准文档流</h3><ul>
-<li>由于标准流限制过多，为了使网页设计更灵活，需要脱离标准流</li>
-<li>方法：<ul>
-<li>浮动</li>
-<li>绝对定位</li>
-<li>固定定位</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="float四大性质"><a href="#float四大性质" class="headerlink" title="float四大性质"></a>float四大性质</h2><ol>
-<li><h5 id="浮动元素脱标"><a href="#浮动元素脱标" class="headerlink" title="浮动元素脱标"></a>浮动元素脱标</h5><ul>
-<li>使用float使该元素不受网页默认从左至右、从上至下的排列顺序</li>
-<li>使用float还可以使行内元素也拥有width和height属性</li>
-</ul>
-</li>
-<li><h5 id="浮动的元素互相贴靠"><a href="#浮动的元素互相贴靠" class="headerlink" title="浮动的元素互相贴靠"></a>浮动的元素互相贴靠</h5><ul>
-<li><p>使用float，改变浏览器窗口大小时，元素位置也会发生改变</p>
-<blockquote>
-<p>举个例子</p>
-<p>​        使用float : left， 当窗口无法完全显示该元素时，该元素会向<strong>邻近</strong>的元素贴近，或者向窗口最左侧贴近</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><h5 id="“字围”效果"><a href="#“字围”效果" class="headerlink" title="“字围”效果"></a>“字围”效果</h5></li>
-<li><h5 id="收缩"><a href="#收缩" class="headerlink" title="收缩"></a>收缩</h5><ul>
-<li>块级元素使用float后，若不设置width，则该元素width自动与内容对齐</li>
-</ul>
-</li>
-</ol>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
-<li>float属性不要单独一个元素使用</li>
-<li>浮动是相对于父元素浮动的，即该元素只在父元素之中浮动，不会跳出父元素的范围，因此父元素的宽高一定要合适</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2020/04/01/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
@@ -193,44 +296,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java | 错误：GBK编码GBK的不可映射字符</title>
-    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h2><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
-<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
-<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><ol>
-<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
-<li>将编辑器的默认编码格式改为ANSI</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java | 包</title>
-    <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><a id="more"></a>
-
-<h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
-<p>​                作为源文件的第一条语句；</p>
-<h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
-<p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
-<p>​                那么，该源文件的存储路径应为 <strong>…\tom\jiafei</strong></p>
-<h3 id="包中源文件的编译"><a href="#包中源文件的编译" class="headerlink" title="包中源文件的编译"></a>包中源文件的编译</h3><p>​                对包中源文件进行编译时，要在其包的父目录运行cmd进行编译</p>
-<p>​                如    源文件存储路径为 <strong>D\Code\tom\jiafei</strong></p>
-<p>​                那么，应在  <strong>D\Code</strong> 目录下运行cmd进行编译，编译时要给出全路径，</p>
-<p>​                格式为：<em>javac 包名\主类名.java</em></p>
-<p>​                如    <em>javac tom\jiafei\test.java</em></p>
-<h3 id="包文件的运行"><a href="#包文件的运行" class="headerlink" title="包文件的运行"></a>包文件的运行</h3><p>​                运行时，同样要求在父目录下运行，执行java命令时给出包名</p>
-<p>​                格式为：<em>java 包名.主类名</em></p>
-<p>​                如 <em>java tom.jiafei.test</em></p>
-<h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>虚拟存储器</title>
     <url>/2020/04/02/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E5%99%A8/</url>
     <content><![CDATA[<h1 id="虚拟存储器"><a href="#虚拟存储器" class="headerlink" title="虚拟存储器"></a>虚拟存储器</h1><p><em>由于计算机只能执行和访问存储在主存中的数据，为了执行比主存更大的数据需要使用虚拟存储器</em></p>
@@ -265,6 +330,30 @@
 ]]></content>
       <tags>
         <tag>计算机基本原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java | 包</title>
+    <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><a id="more"></a>
+
+<h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
+<p>​                作为源文件的第一条语句；</p>
+<h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
+<p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
+<p>​                那么，该源文件的存储路径应为 <strong>…\tom\jiafei</strong></p>
+<h3 id="包中源文件的编译"><a href="#包中源文件的编译" class="headerlink" title="包中源文件的编译"></a>包中源文件的编译</h3><p>​                对包中源文件进行编译时，要在其包的父目录运行cmd进行编译</p>
+<p>​                如    源文件存储路径为 <strong>D\Code\tom\jiafei</strong></p>
+<p>​                那么，应在  <strong>D\Code</strong> 目录下运行cmd进行编译，编译时要给出全路径，</p>
+<p>​                格式为：<em>javac 包名\主类名.java</em></p>
+<p>​                如    <em>javac tom\jiafei\test.java</em></p>
+<h3 id="包文件的运行"><a href="#包文件的运行" class="headerlink" title="包文件的运行"></a>包文件的运行</h3><p>​                运行时，同样要求在父目录下运行，执行java命令时给出包名</p>
+<p>​                格式为：<em>java 包名.主类名</em></p>
+<p>​                如 <em>java tom.jiafei.test</em></p>
+<h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
 </search>

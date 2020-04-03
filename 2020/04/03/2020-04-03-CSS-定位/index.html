@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="author" content="AswarS"><meta name="renderer" content="webkit"><meta name="copyright" content="AswarS"><meta name="keywords" content="AswarS"><meta name="description" content=""><meta name="Cache-Control" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>CSS 定位 · AswarS' Blog</title><link rel="stylesheet" href="/css/style.css?v=2018.7.9"><link rel="stylesheet" href="/css/animation.css?v=2018.7.9"><link rel="icon" href="/img/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><!-- scripts--><script>(function( w ){
+  "use strict";
+  // rel=preload support test
+  if( !w.loadCSS ){
+    w.loadCSS = function(){};
+  }
+  // define on the loadCSS obj
+  var rp = loadCSS.relpreload = {};
+  // rel=preload feature support test
+  // runs once and returns a function for compat purposes
+  rp.support = (function(){
+    var ret;
+    try {
+      ret = w.document.createElement( "link" ).relList.supports( "preload" );
+    } catch (e) {
+      ret = false;
+    }
+    return function(){
+      return ret;
+    };
+  })();
+
+  // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+  // then change that media back to its intended value on load
+  rp.bindMediaToggle = function( link ){
+    // remember existing media attr for ultimate state, or default to 'all'
+    var finalMedia = link.media || "all";
+
+    function enableStylesheet(){
+      link.media = finalMedia;
+    }
+
+    // bind load handlers to enable media
+    if( link.addEventListener ){
+      link.addEventListener( "load", enableStylesheet );
+    } else if( link.attachEvent ){
+      link.attachEvent( "onload", enableStylesheet );
+    }
+
+    // Set rel and non-applicable media type to start an async request
+    // note: timeout allows this to happen async to let rendering continue in IE
+    setTimeout(function(){
+      link.rel = "stylesheet";
+      link.media = "only x";
+    });
+    // also enable media after 3 seconds,
+    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+    setTimeout( enableStylesheet, 3000 );
+  };
+
+  // loop through link elements in DOM
+  rp.poly = function(){
+    // double check this to prevent external calls from running
+    if( rp.support() ){
+      return;
+    }
+    var links = w.document.getElementsByTagName( "link" );
+    for( var i = 0; i < links.length; i++ ){
+      var link = links[ i ];
+      // qualify links to those with rel=preload and as=style attrs
+      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+        // prevent rerunning on link
+        link.setAttribute( "data-loadcss", true );
+        // bind listeners to toggle media back
+        rp.bindMediaToggle( link );
+      }
+    }
+  };
+
+  // if unsupported, run the polyfill
+  if( !rp.support() ){
+    // run once at least
+    rp.poly();
+
+    // rerun poly on an interval until onload
+    var run = w.setInterval( rp.poly, 500 );
+    if( w.addEventListener ){
+      w.addEventListener( "load", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    } else if( w.attachEvent ){
+      w.attachEvent( "onload", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    }
+  }
+
+
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.loadCSS = loadCSS;
+  }
+  else {
+    w.loadCSS = loadCSS;
+  }
+}( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 4.2.0"></head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/avater.jpeg"></div><!--.profile-saying
+  i.fa.fa-comment
+  .saying--><div class="cxo-profile-inner"><div class="profile-name">AswarS</div><div class="profile-signature">一个默默无闻的人</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/cover.jpg);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">AswarS' Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">CSS 定位</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-edit"></i><span>2020-04-03</span></span><span class="post-intro-tags"><a class="intro-tag fa fa-tag" href="javascript:void(0)" date-tags="CSS"> CSS</a></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
+<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
+</ul>
+<blockquote>
+<h4 id="position-absolute"><a href="#position-absolute" class="headerlink" title="position : absolute"></a><em>position : absolute</em></h4></blockquote>
+<h4 id="绝对定位："><a href="#绝对定位：" class="headerlink" title="绝对定位："></a>绝对定位：</h4><ol>
+<li><p>使元素脱离标准文档流</p>
+</li>
+<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
+</li>
+<li><p>参考对象默认为body，也可以设置为别的元素</p>
+</li>
+<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
+<p>注意，此时position属性不可为<strong>static</strong></p>
+</li>
+<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
+<ul>
+<li>这种块级元素不独占一行</li>
+<li>宽度默认为0</li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<h4 id="position-relative"><a href="#position-relative" class="headerlink" title="position : relative"></a><strong><em>position : relative</em></strong></h4></blockquote>
+<h4 id="相对定位："><a href="#相对定位：" class="headerlink" title="相对定位："></a>相对定位：</h4><ol>
+<li>元素不脱离标准文档流</li>
+<li>不会改变元素本身的特性（块内和行内）</li>
+<li>参考对象为不加position之前该元素的位置</li>
+<li>元素进行相对定位后，原本的空间依然存在于文档流中，文档流其他元素不会占用该空间</li>
+</ol>
+<blockquote>
+<h4 id="position-fixed"><a href="#position-fixed" class="headerlink" title="position : fixed"></a><strong><em>position : fixed</em></strong></h4></blockquote>
+<ul>
+<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
+<li><p>用来划分各元素之间的堆叠顺序，z-index默认为1</p>
+</li>
+<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
+</li>
+</ul>
+</li>
+</ul>
+</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="https://AswarS.github.io.git">AswarS</a></p><p> <span>Link:  </span><a href="https://aswars.github.io.git/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/">https://aswars.github.io.git/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/3.0" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="nextSlogan" href="/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/" title="CSS | 四种居中div的方法"><span>NextPost ></span><br><span class="nextTitle">CSS | 四种居中div的方法</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span> | theme </span><a href="https://github.com/Longlongyu/hexo-theme-Cxo" target="_blank" rel="noopener"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CSS-定位"><span class="toc-number">1.</span> <span class="toc-text">CSS | 定位</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#position"><span class="toc-number">1.1.</span> <span class="toc-text">position</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#position-absolute"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">position : absolute</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#绝对定位："><span class="toc-number">1.1.0.2.</span> <span class="toc-text">绝对定位：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#position-relative"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">position : relative</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相对定位："><span class="toc-number">1.1.0.4.</span> <span class="toc-text">相对定位：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#position-fixed"><span class="toc-number">1.1.0.5.</span> <span class="toc-text">position : fixed</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#z-index"><span class="toc-number">1.2.</span> <span class="toc-text">z-index</span></a></li></ol></li></ol></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>
