@@ -250,26 +250,26 @@
 <p>​    × 写穿：将数据同时写入Cache和主存中</p>
 <p>​    √ 写回：将数据写入Cache，等到CPU不再进行写操作了再由Cache将数据写入主存中</p>
 </li>
-<li><h3 id="Cache地址映射"><a href="#Cache地址映射" class="headerlink" title="Cache地址映射"></a>Cache<strong>地址映射</strong></h3><ul>
+<li><h2 id="Cache地址映射"><a href="#Cache地址映射" class="headerlink" title="Cache地址映射"></a>Cache<strong>地址映射</strong></h2><ul>
 <li><strong>主存地址 = 块地址 + 偏移地址 = Tag + Index + 偏移地址</strong></li>
 </ul>
 </li>
-<li><h3 id="Cache基本结构"><a href="#Cache基本结构" class="headerlink" title="Cache基本结构"></a>Cache<strong>基本结构</strong></h3><p>​    Cache分为若干行，每行大小与主存快相同：</p>
+</ul>
+<ul>
+<li><h2 id="Cache基本结构"><a href="#Cache基本结构" class="headerlink" title="Cache基本结构"></a>Cache<strong>基本结构</strong></h2><p>​    Cache分为若干行，每行大小与主存快相同：</p>
 <blockquote>
 <ul>
-<li><p>Tag ：判断数据是否在Cache中</p>
-</li>
-<li><p>Data ：与主存交换的数据</p>
-</li>
-<li><p>Vaild ：Cache中数据是否有效</p>
-</li>
-<li><p>Dirty ：主存中数据是否为最新</p>
-</li>
+<li>Tag ：判断数据是否在Cache中</li>
+<li>Data ：与主存交换的数据</li>
+<li>Vaild ：Cache中数据是否有效</li>
+<li>Dirty ：主存中数据是否为最新</li>
 </ul>
 </blockquote>
 </li>
-<li><h3 id="Cache地址映射法"><a href="#Cache地址映射法" class="headerlink" title="Cache地址映射法"></a>Cache<strong>地址映射法</strong></h3><ul>
-<li><h4 id="全相联（适用于小容量cache）"><a href="#全相联（适用于小容量cache）" class="headerlink" title="全相联（适用于小容量cache）"></a><strong>全相联（适用于小容量cache）</strong></h4><ul>
+</ul>
+<ul>
+<li><h2 id="Cache地址映射法"><a href="#Cache地址映射法" class="headerlink" title="Cache地址映射法"></a>Cache<strong>地址映射法</strong></h2><ul>
+<li><h3 id="全相联（适用于小容量cache）"><a href="#全相联（适用于小容量cache）" class="headerlink" title="全相联（适用于小容量cache）"></a><strong>全相联（适用于小容量cache）</strong></h3><ul>
 <li><p>主存分块，Cache分行，二者大小相同</p>
 </li>
 <li><p>主存地址：<strong>块号</strong> + <strong>块内偏移地址</strong></p>
@@ -284,7 +284,7 @@
 </li>
 </ul>
 <ul>
-<li><h4 id="直接相联（适用于大容量cache）"><a href="#直接相联（适用于大容量cache）" class="headerlink" title="直接相联（适用于大容量cache）"></a>直接相联（适用于大容量cache）</h4><ul>
+<li><h3 id="直接相联（适用于大容量cache）"><a href="#直接相联（适用于大容量cache）" class="headerlink" title="直接相联（适用于大容量cache）"></a>直接相联（适用于大容量cache）</h3><ul>
 <li><p>主存分块，Cache分行，根据Cache行数，将主存分区，<strong>每个区的块数</strong>与Cache<strong>行数</strong>相同</p>
 </li>
 <li><p>主存地址：<strong>区号</strong> + <strong>区内块号（cache的行号）</strong> + <strong>块内地址</strong></p>
@@ -302,7 +302,7 @@
 </li>
 </ul>
 <ul>
-<li><h4 id="组相联"><a href="#组相联" class="headerlink" title="组相联"></a><strong>组相联</strong></h4><ul>
+<li><h3 id="组相联"><a href="#组相联" class="headerlink" title="组相联"></a><strong>组相联</strong></h3><ul>
 <li>结合了上述两种方法的特点。</li>
 <li>主存分块，cache分行，同时cache分成 j 组，每组中包含 k 行。（k可以随意设定）主存分组，每组有 j 个块。</li>
 <li>即 cache 的组数 与 主存每组的个数 相同。</li>

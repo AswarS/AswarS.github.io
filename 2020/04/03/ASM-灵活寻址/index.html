@@ -257,16 +257,16 @@ mov ax,200[bx]
 <p><em>or al, 00110011B</em></p>
 <p>可用于将某位 置<strong>1</strong></p>
 <h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><p>如将’abc’、’dfe’、’ghe’三个字符串改为大写，以下是循环部分：</p>
-<p>​        <em>mov cx, 3</em></p>
-<p><em>s0:    mov si,0</em></p>
-<p>​        <em>mov cx, 3</em></p>
-<p><em>s1:    mov al, [bx + si]</em></p>
-<p>​        <em>and al,11011111b</em></p>
-<p>​        <em>mov [bx+si], al</em>        </p>
-<p>​        <em>inc si</em></p>
-<p>​        <em>loop s1</em></p>
-<p>​        <em>add bx, 3</em></p>
-<p>​        <em>loop s0</em></p>
+<p>​        <strong><em>mov cx, 3</em></strong></p>
+<p><strong><em>s0:    mov si,0</em></strong></p>
+<p>​        <strong><em>mov cx, 3</em></strong></p>
+<p><strong><em>s1:    mov al, [bx + si]</em></strong></p>
+<p>​        <strong><em>and al,11011111b</em></strong></p>
+<p>​        <strong><em>mov [bx+si], al</em></strong>        </p>
+<p>​        <strong><em>inc si</em></strong></p>
+<p>​        <strong><em>loop s1</em></strong></p>
+<p>​        <strong><em>add bx, 3</em></strong></p>
+<p>​        <strong><em>loop s0</em></strong></p>
 <p>注意，此循环中有两个循环，但却只使用了一个循环计数器cx</p>
 <p>本来我们希望他可以循环9次,但实际上只循环了3次，外部循环只执行了一次</p>
 <p>为了实现二重循环，我们要将外部循环的cx提前保存起来，等到内部循环结束后再将其恢复</p>
@@ -279,14 +279,14 @@ mov ax,200[bx]
 <p>在指令前，先分配一段内存空间用来保存cx，内存大小和循环数量相同</p>
 </blockquote>
 <p>此例中有两个循环，就分配两个字节空间即可，循环部分代码如下：</p>
-<p>​        <em>mov cx, 3</em></p>
-<p><em>s0:    push cx</em></p>
-<p>​        <em>mov cx, 3</em></p>
-<p><em>s1:        …</em></p>
-<p>​        <em>loop s1</em></p>
-<p>​            <em>…</em></p>
-<p>​        <em>pop cx</em></p>
-<p>​        <em>loop s0</em></p>
+<p>​        <strong><em>mov cx, 3</em></strong></p>
+<p><strong><em>s0:    push cx</em></strong></p>
+<p>​        <strong><em>mov cx, 3</em></strong></p>
+<p><strong><em>s1:        …</em></strong></p>
+<p>​        <strong><em>loop s1</em></strong></p>
+<p>​            <strong><em>…</em></strong></p>
+<p>​        <strong><em>pop cx</em></strong></p>
+<p>​        <strong><em>loop s0</em></strong></p>
 
 
                 
