@@ -18,7 +18,8 @@
 mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
 该指令还有以下几种写法：
 
-mov ax,200[bx] → 类似于数组的表"/>
+mov ax,200[bx] 
+ 类似于数组的表"/>
     
 
     <!--Author-->
@@ -38,7 +39,8 @@ mov ax,200[bx] → 类似于数组的表"/>
 mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
 该指令还有以下几种写法：
 
-mov ax,200[bx] → 类似于数组的表"/>
+mov ax,200[bx] 
+ 类似于数组的表"/>
     
 
     <!--Open Graph Site Name-->
@@ -226,8 +228,11 @@ mov ax,200[bx] → 类似于数组的表"/>
 <p>mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)</p>
 <p>该指令还有以下几种写法：</p>
 <ul>
-<li>mov ax,200[bx] → 类似于数组的表示方法200为数组首地址，bx为脚标</li>
-<li>mov ax,[bx].200</li>
+<li><p>mov ax,200[bx] </p>
+<p> 类似于数组的表示方法200为数组首地址，bx为脚标</p>
+</li>
+<li><p>mov ax,[bx].200</p>
+</li>
 </ul>
 </blockquote>
 <h3 id="si-和-di"><a href="#si-和-di" class="headerlink" title="si 和 di"></a>si 和 di</h3><p>si、di是8086CPU中和bx功能相似的寄存器</p>
@@ -246,28 +251,22 @@ mov ax,200[bx] → 类似于数组的表"/>
 </ul>
 </blockquote>
 <h3 id="and-和-or"><a href="#and-和-or" class="headerlink" title="and 和 or"></a>and 和 or</h3><p><strong>and</strong>：按位与运算</p>
-<blockquote>
-<p>and al, 00110011B</p>
-</blockquote>
+<p><em>and al, 00110011B</em></p>
 <p>可用于将某位 置<strong>0</strong></p>
 <p><strong>or</strong>：按位或运算</p>
-<blockquote>
-<p>or al, 00110011B</p>
-</blockquote>
+<p><em>or al, 00110011B</em></p>
 <p>可用于将某位 置<strong>1</strong></p>
 <h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><p>如将’abc’、’dfe’、’ghe’三个字符串改为大写，以下是循环部分：</p>
-<blockquote>
-<p>​        mov cx, 3</p>
-<p>s0:    mov si,0</p>
-<p>​        mov cx, 3</p>
-<p>s1:    mov al, [bx + si]</p>
-<p>​        and al,11011111b</p>
-<p>​        mov [bx+si], al        </p>
-<p>​        inc si</p>
-<p>​        loop s1</p>
-<p>​        add bx, 3</p>
-<p>​        loop s0</p>
-</blockquote>
+<p>​        <em>mov cx, 3</em></p>
+<p><em>s0:    mov si,0</em></p>
+<p>​        <em>mov cx, 3</em></p>
+<p><em>s1:    mov al, [bx + si]</em></p>
+<p>​        <em>and al,11011111b</em></p>
+<p>​        <em>mov [bx+si], al</em>        </p>
+<p>​        <em>inc si</em></p>
+<p>​        <em>loop s1</em></p>
+<p>​        <em>add bx, 3</em></p>
+<p>​        <em>loop s0</em></p>
 <p>注意，此循环中有两个循环，但却只使用了一个循环计数器cx</p>
 <p>本来我们希望他可以循环9次,但实际上只循环了3次，外部循环只执行了一次</p>
 <p>为了实现二重循环，我们要将外部循环的cx提前保存起来，等到内部循环结束后再将其恢复</p>
@@ -278,16 +277,16 @@ mov ax,200[bx] → 类似于数组的表"/>
 <p>而嵌套循环这种层次结构很适合于栈（cx 先进后出），因此，我们用栈来保存每个loop的cx</p>
 <blockquote>
 <p>在指令前，先分配一段内存空间用来保存cx，内存大小和循环数量相同</p>
-<p>此例中有两个循环，就分配两个字节空间即可，循环部分代码如下：</p>
-<p>​        mov cx, 3</p>
-<p>s0:    push cx</p>
-<p>​        mov cx, 3</p>
-<p>s1:        …</p>
-<p>​        loop s1</p>
-<p>​            …</p>
-<p>​        pop cx</p>
-<p>​        loop s0</p>
 </blockquote>
+<p>此例中有两个循环，就分配两个字节空间即可，循环部分代码如下：</p>
+<p>​        <em>mov cx, 3</em></p>
+<p><em>s0:    push cx</em></p>
+<p>​        <em>mov cx, 3</em></p>
+<p><em>s1:        …</em></p>
+<p>​        <em>loop s1</em></p>
+<p>​            <em>…</em></p>
+<p>​        <em>pop cx</em></p>
+<p>​        <em>loop s0</em></p>
 
 
                 
