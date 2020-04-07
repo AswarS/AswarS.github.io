@@ -1,159 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>CSS 定位</title>
-    <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
-    <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
-<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
-</ul>
-<h3 id="position-absolute-绝对定位："><a href="#position-absolute-绝对定位：" class="headerlink" title="position : absolute | 绝对定位："></a><em>position : absolute</em> | 绝对定位：</h3><ol>
-<li><p>使元素脱离标准文档流</p>
-</li>
-<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
-</li>
-<li><p>参考对象默认为body，也可以设置为别的元素</p>
-</li>
-<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
-<p>注意，此时position属性不可为<strong>static</strong></p>
-</li>
-<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
-<ul>
-<li>这种块级元素不独占一行</li>
-<li>宽度默认为0</li>
-</ul>
-</li>
-</ol>
-<h3 id="position-relative-相对定位："><a href="#position-relative-相对定位：" class="headerlink" title="position : relative | 相对定位："></a><strong><em>position : relative</em></strong> | 相对定位：</h3><ol>
-<li>元素不脱离标准文档流</li>
-<li>不会改变元素本身的特性（块内和行内）</li>
-<li>参考对象为不加position之前该元素的位置</li>
-<li>元素进行相对定位后，原本的空间<strong>依然存在于文档流中</strong>，文档流其他元素不会占用该空间</li>
-</ol>
-<h3 id="position-fixed-固定定位："><a href="#position-fixed-固定定位：" class="headerlink" title="position : fixed | 固定定位："></a><strong><em>position : fixed</em></strong> | <strong>固定定位：</strong></h3><ol>
-<li>元素脱离标准文档流</li>
-<li>页面滚动，元素位置固定不动（如某些网站的返回顶部按键</li>
-<li>参考对象为父级容器</li>
-</ol>
-<ul>
-<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
-<li>用来划分各元素之间的堆叠顺序，z-index默认为1</li>
-</ul>
-</li>
-<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
-</li>
-</ul>
-<ul>
-<li><h2 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h2><ul>
-<li>指定该元素的左侧或右侧不允许有元素浮动（即<strong>消除其左侧或右侧元素的浮动效果</strong></li>
-<li>属性值：left / rigth / both / none(默认值) / inherit(继承父元素的clear属性)</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><ul>
-<li>当子元素超出父元素的显示范围时，可以通过overflow来设置显示方式</li>
-<li>属性值：<ul>
-<li>visible((默认值)所有内容都显示) </li>
-<li>auto(超出范围时显示滚动条)</li>
-<li>hidden(隐藏超出范围的内容)</li>
-<li>scroll(不论是否超出范围都显示滚动条)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript DOM</title>
-    <url>/2020/04/06/2020-04-06-JavaScript-DOM/</url>
-    <content><![CDATA[<h1 id="JavaScript-DOM"><a href="#JavaScript-DOM" class="headerlink" title="JavaScript | DOM"></a>JavaScript | DOM</h1><ul>
-<li><h2 id="DOM基础"><a href="#DOM基础" class="headerlink" title="DOM基础"></a>DOM基础</h2><ul>
-<li><h3 id="什么是DOM？"><a href="#什么是DOM？" class="headerlink" title="什么是DOM？"></a>什么是DOM？</h3><p><strong><em>DOM = document Object Model</em></strong></p>
-<p>DOM用于用户对节点进行操作</p>
-</li>
-<li><h3 id="节点（Node）"><a href="#节点（Node）" class="headerlink" title="节点（Node）"></a>节点（Node）</h3><p><strong><em>.nodeType :</em></strong> 返回该节点的节点类型</p>
-<ul>
-<li>返回1：元素节点</li>
-<li>返回3：文本节点（无前后标签，直接写在<em>body</em>里的文本*）</li>
-</ul>
-<p><strong><em>.childNodes :</em></strong> 获取该节点的子节点的集合（包括文本节点和元素节点）</p>
-<p><strong><em>.children ：</em></strong>获取该节点的元素节点（只包括元素节点）</p>
-<p><strong><em>.firstElementChild ：</em></strong> 获取该节点的第一个元素子节点</p>
-<p><strong><em>.parentNode ：</em></strong>  获取该节点的父节点</p>
-<p><strong><em>.offsetpatent :</em></strong>  获取该节点用于定位的父节点</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><h2 id="操纵元素属性"><a href="#操纵元素属性" class="headerlink" title="操纵元素属性"></a>操纵元素属性</h2><ul>
-<li>获取：<strong><em>.getAttribute(名称)</em></strong></li>
-<li>设置：<strong><em>.setAttribute(名称， 值)</em></strong></li>
-<li>删除：<strong><em>.removeAttribute(名称)</em></strong></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><h2 id="DOM元素灵活查找"><a href="#DOM元素灵活查找" class="headerlink" title="DOM元素灵活查找"></a>DOM元素灵活查找</h2><ul>
-<li>使用 <strong><em>className</em></strong> 选择元素<ul>
-<li>选出所有元素</li>
-<li>通过 <strong><em>className</em></strong> 进行筛选</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function getClass(oParent, sClass)</span><br><span class="line">&#123;</span><br><span class="line">	var aResult &#x3D; [];</span><br><span class="line">	var aEle &#x3D; oParent.getElementByTagName(&#39;*&#39;);</span><br><span class="line"></span><br><span class="line">	for(var i&#x3D;; i&lt;aEle.length; i++)</span><br><span class="line">		if(aEle[i].className &#x3D;&#x3D; sClass)</span><br><span class="line">			aResut.push(aEle[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS | 四种居中div的方法</title>
-    <url>/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="CSS-四种居中div的方法"><a href="#CSS-四种居中div的方法" class="headerlink" title="CSS | 四种居中div的方法"></a>CSS | 四种居中div的方法</h1><ul>
-<li><h3 id="Flex-layout"><a href="#Flex-layout" class="headerlink" title="Flex layout"></a>Flex layout</h3><p>在父容器中添加以下样式</p>
-<blockquote>
-<p>display: flex;</p>
-<p>justify-content: center;</p>
-<p>align-items: center;</p>
-</blockquote>
-</li>
-<li><h3 id="Margin-auto"><a href="#Margin-auto" class="headerlink" title="Margin auto"></a>Margin auto</h3><p>在子容器中添加以下样式</p>
-<blockquote>
-<p>margin: 0 auto;</p>
-</blockquote>
-</li>
-<li><h3 id="Text-align-和-Inline-block"><a href="#Text-align-和-Inline-block" class="headerlink" title="Text-align 和 Inline-block"></a>Text-align 和 Inline-block</h3><p>在父容器中添加以下样式</p>
-<blockquote>
-<p>text-align: center;</p>
-</blockquote>
-<p>在子容器中添加以下样式</p>
-<blockquote>
-<p>display: inline-block;</p>
-</blockquote>
-</li>
-<li><h3 id="2D-Transform"><a href="#2D-Transform" class="headerlink" title="2D Transform"></a>2D Transform</h3><p>在子容器中添加以下样式</p>
-<blockquote>
-<p>position: absolute;</p>
-<p>top: 50%;</p>
-<p>left: 50%;</p>
-<p>transform: translate(-50%, -50%);</p>
-</blockquote>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CSS| float</title>
     <url>/2020/04/03/2020-04-03-CSS-float/</url>
     <content><![CDATA[<h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
@@ -223,6 +70,45 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS | 四种居中div的方法</title>
+    <url>/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="CSS-四种居中div的方法"><a href="#CSS-四种居中div的方法" class="headerlink" title="CSS | 四种居中div的方法"></a>CSS | 四种居中div的方法</h1><ul>
+<li><h3 id="Flex-layout"><a href="#Flex-layout" class="headerlink" title="Flex layout"></a>Flex layout</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>display: flex;</p>
+<p>justify-content: center;</p>
+<p>align-items: center;</p>
+</blockquote>
+</li>
+<li><h3 id="Margin-auto"><a href="#Margin-auto" class="headerlink" title="Margin auto"></a>Margin auto</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>margin: 0 auto;</p>
+</blockquote>
+</li>
+<li><h3 id="Text-align-和-Inline-block"><a href="#Text-align-和-Inline-block" class="headerlink" title="Text-align 和 Inline-block"></a>Text-align 和 Inline-block</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>text-align: center;</p>
+</blockquote>
+<p>在子容器中添加以下样式</p>
+<blockquote>
+<p>display: inline-block;</p>
+</blockquote>
+</li>
+<li><h3 id="2D-Transform"><a href="#2D-Transform" class="headerlink" title="2D Transform"></a>2D Transform</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>position: absolute;</p>
+<p>top: 50%;</p>
+<p>left: 50%;</p>
+<p>transform: translate(-50%, -50%);</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript 定时器</title>
     <url>/2020/04/06/2020-04-06-JavaScript-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
     <content><![CDATA[<h1 id="Javascript-定时器"><a href="#Javascript-定时器" class="headerlink" title="Javascript | 定时器"></a>Javascript | 定时器</h1><ul>
@@ -251,6 +137,201 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaScript DOM</title>
+    <url>/2020/04/06/2020-04-06-JavaScript-DOM/</url>
+    <content><![CDATA[<h1 id="JavaScript-DOM"><a href="#JavaScript-DOM" class="headerlink" title="JavaScript | DOM"></a>JavaScript | DOM</h1><ul>
+<li><h2 id="DOM基础"><a href="#DOM基础" class="headerlink" title="DOM基础"></a>DOM基础</h2><ul>
+<li><h3 id="什么是DOM？"><a href="#什么是DOM？" class="headerlink" title="什么是DOM？"></a>什么是DOM？</h3><p><strong><em>DOM = document Object Model</em></strong></p>
+<p>DOM用于用户对节点进行操作</p>
+</li>
+<li><h3 id="节点（Node）"><a href="#节点（Node）" class="headerlink" title="节点（Node）"></a>节点（Node）</h3><p><strong><em>.nodeType :</em></strong> 返回该节点的节点类型</p>
+<ul>
+<li>返回1：元素节点</li>
+<li>返回3：文本节点（无前后标签，直接写在<em>body</em>里的文本*）</li>
+</ul>
+<p><strong><em>.childNodes :</em></strong> 获取该节点的子节点的集合（包括文本节点和元素节点）</p>
+<p><strong><em>.children ：</em></strong>获取该节点的元素节点（只包括元素节点）</p>
+<p><strong><em>.firstElementChild ：</em></strong> 获取该节点的第一个元素子节点</p>
+<p><strong><em>.parentNode ：</em></strong>  获取该节点的父节点</p>
+<p><strong><em>.offsetpatent :</em></strong>  获取该节点用于定位的父节点</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="操纵元素属性"><a href="#操纵元素属性" class="headerlink" title="操纵元素属性"></a>操纵元素属性</h2><ul>
+<li>获取：<strong><em>.getAttribute(名称)</em></strong></li>
+<li>设置：<strong><em>.setAttribute(名称， 值)</em></strong></li>
+<li>删除：<strong><em>.removeAttribute(名称)</em></strong></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="DOM元素灵活查找"><a href="#DOM元素灵活查找" class="headerlink" title="DOM元素灵活查找"></a>DOM元素灵活查找</h2><ul>
+<li>使用 <strong><em>className</em></strong> 选择元素<ul>
+<li>选出所有元素</li>
+<li>通过 <strong><em>className</em></strong> 进行筛选</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function getClass(oParent, sClass)</span><br><span class="line">&#123;</span><br><span class="line">	var aResult &#x3D; [];</span><br><span class="line">	var aEle &#x3D; oParent.getElementByTagName(&#39;*&#39;);</span><br><span class="line"></span><br><span class="line">	for(var i&#x3D;; i&lt;aEle.length; i++)</span><br><span class="line">		if(aEle[i].className &#x3D;&#x3D; sClass)</span><br><span class="line">			aResut.push(aEle[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><h2 id="创建、插入和删除元素"><a href="#创建、插入和删除元素" class="headerlink" title="创建、插入和删除元素"></a>创建、插入和删除元素</h2><ul>
+<li><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><ul>
+<li><strong><em>document.createElement(‘Tagname’) :</em></strong> 创建一个Tagname节点并保存在内存里</li>
+<li><strong><em>.appendChild( var ) :</em></strong> 将子节点从原有父级中删除并添加在该节点的尾部     </li>
+<li>由于 createElement 并不会将创建好的节点直接放入html中（因为js并不知道你需要将其放在哪里），因此需要配合 appendChild 使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><ul>
+<li><p><strong><em>.insertBefore(var1, var2) :</em></strong> 在该节点下第var2个子节点的位置前插入var1</p>
+</li>
+<li><p>在最前面插入也可以写成：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Var.insertBefore(var1, Var.firstElementChild);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
+<li><strong><em>.removeChild( var ) :</em></strong> 删除该子节点</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="文档碎片"><a href="#文档碎片" class="headerlink" title="文档碎片"></a>文档碎片</h2><ul>
+<li><p>可以将创建的元素保存在文档碎片中，然后一次性全部插入到html中</p>
+</li>
+<li><p>避免重复渲染</p>
+</li>
+<li><h3 id="创建文档碎片"><a href="#创建文档碎片" class="headerlink" title="创建文档碎片"></a>创建文档碎片</h3><ul>
+<li><strong><em>document.createDocumentFragment()</em></strong></li>
+</ul>
+</li>
+<li><p><strong>现在基本没用了</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS 定位</title>
+    <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
+    <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
+<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
+</ul>
+<h3 id="position-absolute-绝对定位："><a href="#position-absolute-绝对定位：" class="headerlink" title="position : absolute | 绝对定位："></a><em>position : absolute</em> | 绝对定位：</h3><ol>
+<li><p>使元素脱离标准文档流</p>
+</li>
+<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
+</li>
+<li><p>参考对象默认为body，也可以设置为别的元素</p>
+</li>
+<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
+<p>注意，此时position属性不可为<strong>static</strong></p>
+</li>
+<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
+<ul>
+<li>这种块级元素不独占一行</li>
+<li>宽度默认为0</li>
+</ul>
+</li>
+</ol>
+<h3 id="position-relative-相对定位："><a href="#position-relative-相对定位：" class="headerlink" title="position : relative | 相对定位："></a><strong><em>position : relative</em></strong> | 相对定位：</h3><ol>
+<li>元素不脱离标准文档流</li>
+<li>不会改变元素本身的特性（块内和行内）</li>
+<li>参考对象为不加position之前该元素的位置</li>
+<li>元素进行相对定位后，原本的空间<strong>依然存在于文档流中</strong>，文档流其他元素不会占用该空间</li>
+</ol>
+<h3 id="position-fixed-固定定位："><a href="#position-fixed-固定定位：" class="headerlink" title="position : fixed | 固定定位："></a><strong><em>position : fixed</em></strong> | <strong>固定定位：</strong></h3><ol>
+<li>元素脱离标准文档流</li>
+<li>页面滚动，元素位置固定不动（如某些网站的返回顶部按键</li>
+<li>参考对象为父级容器</li>
+</ol>
+<ul>
+<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
+<li>用来划分各元素之间的堆叠顺序，z-index默认为1</li>
+</ul>
+</li>
+<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
+</li>
+</ul>
+<ul>
+<li><h2 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h2><ul>
+<li>指定该元素的左侧或右侧不允许有元素浮动（即<strong>消除其左侧或右侧元素的浮动效果</strong></li>
+<li>属性值：left / rigth / both / none(默认值) / inherit(继承父元素的clear属性)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><ul>
+<li>当子元素超出父元素的显示范围时，可以通过overflow来设置显示方式</li>
+<li>属性值：<ul>
+<li>visible((默认值)所有内容都显示) </li>
+<li>auto(超出范围时显示滚动条)</li>
+<li>hidden(隐藏超出范围的内容)</li>
+<li>scroll(不论是否超出范围都显示滚动条)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML input</title>
+    <url>/2020/04/07/2020-04-07-HTML-input/</url>
+    <content><![CDATA[<h1 id="HTML-input"><a href="#HTML-input" class="headerlink" title="HTML | input"></a>HTML | input</h1><ul>
+<li><h2 id="type"><a href="#type" class="headerlink" title="type"></a>type</h2><ul>
+<li><h3 id="button——按钮"><a href="#button——按钮" class="headerlink" title="button——按钮"></a>button——按钮</h3></li>
+<li><h3 id="checkbox——复选框"><a href="#checkbox——复选框" class="headerlink" title="checkbox——复选框"></a>checkbox——复选框</h3></li>
+<li><h3 id="radio——单选框"><a href="#radio——单选框" class="headerlink" title="radio——单选框"></a>radio——单选框</h3></li>
+<li><h3 id="text——文本"><a href="#text——文本" class="headerlink" title="text——文本"></a>text——文本</h3></li>
+<li><h3 id="file——文件"><a href="#file——文件" class="headerlink" title="file——文件"></a>file——文件</h3></li>
+<li><h3 id="email——邮箱（自动校验格式）"><a href="#email——邮箱（自动校验格式）" class="headerlink" title="email——邮箱（自动校验格式）"></a>email——邮箱（自动校验格式）</h3></li>
+<li><h3 id="number——数字"><a href="#number——数字" class="headerlink" title="number——数字"></a>number——数字</h3></li>
+<li><h3 id="range——滑动条"><a href="#range——滑动条" class="headerlink" title="range——滑动条"></a>range——滑动条</h3></li>
+<li><h3 id="reset——重置"><a href="#reset——重置" class="headerlink" title="reset——重置"></a>reset——重置</h3></li>
+<li><h3 id="submit——提交"><a href="#submit——提交" class="headerlink" title="submit——提交"></a>submit——提交</h3></li>
+<li><h3 id="image——定义图像作为提交按钮"><a href="#image——定义图像作为提交按钮" class="headerlink" title="image——定义图像作为提交按钮"></a>image——定义图像作为提交按钮</h3></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="value"><a href="#value" class="headerlink" title="value"></a>value</h2><p>value 属性规定 <input> 元素的值。</p>
+<p>value 属性对于不同 input 类型，用法也不同：</p>
+<ul>
+<li>对于 “button”、”reset”、”submit” 类型 - 定义<strong>按钮上的文本</strong></li>
+<li>对于 “text”、”password”、”hidden” 类型 - 定义输入字段的<strong>初始（默认）值</strong></li>
+<li>对于 “checkbox”、”radio”、”image” 类型 - 定义与 input 元素相关的值，当提交表单时该值会发送到表单的 action URL。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>HTML</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>ASM 灵活寻址</title>
     <url>/2020/04/03/ASM-%E7%81%B5%E6%B4%BB%E5%AF%BB%E5%9D%80/</url>
     <content><![CDATA[<h1 id="ASM-灵活定位内存地址的方法"><a href="#ASM-灵活定位内存地址的方法" class="headerlink" title="ASM | 灵活定位内存地址的方法"></a>ASM | 灵活定位内存地址的方法</h1><h3 id="bx-idata"><a href="#bx-idata" class="headerlink" title="[bx+idata]"></a>[bx+idata]</h3><p>[bx+idata]表示一个内存单元，偏移地址为 bx + idata</p>
@@ -270,7 +351,7 @@
 </blockquote>
 <h3 id="bx-si-di-idata"><a href="#bx-si-di-idata" class="headerlink" title="[bx + si/di + idata]"></a>[bx + si/di + idata]</h3><p>mov ax,[bx+si/di] = (as) = ((ds)*16 + bx + si/di + idata)</p>
 <p>也可以写成以下形式：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mov ax,[bx].(idata)[cx]</span><br><span class="line"></span><br><span class="line">mov ax[bx][cx].idata</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mov ax,[bx].(idata)[cx]</span><br><span class="line"></span><br><span class="line">mov ax,[bx][cx].idata</span><br></pre></td></tr></table></figure>
 
 
 
@@ -281,7 +362,7 @@
 <p><em>or al, 00110011B</em></p>
 <p>可用于将某位 置<strong>1</strong></p>
 <h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><p>如将’abc’、’dfe’、’ghe’三个字符串改为大写，以下是循环部分：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">		mov cx, 3</span><br><span class="line">s0:		mov si,0</span><br><span class="line">		mov cx, 3</span><br><span class="line">s1:		mov al, [bx + si]</span><br><span class="line">		and al,11011111b</span><br><span class="line">		mov [bx+si], al		</span><br><span class="line">		inc si</span><br><span class="line">		loop s1</span><br><span class="line">		add bx, 3</span><br><span class="line">		loop s0</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">		mov cx, 3</span><br><span class="line">s0:		mov si,0</span><br><span class="line">		mov cx, 3</span><br><span class="line">s1:		mov al, [bx+si]</span><br><span class="line">		and al,11011111b</span><br><span class="line">		mov [bx+si], al		</span><br><span class="line">		inc si</span><br><span class="line">		loop s1</span><br><span class="line">		add bx, 3</span><br><span class="line">		loop s0</span><br></pre></td></tr></table></figure>
 
 <p>注意，此循环中有两个循环，但却只使用了一个循环计数器cx</p>
 <p>本来我们希望他可以循环9次,但实际上只循环了3次，外部循环只执行了一次</p>
@@ -301,37 +382,6 @@
       <tags>
         <tag>ASM</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/04/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>HTML  兼容性问题</title>
-    <url>/2020/04/06/HTML%20%20%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="HTML-兼容性问题"><a href="#HTML-兼容性问题" class="headerlink" title="HTML | 兼容性问题"></a>HTML | 兼容性问题</h1><p>某方法（function1）在不同浏览器中兼容性不同，且有兼容性更高的版本（function2）</p>
-<p>通常 function1 比 function2 更实用</p>
-<p><strong><em>if（  function1 ）</em></strong></p>
-<p>​    <strong><em>function1；</em></strong></p>
-<p><strong><em>else</em></strong></p>
-<p>​    <strong><em>function2；</em></strong></p>
-]]></content>
   </entry>
   <entry>
     <title>Cache基本原理</title>
@@ -418,18 +468,77 @@
       </tags>
   </entry>
   <entry>
-    <title>java | 错误：GBK编码GBK的不可映射字符</title>
-    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<h1 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h1><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
-<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
-<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><ol>
-<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
-<li>将编辑器的默认编码格式改为ANSI</li>
-</ol>
+    <title>HTML  兼容性问题</title>
+    <url>/2020/04/06/HTML%20%20%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="HTML-兼容性问题"><a href="#HTML-兼容性问题" class="headerlink" title="HTML | 兼容性问题"></a>HTML | 兼容性问题</h1><p>某方法（function1）在不同浏览器中兼容性不同，且有兼容性更高的版本（function2）</p>
+<p>通常 function1 比 function2 更实用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if（function1）</span><br><span class="line">	function1；</span><br><span class="line">else</span><br><span class="line">	function2；</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>JavaScript 表格和表单</title>
+    <url>/2020/04/07/JavaScript%20%20%E8%A1%A8%E5%8D%95/</url>
+    <content><![CDATA[<h1 id="JavaScript-表单"><a href="#JavaScript-表单" class="headerlink" title="JavaScript | 表单"></a>JavaScript | 表单</h1><h2 id="表格的一些便捷操作："><a href="#表格的一些便捷操作：" class="headerlink" title="表格的一些便捷操作："></a>表格的一些便捷操作：</h2><ul>
+<li><p><strong><em>getElementsByTagName(‘tbody’) = tBodies</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘tr’) = rows</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘td’) = cells</em></strong></p>
+</li>
+</ul>
+<ul>
+<li><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ul>
+<li><p><strong><em>.search(‘Str’) :</em></strong> </p>
+<ul>
+<li>返回-1：查找失败</li>
+<li>返回0、1、2……：str在该字符串的第几个位置</li>
+</ul>
+</li>
+<li><p><strong><em>.split(‘Str’) :</em></strong> 用Str将该字符串分离成数组</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var otxt&#x3D;&#39;abc def ghe&#39;;</span><br><span class="line">var aspt&#x3D;otxt.split(&#39; &#39;);</span><br><span class="line">aspt &#x3D; [&#39;abc&#39;, &#39;def&#39;, &#39;ghe&#39;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>.toLowerCase/toUpperCase :</em></strong> 将字符串变为小写/大写</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<li>关键：使用 <strong><em>appendChild()</em></strong> 方法</li>
+<li>因为 appendchild() 原理是将所选的节点移除原本的父节点并添加在该节点的尾部</li>
+<li>利用这一点，将表中各行按顺序依次使用appendchild移至表尾，完成排序</li>
+</ul>
+</li>
+</ul>
+<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
+<li><strong><em>onsubmit ：</em></strong> 与 onclick 用法一样，在提交表单时触发</li>
+<li><strong><em>onreset ：</em></strong> 同上，在重置时发生</li>
+</ul>
 ]]></content>
       <tags>
-        <tag>java</tag>
+        <tag>JavaScript</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/04/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>替换算法</title>
@@ -445,6 +554,42 @@
 ]]></content>
       <tags>
         <tag>计算机基本原理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java | 错误：GBK编码GBK的不可映射字符</title>
+    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h1><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
+<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><ol>
+<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
+<li>将编辑器的默认编码格式改为ANSI</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java | 包</title>
+    <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
+<p>​                作为源文件的第一条语句；</p>
+<h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
+<p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
+<p>​                那么，该源文件的存储路径应为 <strong>…\tom\jiafei</strong></p>
+<h3 id="包中源文件的编译"><a href="#包中源文件的编译" class="headerlink" title="包中源文件的编译"></a>包中源文件的编译</h3><p>​                对包中源文件进行编译时，要在其包的父目录运行cmd进行编译</p>
+<p>​                如    源文件存储路径为 <strong>D\Code\tom\jiafei</strong></p>
+<p>​                那么，应在  <strong>D\Code</strong> 目录下运行cmd进行编译，编译时要给出全路径，</p>
+<p>​                格式为：<em>javac 包名\主类名.java</em></p>
+<p>​                如    <em>javac tom\jiafei\test.java</em></p>
+<h3 id="包文件的运行"><a href="#包文件的运行" class="headerlink" title="包文件的运行"></a>包文件的运行</h3><p>​                运行时，同样要求在父目录下运行，执行java命令时给出包名</p>
+<p>​                格式为：<em>java 包名.主类名</em></p>
+<p>​                如 <em>java tom.jiafei.test</em></p>
+<h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -480,28 +625,6 @@
 ]]></content>
       <tags>
         <tag>计算机基本原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java | 包</title>
-    <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
-<p>​                作为源文件的第一条语句；</p>
-<h3 id="包中文件的存储"><a href="#包中文件的存储" class="headerlink" title="包中文件的存储"></a>包中文件的存储</h3><p>​                源文件的存储路径为 <strong>…\包名</strong></p>
-<p>​                如    源文件中使用了包语句 <em>package tom.jiafei</em></p>
-<p>​                那么，该源文件的存储路径应为 <strong>…\tom\jiafei</strong></p>
-<h3 id="包中源文件的编译"><a href="#包中源文件的编译" class="headerlink" title="包中源文件的编译"></a>包中源文件的编译</h3><p>​                对包中源文件进行编译时，要在其包的父目录运行cmd进行编译</p>
-<p>​                如    源文件存储路径为 <strong>D\Code\tom\jiafei</strong></p>
-<p>​                那么，应在  <strong>D\Code</strong> 目录下运行cmd进行编译，编译时要给出全路径，</p>
-<p>​                格式为：<em>javac 包名\主类名.java</em></p>
-<p>​                如    <em>javac tom\jiafei\test.java</em></p>
-<h3 id="包文件的运行"><a href="#包文件的运行" class="headerlink" title="包文件的运行"></a>包文件的运行</h3><p>​                运行时，同样要求在父目录下运行，执行java命令时给出包名</p>
-<p>​                格式为：<em>java 包名.主类名</em></p>
-<p>​                如 <em>java tom.jiafei.test</em></p>
-<h3 id="包之间的调用"><a href="#包之间的调用" class="headerlink" title="包之间的调用"></a>包之间的调用</h3><p>​                调用外部的包时，要确保所调用的方法或属性是 <em>public</em> 级别的，否则编译时会提示权限不够</p>
-]]></content>
-      <tags>
-        <tag>java</tag>
       </tags>
   </entry>
 </search>

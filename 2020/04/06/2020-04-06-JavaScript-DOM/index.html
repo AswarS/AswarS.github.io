@@ -62,7 +62,7 @@ DOM用于用户对节点进行操作
     <!--Page Cover-->
     
     
-        <meta property="og:image" content="https://AswarS.github.io.githttp://m.qpic.cn/psc?/V11iNCuq3VgMfi/AAqA*OLIGuMLp9aQ5B1ShGX31jzHvgViBfFVbqwIOOeFEHBGrD*kkR5N0H.yCAG43pZyPXtv0KfF*YeTPjSiQQ!!/b&amp;bo=wAY4BAAAAAARB8o!&amp;rf=viewer_4"/>
+        <meta property="og:image" content="https://AswarS.github.io.githttps://github.com/AswarS/AswarS.github.io/blob/master/img/home-bg.jpg?raw=true"/>
     
 
         <meta name="twitter:card" content="summary_large_image"/>
@@ -70,7 +70,7 @@ DOM用于用户对节点进行操作
     
 
     
-        <meta name="twitter:image" content="https://AswarS.github.io.githttp://m.qpic.cn/psc?/V11iNCuq3VgMfi/AAqA*OLIGuMLp9aQ5B1ShGX31jzHvgViBfFVbqwIOOeFEHBGrD*kkR5N0H.yCAG43pZyPXtv0KfF*YeTPjSiQQ!!/b&amp;bo=wAY4BAAAAAARB8o!&amp;rf=viewer_4"/>
+        <meta name="twitter:image" content="https://AswarS.github.io.githttps://github.com/AswarS/AswarS.github.io/blob/master/img/home-bg.jpg?raw=true"/>
     
 
     <!-- Title -->
@@ -184,7 +184,7 @@ DOM用于用户对节点进行操作
     <!-- Page Header -->
 <!-- Set your background image for this header in your post front-matter: cover -->
 
-<header class="intro-header" style="background-image: url('http://m.qpic.cn/psc?/V11iNCuq3VgMfi/AAqA*OLIGuMLp9aQ5B1ShGX31jzHvgViBfFVbqwIOOeFEHBGrD*kkR5N0H.yCAG43pZyPXtv0KfF*YeTPjSiQQ!!/b&bo=wAY4BAAAAAARB8o!&rf=viewer_4')">
+<header class="intro-header" style="background-image: url('https://github.com/AswarS/AswarS.github.io/blob/master/img/home-bg.jpg?raw=true')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -270,6 +270,53 @@ DOM用于用户对节点进行操作
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function getClass(oParent, sClass)</span><br><span class="line">&#123;</span><br><span class="line">	var aResult &#x3D; [];</span><br><span class="line">	var aEle &#x3D; oParent.getElementByTagName(&#39;*&#39;);</span><br><span class="line"></span><br><span class="line">	for(var i&#x3D;; i&lt;aEle.length; i++)</span><br><span class="line">		if(aEle[i].className &#x3D;&#x3D; sClass)</span><br><span class="line">			aResut.push(aEle[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<ul>
+<li><h2 id="创建、插入和删除元素"><a href="#创建、插入和删除元素" class="headerlink" title="创建、插入和删除元素"></a>创建、插入和删除元素</h2><ul>
+<li><h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><ul>
+<li><strong><em>document.createElement(‘Tagname’) :</em></strong> 创建一个Tagname节点并保存在内存里</li>
+<li><strong><em>.appendChild( var ) :</em></strong> 将子节点从原有父级中删除并添加在该节点的尾部     </li>
+<li>由于 createElement 并不会将创建好的节点直接放入html中（因为js并不知道你需要将其放在哪里），因此需要配合 appendChild 使用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h3><ul>
+<li><p><strong><em>.insertBefore(var1, var2) :</em></strong> 在该节点下第var2个子节点的位置前插入var1</p>
+</li>
+<li><p>在最前面插入也可以写成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Var.insertBefore(var1, Var.firstElementChild);</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><ul>
+<li><strong><em>.removeChild( var ) :</em></strong> 删除该子节点</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="文档碎片"><a href="#文档碎片" class="headerlink" title="文档碎片"></a>文档碎片</h2><ul>
+<li><p>可以将创建的元素保存在文档碎片中，然后一次性全部插入到html中</p>
+</li>
+<li><p>避免重复渲染</p>
+</li>
+<li><h3 id="创建文档碎片"><a href="#创建文档碎片" class="headerlink" title="创建文档碎片"></a>创建文档碎片</h3><ul>
+<li><strong><em>document.createDocumentFragment()</em></strong></li>
+</ul>
+</li>
+<li><p><strong>现在基本没用了</strong></p>
+</li>
+</ul>
+</li>
+</ul>
 
 
                 

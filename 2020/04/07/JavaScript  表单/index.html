@@ -13,12 +13,17 @@
     
 
     
-        <meta name="description" content="ASM | 灵活定位内存地址的方法[bx+idata][bx+idata]表示一个内存单元，偏移地址为 bx + idata
-mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
-该指令还有以下几种写法：
-1mov ax,200[bx]
+        <meta name="description" content="JavaScript | 表单表格的一些便捷操作：
+getElementsByTagName(‘tbody’) = tBodies
 
-类似于数组的表示方"/>
+getElementsByTagName(‘tr’) = rows
+
+getElementsByTagName(‘td’) = cells
+
+
+
+搜索
+.search"/>
     
 
     <!--Author-->
@@ -28,17 +33,22 @@ mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="ASM 灵活寻址"/>
+        <meta property="og:title" content="JavaScript 表格和表单"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="ASM | 灵活定位内存地址的方法[bx+idata][bx+idata]表示一个内存单元，偏移地址为 bx + idata
-mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
-该指令还有以下几种写法：
-1mov ax,200[bx]
+        <meta property="og:description" content="JavaScript | 表单表格的一些便捷操作：
+getElementsByTagName(‘tbody’) = tBodies
 
-类似于数组的表示方"/>
+getElementsByTagName(‘tr’) = rows
+
+getElementsByTagName(‘td’) = cells
+
+
+
+搜索
+.search"/>
     
 
     <!--Open Graph Site Name-->
@@ -65,7 +75,7 @@ mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
 
     <!-- Title -->
     
-    <title>ASM 灵活寻址 - AswarS</title>
+    <title>JavaScript 表格和表单 - AswarS</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -179,13 +189,13 @@ mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>ASM 灵活寻址</h1>
+                    <h1>JavaScript 表格和表单</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2020-04-03
+                            2020-04-07
                         
                     </span>
                 </div>
@@ -206,7 +216,7 @@ mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
                         
 
 
-<a href="/tags/ASM/">#ASM</a>
+<a href="/tags/JavaScript/">#JavaScript</a>
 
 
                     
@@ -221,50 +231,42 @@ mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1 id="ASM-灵活定位内存地址的方法"><a href="#ASM-灵活定位内存地址的方法" class="headerlink" title="ASM | 灵活定位内存地址的方法"></a>ASM | 灵活定位内存地址的方法</h1><h3 id="bx-idata"><a href="#bx-idata" class="headerlink" title="[bx+idata]"></a>[bx+idata]</h3><p>[bx+idata]表示一个内存单元，偏移地址为 bx + idata</p>
-<p>mov ax,[bx+200] = (ax) = ((ds)*16 + (bx) + 200)</p>
-<p>该指令还有以下几种写法：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov ax,200[bx]</span><br></pre></td></tr></table></figure>
-
-<p>类似于数组的表示方法200为数组首地址，bx为脚标</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[bx].200</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="si-和-di"><a href="#si-和-di" class="headerlink" title="si 和 di"></a>si 和 di</h3><p>si、di是8086CPU中和bx功能相似的寄存器</p>
-<p><strong>不可以分成两个8位寄存器来使用</strong></p>
-<blockquote>
-<p>复制数据时，si指向需要复制的数据地址，di指向存放数据的地址</p>
-</blockquote>
-<h3 id="bx-si-di-idata"><a href="#bx-si-di-idata" class="headerlink" title="[bx + si/di + idata]"></a>[bx + si/di + idata]</h3><p>mov ax,[bx+si/di] = (as) = ((ds)*16 + bx + si/di + idata)</p>
-<p>也可以写成以下形式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[bx].(idata)[cx]</span><br><span class="line"></span><br><span class="line">mov ax,[bx][cx].idata</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="and-和-or"><a href="#and-和-or" class="headerlink" title="and 和 or"></a>and 和 or</h3><p><strong>and</strong>：按位与运算</p>
-<p><em>and al, 00110011B</em></p>
-<p>可用于将某位 置<strong>0</strong></p>
-<p><strong>or</strong>：按位或运算</p>
-<p><em>or al, 00110011B</em></p>
-<p>可用于将某位 置<strong>1</strong></p>
-<h3 id="嵌套循环"><a href="#嵌套循环" class="headerlink" title="嵌套循环"></a>嵌套循环</h3><p>如将’abc’、’dfe’、’ghe’三个字符串改为大写，以下是循环部分：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">		mov cx, 3</span><br><span class="line">s0:		mov si,0</span><br><span class="line">		mov cx, 3</span><br><span class="line">s1:		mov al, [bx+si]</span><br><span class="line">		and al,11011111b</span><br><span class="line">		mov [bx+si], al		</span><br><span class="line">		inc si</span><br><span class="line">		loop s1</span><br><span class="line">		add bx, 3</span><br><span class="line">		loop s0</span><br></pre></td></tr></table></figure>
-
-<p>注意，此循环中有两个循环，但却只使用了一个循环计数器cx</p>
-<p>本来我们希望他可以循环9次,但实际上只循环了3次，外部循环只执行了一次</p>
-<p>为了实现二重循环，我们要将外部循环的cx提前保存起来，等到内部循环结束后再将其恢复</p>
-<blockquote>
-<p>如在s0处先使用 mov dx, cx进行保存，然后在loop s0前再使用mov cx,dx恢复</p>
-</blockquote>
-<p>但这种方法显然不适用于更多层的循环，毕竟可供我们操作的寄存器并不多</p>
-<p>而嵌套循环这种层次结构很适合于栈（cx 先进后出），因此，我们用栈来保存每个loop的cx</p>
-<blockquote>
-<p>在指令前，先分配一段内存空间用来保存cx，n个循环分配n-1个字空间</p>
-</blockquote>
-<p>此例中有两个循环，就分配两个字节空间即可，循环部分代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">		mov cx, 3</span><br><span class="line">s0:		push cx</span><br><span class="line">		mov cx, 3</span><br><span class="line">s1:		...</span><br><span class="line">		loop s1</span><br><span class="line">		...</span><br><span class="line">		pop cx</span><br><span class="line">		loop s0</span><br></pre></td></tr></table></figure>
-
+                <h1 id="JavaScript-表单"><a href="#JavaScript-表单" class="headerlink" title="JavaScript | 表单"></a>JavaScript | 表单</h1><h2 id="表格的一些便捷操作："><a href="#表格的一些便捷操作：" class="headerlink" title="表格的一些便捷操作："></a>表格的一些便捷操作：</h2><ul>
+<li><p><strong><em>getElementsByTagName(‘tbody’) = tBodies</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘tr’) = rows</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘td’) = cells</em></strong></p>
+</li>
+</ul>
+<ul>
+<li><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ul>
+<li><p><strong><em>.search(‘Str’) :</em></strong> </p>
+<ul>
+<li>返回-1：查找失败</li>
+<li>返回0、1、2……：str在该字符串的第几个位置</li>
+</ul>
+</li>
+<li><p><strong><em>.split(‘Str’) :</em></strong> 用Str将该字符串分离成数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var otxt&#x3D;&#39;abc def ghe&#39;;</span><br><span class="line">var aspt&#x3D;otxt.split(&#39; &#39;);</span><br><span class="line">aspt &#x3D; [&#39;abc&#39;, &#39;def&#39;, &#39;ghe&#39;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>.toLowerCase/toUpperCase :</em></strong> 将字符串变为小写/大写</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<li>关键：使用 <strong><em>appendChild()</em></strong> 方法</li>
+<li>因为 appendchild() 原理是将所选的节点移除原本的父节点并添加在该节点的尾部</li>
+<li>利用这一点，将表中各行按顺序依次使用appendchild移至表尾，完成排序</li>
+</ul>
+</li>
+</ul>
+<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
+<li><strong><em>onsubmit ：</em></strong> 与 onclick 用法一样，在提交表单时触发</li>
+<li><strong><em>onreset ：</em></strong> 同上，在重置时发生</li>
+</ul>
 
 
                 
