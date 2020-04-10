@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="zh-cn"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="author" content="AswarS"><meta name="renderer" content="webkit"><meta name="copyright" content="AswarS"><meta name="keywords" content="AswarS"><meta name="description" content=""><meta name="Cache-Control" content="no-cache"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>JavaScript 运动 · AswarS' Blog</title><link rel="stylesheet" href="/css/style.css?v=2018.7.9"><link rel="stylesheet" href="/css/animation.css?v=2018.7.9"><link rel="icon" href="/img/assets/favicon.ico"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><!-- scripts--><script>(function( w ){
+  "use strict";
+  // rel=preload support test
+  if( !w.loadCSS ){
+    w.loadCSS = function(){};
+  }
+  // define on the loadCSS obj
+  var rp = loadCSS.relpreload = {};
+  // rel=preload feature support test
+  // runs once and returns a function for compat purposes
+  rp.support = (function(){
+    var ret;
+    try {
+      ret = w.document.createElement( "link" ).relList.supports( "preload" );
+    } catch (e) {
+      ret = false;
+    }
+    return function(){
+      return ret;
+    };
+  })();
+
+  // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+  // then change that media back to its intended value on load
+  rp.bindMediaToggle = function( link ){
+    // remember existing media attr for ultimate state, or default to 'all'
+    var finalMedia = link.media || "all";
+
+    function enableStylesheet(){
+      link.media = finalMedia;
+    }
+
+    // bind load handlers to enable media
+    if( link.addEventListener ){
+      link.addEventListener( "load", enableStylesheet );
+    } else if( link.attachEvent ){
+      link.attachEvent( "onload", enableStylesheet );
+    }
+
+    // Set rel and non-applicable media type to start an async request
+    // note: timeout allows this to happen async to let rendering continue in IE
+    setTimeout(function(){
+      link.rel = "stylesheet";
+      link.media = "only x";
+    });
+    // also enable media after 3 seconds,
+    // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+    setTimeout( enableStylesheet, 3000 );
+  };
+
+  // loop through link elements in DOM
+  rp.poly = function(){
+    // double check this to prevent external calls from running
+    if( rp.support() ){
+      return;
+    }
+    var links = w.document.getElementsByTagName( "link" );
+    for( var i = 0; i < links.length; i++ ){
+      var link = links[ i ];
+      // qualify links to those with rel=preload and as=style attrs
+      if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+        // prevent rerunning on link
+        link.setAttribute( "data-loadcss", true );
+        // bind listeners to toggle media back
+        rp.bindMediaToggle( link );
+      }
+    }
+  };
+
+  // if unsupported, run the polyfill
+  if( !rp.support() ){
+    // run once at least
+    rp.poly();
+
+    // rerun poly on an interval until onload
+    var run = w.setInterval( rp.poly, 500 );
+    if( w.addEventListener ){
+      w.addEventListener( "load", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    } else if( w.attachEvent ){
+      w.attachEvent( "onload", function(){
+        rp.poly();
+        w.clearInterval( run );
+      } );
+    }
+  }
+
+
+  // commonjs
+  if( typeof exports !== "undefined" ){
+    exports.loadCSS = loadCSS;
+  }
+  else {
+    w.loadCSS = loadCSS;
+  }
+}( typeof global !== "undefined" ? global : this ) );</script><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" defer></script><script src="/js/main.js?v=2018.7.9" defer></script><!-- fancybox--><link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script><!-- busuanzi--><script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 4.2.0"></head><body><section class="profile-close" id="cxo-profile"><div class="profile-avatar"><i class="fa fa-caret-left"></i><img src="/img/assets/avater.jpeg"></div><!--.profile-saying
+  i.fa.fa-comment
+  .saying--><div class="cxo-profile-inner"><div class="profile-name">AswarS</div><div class="profile-signature">一个默默无闻的人</div><div class="friends"><div>FRIENDS</div><span><a href="//github.com/" target="_black">friendA</a></span><span><a href="//github.com/" target="_black">friendB</a></span><span><a href="//github.com/" target="_black">friendC</a></span></div><div class="read-progress"></div></div></section><header id="cxo-intro" style="height: 70vh;background-image: url(/img/intro/cover.jpg);"><nav id="cxo-intro-nav"><section><div class="intro-nav-title"><a href="/">AswarS' Blog</a></div><div class="intro-nav-label-box"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div><i class="fa fa-bars intro-nav-menu"><div class="intro-nav-drop"><a href="/">Home</a><a href="/about/">About</a><a href="/archives/">Archives</a><a href="/tags/">Tags</a></div></i><div class="clear"></div></section></nav><h1 class="post-title">JavaScript 运动</h1><div class="post-intros"><div class="post-intro-meta"><span class="post-intro-time"><i class="post-intro-calendar fa fa-edit"></i><span>2020-04-10</span></span><span class="post-intro-tags"><a class="intro-tag fa fa-tag" href="javascript:void(0)" date-tags="JavaScript"> JavaScript</a></span></div></div></header><article class="cxo-up" id="cxo-content-outer"><section id="cxo-content-inner"><article class="article-entry" id="post"><h1 id="JavaScript-运动"><a href="#JavaScript-运动" class="headerlink" title="JavaScript | 运动"></a>JavaScript | 运动</h1><ul>
+<li><h2 id="运动基础"><a href="#运动基础" class="headerlink" title="运动基础"></a>运动基础</h2><ul>
+<li><p>让 DIV 动起来</p>
+<ul>
+<li>利用定时器</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	oDiv.style.left = oDiv.offsetLeft + speed + <span class="string">'px'</span>; <span class="comment">//speed为每30ms移动的距离</span></span><br><span class="line">&#125;, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过控制 oDiv.offestLeft 的值，使用 clearInterval() 来让其停止运动</li>
+<li>每次启动定时器前需使用 clearInterval() 将上一次启动的定时器关闭，以免出现电子次数越多移动越快的情况</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="运动框架"><a href="#运动框架" class="headerlink" title="运动框架"></a>运动框架</h2><ul>
+<li>开始运动时，关闭已有定时器</li>
+<li>把运动和停止隔开(if … else)</li>
+</ul>
+</li>
+<li><h2 id="缓冲效果"><a href="#缓冲效果" class="headerlink" title="缓冲效果"></a>缓冲效果</h2><ul>
+<li><p>speed 与距离成正比，与目标距离越近，速度越慢</p>
+</li>
+<li><p>speed = (目标距离 - oDiv.offsetLeft) / 减缓倍率（防止速度过快一下子直接到达目标距离）</p>
+</li>
+<li><p>由于 px 的值不能 &lt;1，当 speed&lt;1 时，div会停止不动。为了让 div 精准停在想要的位置，需要使用 <strong><em>Math.ceil( )</em></strong> 向上取整。</p>
+<ul>
+<li><strong><em>Math.floor()</em></strong> 是向下取整</li>
+<li><strong><em>Math.abs()</em></strong> 取绝对值</li>
+<li><strong><em>Math.round()</em></strong> 四舍五入</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">speed=speed &gt;<span class="number">0</span> ? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);</span><br><span class="line">   speed=<span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.abs(speed));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><h2 id="多物体运动框架"><a href="#多物体运动框架" class="headerlink" title="多物体运动框架"></a>多物体运动框架</h2><ul>
+<li>参数：物体，运动属性，目标参数</li>
+<li>定时器作为运动对象的属性（JavaScript允许通过 adiv[i].timer=null; 这样的方式为对象增添新的属性）</li>
+<li>如果一个物体需要同时改变多个属性，则每个运动的属性都需要一个单独的定时器<ul>
+<li>如，要让宽度和透明度同时改变，需要两个定时器，若使用一个定时器则会相互清除</li>
+</ul>
+</li>
+<li>对于不同的属性，使用getStyle()获取该属性的值</li>
+<li>框架如下：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Move</span>(<span class="params">obj, attr, iTarget</span>)	//三个参数，物体、变更的属性、目标值</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	clearInterval(obj.timer1);		<span class="comment">//清除上一个定时器，避免多次点击重复触发</span></span><br><span class="line">	obj.timer1 = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> cur = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度需要单独处理</span></span><br><span class="line">            cur = <span class="built_in">parseFloat</span>(getStyle(obj, attr))*<span class="number">100</span>;	<span class="comment">//为了方便处理，透明度1按100算</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        	cur = <span class="built_in">parseInt</span>(getStyle(obj, attr));</span><br><span class="line">		<span class="keyword">var</span> speed = (iTarget - cur)/<span class="number">10</span>;			<span class="comment">//确定速度的值，改10可以变更其缓冲速度</span></span><br><span class="line">		speed = speed&gt;<span class="number">0</span>? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);	<span class="comment">//速度最小为1</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">parseInt</span>(getStyle(obj, attr)) == iTarget)			<span class="comment">//到达目标位置</span></span><br><span class="line">				clearInterval(obj.timer1);						<span class="comment">//清除定时器</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度，速度单独处理</span></span><br><span class="line">            &#123;</span><br><span class="line">            	obj.style.filter = <span class="string">'aplha(opacity:'</span>+ cur + speed +<span class="string">')'</span>;	<span class="comment">//IE下</span></span><br><span class="line">          	obj.style.opacity = (cur + speed)/<span class="number">100</span>;				<span class="comment">//chrome、Firefox</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            	obj.style[attr] = <span class="built_in">parseInt</span>(getStyle(obj, attr)) + speed + <span class="string">'px'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;, <span class="number">30</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取样式属性的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj, attr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.currentStyle) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[attr];				<span class="comment">//IE下</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj,<span class="literal">null</span>)[attr];	<span class="comment">//Chrome、FireFox等</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+</article><!-- lincense--><div class="license-wrapper"><p> <span>Author:  </span><a href="https://AswarS.github.io.git">AswarS</a></p><p> <span>Link:  </span><a href="https://aswars.github.io.git/2020/04/08/2020-04-08-JavaScript-%E8%BF%90%E5%8A%A8/">https://aswars.github.io.git/2020/04/08/2020-04-08-JavaScript-%E8%BF%90%E5%8A%A8/</a></p><p> <span>Copyright:  </span><span>All articles in this blog are licensed under <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/3.0" target="_blank">CC BY-NC-SA 3.0</a> unless stating additionally.</span></p></div><div class="post-paginator"><a class="prevSlogan" href="/2020/04/10/2020-04-10-JavaScript--%E4%BA%8B%E4%BB%B6/" title="JavaScript | 事件"><span>< PreviousPost</span><br><span class="prevTitle">JavaScript | 事件</span></a><a class="nextSlogan" href="/2020/04/08/C++%20%20%E5%BC%95%E7%94%A8/" title="C++  引用"><span>NextPost ></span><br><span class="nextTitle">C++  引用</span></a><div class="clear"></div></div><div id="comment"></div></section></article><footer id="cxo-footer-outer"><div id="cxo-footer-inner"><p class="footer-container"><span>Site by </span><a href="http://hexo.io" target="_blank" rel="noopener"><span>Hexo</span></a><span> | theme </span><a href="https://github.com/Longlongyu/hexo-theme-Cxo" target="_blank" rel="noopener"><span>Cxo</span></a></p><i class="fa fa-user"> </i><span id="busuanzi_value_site_uv"></span><span> | </span><i class="fa fa-eye"> </i><span id="busuanzi_value_site_pv"></span></div></footer><!-- catelog--><div class="toc-wrapper" style="top: 70vh;"><div class="toc-catalog"><i class="fa fa-list"> </i><span>CATALOG</span></div><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript-运动"><span class="toc-number">1.</span> <span class="toc-text">JavaScript | 运动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#运动基础"><span class="toc-number">1.1.</span> <span class="toc-text">运动基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运动框架"><span class="toc-number">1.2.</span> <span class="toc-text">运动框架</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#缓冲效果"><span class="toc-number">1.3.</span> <span class="toc-text">缓冲效果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多物体运动框架"><span class="toc-number">1.4.</span> <span class="toc-text">多物体运动框架</span></a></li></ol></li></ol></div><!-- top--><i class="fa fa-arrow-up close" id="go-up" aria-hidden="true"></i></body></html>

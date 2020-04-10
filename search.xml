@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CSS | 四种居中div的方法</title>
+    <url>/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="CSS-四种居中div的方法"><a href="#CSS-四种居中div的方法" class="headerlink" title="CSS | 四种居中div的方法"></a>CSS | 四种居中div的方法</h1><ul>
+<li><h3 id="Flex-layout"><a href="#Flex-layout" class="headerlink" title="Flex layout"></a>Flex layout</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>display: flex;</p>
+<p>justify-content: center;</p>
+<p>align-items: center;</p>
+</blockquote>
+</li>
+<li><h3 id="Margin-auto"><a href="#Margin-auto" class="headerlink" title="Margin auto"></a>Margin auto</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>margin: 0 auto;</p>
+</blockquote>
+</li>
+<li><h3 id="Text-align-和-Inline-block"><a href="#Text-align-和-Inline-block" class="headerlink" title="Text-align 和 Inline-block"></a>Text-align 和 Inline-block</h3><p>在父容器中添加以下样式</p>
+<blockquote>
+<p>text-align: center;</p>
+</blockquote>
+<p>在子容器中添加以下样式</p>
+<blockquote>
+<p>display: inline-block;</p>
+</blockquote>
+</li>
+<li><h3 id="2D-Transform"><a href="#2D-Transform" class="headerlink" title="2D Transform"></a>2D Transform</h3><p>在子容器中添加以下样式</p>
+<blockquote>
+<p>position: absolute;</p>
+<p>top: 50%;</p>
+<p>left: 50%;</p>
+<p>transform: translate(-50%, -50%);</p>
+</blockquote>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS| float</title>
     <url>/2020/04/03/2020-04-03-CSS-float/</url>
     <content><![CDATA[<h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
@@ -137,42 +176,90 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS | 四种居中div的方法</title>
-    <url>/2020/04/03/2020-04-03-CSS--%E5%9B%9B%E7%A7%8D%E5%B1%85%E4%B8%ADdiv%E7%9A%84%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="CSS-四种居中div的方法"><a href="#CSS-四种居中div的方法" class="headerlink" title="CSS | 四种居中div的方法"></a>CSS | 四种居中div的方法</h1><ul>
-<li><h3 id="Flex-layout"><a href="#Flex-layout" class="headerlink" title="Flex layout"></a>Flex layout</h3><p>在父容器中添加以下样式</p>
-<blockquote>
-<p>display: flex;</p>
-<p>justify-content: center;</p>
-<p>align-items: center;</p>
-</blockquote>
+    <title>JavaScript 定时器</title>
+    <url>/2020/04/06/2020-04-06-JavaScript-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="Javascript-定时器"><a href="#Javascript-定时器" class="headerlink" title="Javascript | 定时器"></a>Javascript | 定时器</h1><ul>
+<li><h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a>setInterval()</h2><p><strong><em>setInterval（ function， time(ms)）</em></strong></p>
+<p>每隔time毫秒执行一次function，function可以是函数名、匿名函数或者一行代码（需用’’）</p>
+<p><strong>返回值：</strong> 一个数字id，用于传给clearInterval()使其失效</p>
 </li>
-<li><h3 id="Margin-auto"><a href="#Margin-auto" class="headerlink" title="Margin auto"></a>Margin auto</h3><p>在子容器中添加以下样式</p>
-<blockquote>
-<p>margin: 0 auto;</p>
-</blockquote>
+</ul>
+<ul>
+<li><h2 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h2><p><strong><em>setTimeout( function, time(ms))</em></strong></p>
+<p>页面开启time毫秒以后，执行function，function可以使函数名、匿名函数或一行代码</p>
+<p><strong>返回值：</strong> 一个数字id，用于传给clearTimeout()使其失效</p>
+<p>可以在递归函数中调用，使其每隔time毫秒执行一次function</p>
+<p>​    比起使用setInterval()，该方法可以通过设置条件使其停止执行，而不是调用clearTimeout()方法</p>
 </li>
-<li><h3 id="Text-align-和-Inline-block"><a href="#Text-align-和-Inline-block" class="headerlink" title="Text-align 和 Inline-block"></a>Text-align 和 Inline-block</h3><p>在父容器中添加以下样式</p>
-<blockquote>
-<p>text-align: center;</p>
-</blockquote>
-<p>在子容器中添加以下样式</p>
-<blockquote>
-<p>display: inline-block;</p>
-</blockquote>
+</ul>
+<ul>
+<li><p>一般情况下setTimeout用于延迟执行某方法或功能，</p>
 </li>
-<li><h3 id="2D-Transform"><a href="#2D-Transform" class="headerlink" title="2D Transform"></a>2D Transform</h3><p>在子容器中添加以下样式</p>
-<blockquote>
-<p>position: absolute;</p>
-<p>top: 50%;</p>
-<p>left: 50%;</p>
-<p>transform: translate(-50%, -50%);</p>
-</blockquote>
+<li><p>setInterval则一般用于刷新表单，对于一些表单的假实时指定时间刷新同步</p>
 </li>
 </ul>
 ]]></content>
       <tags>
-        <tag>CSS</tag>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript 运动</title>
+    <url>/2020/04/08/2020-04-08-JavaScript-%E8%BF%90%E5%8A%A8/</url>
+    <content><![CDATA[<h1 id="JavaScript-运动"><a href="#JavaScript-运动" class="headerlink" title="JavaScript | 运动"></a>JavaScript | 运动</h1><ul>
+<li><h2 id="运动基础"><a href="#运动基础" class="headerlink" title="运动基础"></a>运动基础</h2><ul>
+<li><p>让 DIV 动起来</p>
+<ul>
+<li>利用定时器</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	oDiv.style.left = oDiv.offsetLeft + speed + <span class="string">'px'</span>; <span class="comment">//speed为每30ms移动的距离</span></span><br><span class="line">&#125;, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过控制 oDiv.offestLeft 的值，使用 clearInterval() 来让其停止运动</li>
+<li>每次启动定时器前需使用 clearInterval() 将上一次启动的定时器关闭，以免出现电子次数越多移动越快的情况</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="运动框架"><a href="#运动框架" class="headerlink" title="运动框架"></a>运动框架</h2><ul>
+<li>开始运动时，关闭已有定时器</li>
+<li>把运动和停止隔开(if … else)</li>
+</ul>
+</li>
+<li><h2 id="缓冲效果"><a href="#缓冲效果" class="headerlink" title="缓冲效果"></a>缓冲效果</h2><ul>
+<li><p>speed 与距离成正比，与目标距离越近，速度越慢</p>
+</li>
+<li><p>speed = (目标距离 - oDiv.offsetLeft) / 减缓倍率（防止速度过快一下子直接到达目标距离）</p>
+</li>
+<li><p>由于 px 的值不能 &lt;1，当 speed&lt;1 时，div会停止不动。为了让 div 精准停在想要的位置，需要使用 <strong><em>Math.ceil( )</em></strong> 向上取整。</p>
+<ul>
+<li><strong><em>Math.floor()</em></strong> 是向下取整</li>
+<li><strong><em>Math.abs()</em></strong> 取绝对值</li>
+<li><strong><em>Math.round()</em></strong> 四舍五入</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">speed=speed &gt;<span class="number">0</span> ? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);</span><br><span class="line">   speed=<span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.abs(speed));</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><h2 id="多物体运动框架"><a href="#多物体运动框架" class="headerlink" title="多物体运动框架"></a>多物体运动框架</h2><ul>
+<li>参数：物体，运动属性，目标参数</li>
+<li>定时器作为运动对象的属性（JavaScript允许通过 adiv[i].timer=null; 这样的方式为对象增添新的属性）</li>
+<li>如果一个物体需要同时改变多个属性，则每个运动的属性都需要一个单独的定时器<ul>
+<li>如，要让宽度和透明度同时改变，需要两个定时器，若使用一个定时器则会相互清除</li>
+</ul>
+</li>
+<li>对于不同的属性，使用getStyle()获取该属性的值</li>
+<li>框架如下：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Move</span>(<span class="params">obj, attr, iTarget</span>)	//三个参数，物体、变更的属性、目标值</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	clearInterval(obj.timer1);		<span class="comment">//清除上一个定时器，避免多次点击重复触发</span></span><br><span class="line">	obj.timer1 = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> cur = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度需要单独处理</span></span><br><span class="line">            cur = <span class="built_in">parseFloat</span>(getStyle(obj, attr))*<span class="number">100</span>;	<span class="comment">//为了方便处理，透明度1按100算</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        	cur = <span class="built_in">parseInt</span>(getStyle(obj, attr));</span><br><span class="line">		<span class="keyword">var</span> speed = (iTarget - cur)/<span class="number">10</span>;			<span class="comment">//确定速度的值，改10可以变更其缓冲速度</span></span><br><span class="line">		speed = speed&gt;<span class="number">0</span>? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);	<span class="comment">//速度最小为1</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">parseInt</span>(getStyle(obj, attr)) == iTarget)			<span class="comment">//到达目标位置</span></span><br><span class="line">				clearInterval(obj.timer1);						<span class="comment">//清除定时器</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度，速度单独处理</span></span><br><span class="line">            &#123;</span><br><span class="line">            	obj.style.filter = <span class="string">'aplha(opacity:'</span>+ cur + speed +<span class="string">')'</span>;	<span class="comment">//IE下</span></span><br><span class="line">          	obj.style.opacity = (cur + speed)/<span class="number">100</span>;				<span class="comment">//chrome、Firefox</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            	obj.style[attr] = <span class="built_in">parseInt</span>(getStyle(obj, attr)) + speed + <span class="string">'px'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;, <span class="number">30</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取样式属性的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj, attr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.currentStyle) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[attr];				<span class="comment">//IE下</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj,<span class="literal">null</span>)[attr];	<span class="comment">//Chrome、FireFox等</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -193,6 +280,10 @@
 <p><strong><em>.firstElementChild ：</em></strong> 获取该节点的第一个元素子节点</p>
 <p><strong><em>.parentNode ：</em></strong>  获取该节点的父节点</p>
 <p><strong><em>.offsetpatent :</em></strong>  获取该节点用于定位的父节点</p>
+</li>
+<li><h3 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h3><ul>
+<li><strong><em>document.write(‘text‘) ：</em></strong> 将页面内容(包括所有代码)清空，并写入text内容</li>
+</ul>
 </li>
 </ul>
 </li>
@@ -215,7 +306,7 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">function getClass(oParent, sClass)</span><br><span class="line">&#123;</span><br><span class="line">	var aResult &#x3D; [];</span><br><span class="line">	var aEle &#x3D; oParent.getElementByTagName(&#39;*&#39;);</span><br><span class="line"></span><br><span class="line">	for(var i&#x3D;; i&lt;aEle.length; i++)</span><br><span class="line">		if(aEle[i].className &#x3D;&#x3D; sClass)</span><br><span class="line">			aResut.push(aEle[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getClass</span>(<span class="params">oParent, sClass</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">var</span> aResult = [];</span><br><span class="line">	<span class="keyword">var</span> aEle = oParent.getElementByTagName(<span class="string">'*'</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">var</span> i=; i&lt;aEle.length; i++)</span><br><span class="line">		<span class="keyword">if</span>(aEle[i].className == sClass)</span><br><span class="line">			aResut.push(aEle[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -235,7 +326,7 @@
 <li><p><strong><em>.insertBefore(var1, var2) :</em></strong> 在该节点下第var2个子节点的位置前插入var1</p>
 </li>
 <li><p>在最前面插入也可以写成：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Var.insertBefore(var1, Var.firstElementChild);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Var.insertBefore(var1, Var.firstElementChild);</span><br></pre></td></tr></table></figure>
 
 
 
@@ -289,7 +380,7 @@
 </li>
 </ul>
 <ul>
-<li><h2 id="value"><a href="#value" class="headerlink" title="value"></a>value</h2><p>value 属性规定 <input> 元素的值。</p>
+<li><h2 id="value"><a href="#value" class="headerlink" title="value"></a>value</h2><p>value 属性规定  input 元素的值。</p>
 <p>value 属性对于不同 input 类型，用法也不同：</p>
 <ul>
 <li>对于 “button”、”reset”、”submit” 类型 - 定义<strong>按钮上的文本</strong></li>
@@ -304,32 +395,95 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaScript 定时器</title>
-    <url>/2020/04/06/2020-04-06-JavaScript-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
-    <content><![CDATA[<h1 id="Javascript-定时器"><a href="#Javascript-定时器" class="headerlink" title="Javascript | 定时器"></a>Javascript | 定时器</h1><ul>
-<li><h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a>setInterval()</h2><p><strong><em>setInterval（ function， time(ms)）</em></strong></p>
-<p>每隔time毫秒执行一次function，function可以是函数名、匿名函数或者一行代码（需用’’）</p>
-<p><strong>返回值：</strong> 一个数字id，用于传给clearInterval()使其失效</p>
+    <title>JavaScript | BOM</title>
+    <url>/2020/04/10/2020-04-10-JavaScript--BOM/</url>
+    <content><![CDATA[<h1 id="Javascript-BOM"><a href="#Javascript-BOM" class="headerlink" title="Javascript | BOM"></a>Javascript | BOM</h1><h2 id="BOM基础"><a href="#BOM基础" class="headerlink" title="BOM基础"></a>BOM基础</h2><ul>
+<li>打开、关闭窗口<ul>
+<li>open<ul>
+<li>window.open(‘url’);    //可加参数’_blank’，在新页面打开</li>
+<li>返回值为新窗口的window对象</li>
+<li>可以使用 window.document.write() 为新打开的页面添加内容</li>
+</ul>
+</li>
+<li>close<ul>
+<li>window.close()；</li>
+</ul>
 </li>
 </ul>
-<ul>
-<li><h2 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h2><p><strong><em>setTimeout( function, time(ms))</em></strong></p>
-<p>页面开启time毫秒以后，执行function，function可以使函数名、匿名函数或一行代码</p>
-<p><strong>返回值：</strong> 一个数字id，用于传给clearTimeout()使其失效</p>
-<p>可以在递归函数中调用，使其每隔time毫秒执行一次function</p>
-<p>​    比起使用setInterval()，该方法可以通过设置条件使其停止执行，而不是调用clearTimeout()方法</p>
+</li>
+<li>常用属性<ul>
+<li>window.navigator.userAgent：当前浏览器版本</li>
+<li>window.location：当前页面地址/网址，可以实现跳转操作</li>
+</ul>
 </li>
 </ul>
-<ul>
-<li><p>一般情况下setTimeout用于延迟执行某方法或功能，</p>
+<h2 id="尺寸和坐标"><a href="#尺寸和坐标" class="headerlink" title="尺寸和坐标"></a>尺寸和坐标</h2><ul>
+<li>可视区尺寸：<ul>
+<li>document.documentElement.clientWidth：可视区宽度</li>
+<li>document.documentElement.clientheight：可视区高度</li>
+</ul>
 </li>
-<li><p>setInterval则一般用于刷新表单，对于一些表单的假实时指定时间刷新同步</p>
+<li>滚动距离（可视区边框距页面边框的距离）：<ul>
+<li>document.documentElement.scrollTop：滚动高度</li>
+</ul>
 </li>
+</ul>
+<h2 id="常用事件"><a href="#常用事件" class="headerlink" title="常用事件"></a>常用事件</h2><ul>
+<li>window.onscroll()：页面滚动时触发</li>
+<li>window.onload()：页面加载完成时触发</li>
+<li>window.onresize()：页面窗口大小改变是触发</li>
 </ul>
 ]]></content>
       <tags>
         <tag>JavaScript</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>JavaScript | 事件</title>
+    <url>/2020/04/10/2020-04-10-JavaScript--%E4%BA%8B%E4%BB%B6/</url>
+    <content><![CDATA[<h1 id="JavaScript-事件"><a href="#JavaScript-事件" class="headerlink" title="JavaScript | 事件"></a>JavaScript | 事件</h1><h2 id="event对象"><a href="#event对象" class="headerlink" title="event对象"></a>event对象</h2><ul>
+<li><p>什么是 event 对象</p>
+<ul>
+<li>用来获取事件的信息</li>
+<li>例如：获取鼠标位置 ：event.clientX</li>
+</ul>
+</li>
+<li><p>获取event对象</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> oEvent = ev || event;	<span class="comment">//ev为function参数</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>事件流</p>
+<ul>
+<li>事件冒泡：子节点产生的事件会逐层向父级传递<ul>
+<li>如三个div相套，每个div都有onclik事件，当触发最底层的onclick时，外层的onclick也会被触发</li>
+<li>取消冒泡：<strong><em>oEvent.cancelBaubble = true;</em></strong></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="鼠标事件"><a href="#鼠标事件" class="headerlink" title="鼠标事件"></a>鼠标事件</h2><ul>
+<li>常用事件：<ul>
+<li><strong><em>onmouseover :</em></strong> 鼠标移入</li>
+<li><strong><em>onmouseout :</em></strong> 鼠标移出</li>
+<li><strong><em>onclick :</em></strong>鼠标点击</li>
+<li><strong><em>onmousemove :</em></strong> 鼠标移动</li>
+</ul>
+</li>
+<li>可视区坐标：clientX、clientY</li>
+</ul>
+<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2>]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HTML  兼容性问题</title>
+    <url>/2020/04/06/HTML%20%20%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="HTML-兼容性问题"><a href="#HTML-兼容性问题" class="headerlink" title="HTML | 兼容性问题"></a>HTML | 兼容性问题</h1><p>某方法（function1）在不同浏览器中兼容性不同，且有兼容性更高的版本（function2）</p>
+<p>通常 function1 比 function2 更实用</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if（function1）</span><br><span class="line">	function1；</span><br><span class="line">else</span><br><span class="line">	function2；</span><br></pre></td></tr></table></figure>
+
+]]></content>
   </entry>
   <entry>
     <title>ASM 灵活寻址</title>
@@ -384,18 +538,9 @@
       </tags>
   </entry>
   <entry>
-    <title>HTML  兼容性问题</title>
-    <url>/2020/04/06/HTML%20%20%E5%85%BC%E5%AE%B9%E6%80%A7%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="HTML-兼容性问题"><a href="#HTML-兼容性问题" class="headerlink" title="HTML | 兼容性问题"></a>HTML | 兼容性问题</h1><p>某方法（function1）在不同浏览器中兼容性不同，且有兼容性更高的版本（function2）</p>
-<p>通常 function1 比 function2 更实用</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if（function1）</span><br><span class="line">	function1；</span><br><span class="line">else</span><br><span class="line">	function2；</span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
     <title>C++  引用</title>
     <url>/2020/04/08/C++%20%20%E5%BC%95%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="C-引用"><a href="#C-引用" class="headerlink" title="C++ | 引用"></a>C++ | 引用</h1><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int &amp;n &#x3D; m;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="C-引用、const、static"><a href="#C-引用、const、static" class="headerlink" title="C++ | 引用、const、static"></a>C++ | 引用、const、static</h1><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int &amp;n &#x3D; m;</span><br></pre></td></tr></table></figure>
 
 <p>​    n为m的别名，内存中占有<strong>同一块空间</strong>（与指针的区别）</p>
 <h2 id="与指针的比较"><a href="#与指针的比较" class="headerlink" title="与指针的比较"></a>与指针的比较</h2><ol>
@@ -418,6 +563,50 @@
 <h1 id="static类成员变量与函数"><a href="#static类成员变量与函数" class="headerlink" title="static类成员变量与函数"></a>static类成员变量与函数</h1><p>静态成员函数与变量属于类本身，可以通过A::方式访问，与java中的类函数和类属性相同</p>
 <p>使用静态成员变量时，需要在使用前在类的外部进行初始化</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>JavaScript 表格和表单</title>
+    <url>/2020/04/07/JavaScript%20%20%E8%A1%A8%E5%8D%95/</url>
+    <content><![CDATA[<h1 id="JavaScript-表单"><a href="#JavaScript-表单" class="headerlink" title="JavaScript | 表单"></a>JavaScript | 表单</h1><h2 id="表格的一些便捷操作："><a href="#表格的一些便捷操作：" class="headerlink" title="表格的一些便捷操作："></a>表格的一些便捷操作：</h2><ul>
+<li><p><strong><em>getElementsByTagName(‘tbody’) = tBodies</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘tr’) = rows</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘td’) = cells</em></strong></p>
+</li>
+</ul>
+<ul>
+<li><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ul>
+<li><p><strong><em>.search(‘Str’) :</em></strong> </p>
+<ul>
+<li>返回-1：查找失败</li>
+<li>返回0、1、2……：str在该字符串的第几个位置</li>
+</ul>
+</li>
+<li><p><strong><em>.split(‘Str’) :</em></strong> 用Str将该字符串分离成数组</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var otxt&#x3D;&#39;abc def ghe&#39;;</span><br><span class="line">var aspt&#x3D;otxt.split(&#39; &#39;);</span><br><span class="line">aspt &#x3D; [&#39;abc&#39;, &#39;def&#39;, &#39;ghe&#39;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>.toLowerCase/toUpperCase :</em></strong> 将字符串变为小写/大写</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<li>关键：使用 <strong><em>appendChild()</em></strong> 方法</li>
+<li>因为 appendchild() 原理是将所选的节点移除原本的父节点并添加在该节点的尾部</li>
+<li>利用这一点，将表中各行按顺序依次使用appendchild移至表尾，完成排序</li>
+</ul>
+</li>
+</ul>
+<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
+<li><strong><em>onsubmit ：</em></strong> 与 onclick 用法一样，在提交表单时触发</li>
+<li><strong><em>onreset ：</em></strong> 同上，在重置时发生</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
   </entry>
   <entry>
     <title>Cache基本原理</title>
@@ -504,84 +693,6 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaScript 表格和表单</title>
-    <url>/2020/04/07/JavaScript%20%20%E8%A1%A8%E5%8D%95/</url>
-    <content><![CDATA[<h1 id="JavaScript-表单"><a href="#JavaScript-表单" class="headerlink" title="JavaScript | 表单"></a>JavaScript | 表单</h1><h2 id="表格的一些便捷操作："><a href="#表格的一些便捷操作：" class="headerlink" title="表格的一些便捷操作："></a>表格的一些便捷操作：</h2><ul>
-<li><p><strong><em>getElementsByTagName(‘tbody’) = tBodies</em></strong></p>
-</li>
-<li><p><strong><em>getElementsByTagName(‘tr’) = rows</em></strong></p>
-</li>
-<li><p><strong><em>getElementsByTagName(‘td’) = cells</em></strong></p>
-</li>
-</ul>
-<ul>
-<li><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ul>
-<li><p><strong><em>.search(‘Str’) :</em></strong> </p>
-<ul>
-<li>返回-1：查找失败</li>
-<li>返回0、1、2……：str在该字符串的第几个位置</li>
-</ul>
-</li>
-<li><p><strong><em>.split(‘Str’) :</em></strong> 用Str将该字符串分离成数组</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var otxt&#x3D;&#39;abc def ghe&#39;;</span><br><span class="line">var aspt&#x3D;otxt.split(&#39; &#39;);</span><br><span class="line">aspt &#x3D; [&#39;abc&#39;, &#39;def&#39;, &#39;ghe&#39;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><em>.toLowerCase/toUpperCase :</em></strong> 将字符串变为小写/大写</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
-<li>关键：使用 <strong><em>appendChild()</em></strong> 方法</li>
-<li>因为 appendchild() 原理是将所选的节点移除原本的父节点并添加在该节点的尾部</li>
-<li>利用这一点，将表中各行按顺序依次使用appendchild移至表尾，完成排序</li>
-</ul>
-</li>
-</ul>
-<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
-<li><strong><em>onsubmit ：</em></strong> 与 onclick 用法一样，在提交表单时触发</li>
-<li><strong><em>onreset ：</em></strong> 同上，在重置时发生</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/04/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>java | 错误：GBK编码GBK的不可映射字符</title>
-    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<h1 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h1><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
-<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
-<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><ol>
-<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
-<li>将编辑器的默认编码格式改为ANSI</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>java | 包</title>
     <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
@@ -604,6 +715,20 @@
       </tags>
   </entry>
   <entry>
+    <title>java | 错误：GBK编码GBK的不可映射字符</title>
+    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h1><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
+<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><ol>
+<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
+<li>将编辑器的默认编码格式改为ANSI</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>替换算法</title>
     <url>/2020/04/02/%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h1><p><em>cache数据区满时，采取的替换方案</em></p>
@@ -618,6 +743,26 @@
       <tags>
         <tag>计算机基本原理</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/04/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>虚拟存储器</title>
