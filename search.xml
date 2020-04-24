@@ -40,6 +40,34 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaScript 定时器</title>
+    <url>/2020/04/06/2020-04-06-JavaScript-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
+    <content><![CDATA[<h1 id="Javascript-定时器"><a href="#Javascript-定时器" class="headerlink" title="Javascript | 定时器"></a>Javascript | 定时器</h1><ul>
+<li><h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a>setInterval()</h2><p><strong><em>setInterval（ function， time(ms)）</em></strong></p>
+<p>每隔time毫秒执行一次function，function可以是函数名、匿名函数或者一行代码（需用’’）</p>
+<p><strong>返回值：</strong> 一个数字id，用于传给clearInterval()使其失效</p>
+</li>
+</ul>
+<ul>
+<li><h2 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h2><p><strong><em>setTimeout( function, time(ms))</em></strong></p>
+<p>页面开启time毫秒以后，执行function，function可以使函数名、匿名函数或一行代码</p>
+<p><strong>返回值：</strong> 一个数字id，用于传给clearTimeout()使其失效</p>
+<p>可以在递归函数中调用，使其每隔time毫秒执行一次function</p>
+<p>​    比起使用setInterval()，该方法可以通过设置条件使其停止执行，而不是调用clearTimeout()方法</p>
+</li>
+</ul>
+<ul>
+<li><p>一般情况下setTimeout用于延迟执行某方法或功能，</p>
+</li>
+<li><p>setInterval则一般用于刷新表单，对于一些表单的假实时指定时间刷新同步</p>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CSS| float</title>
     <url>/2020/04/03/2020-04-03-CSS-float/</url>
     <content><![CDATA[<h1 id="CSS-float"><a href="#CSS-float" class="headerlink" title="CSS | float"></a>CSS | float</h1><h2 id="标准文档流"><a href="#标准文档流" class="headerlink" title="标准文档流"></a>标准文档流</h2><p>​        <strong>文档流</strong>指的是元素排版布局过程中，元素会<strong>默认</strong>自动从左往右，从上往下的<strong>流式排列方式</strong>。并最终窗体自上而下分成一行行，并在每行中从左至右的顺序排放元素。</p>
@@ -106,160 +134,6 @@
 ]]></content>
       <tags>
         <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CSS 定位</title>
-    <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
-    <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
-<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
-</ul>
-<h3 id="position-absolute-绝对定位："><a href="#position-absolute-绝对定位：" class="headerlink" title="position : absolute | 绝对定位："></a><em>position : absolute</em> | 绝对定位：</h3><ol>
-<li><p>使元素脱离标准文档流</p>
-</li>
-<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
-</li>
-<li><p>参考对象默认为body，也可以设置为别的元素</p>
-</li>
-<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
-<p>注意，此时position属性不可为<strong>static</strong></p>
-</li>
-<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
-<ul>
-<li>这种块级元素不独占一行</li>
-<li>宽度默认为0</li>
-</ul>
-</li>
-</ol>
-<h3 id="position-relative-相对定位："><a href="#position-relative-相对定位：" class="headerlink" title="position : relative | 相对定位："></a><strong><em>position : relative</em></strong> | 相对定位：</h3><ol>
-<li>元素不脱离标准文档流</li>
-<li>不会改变元素本身的特性（块内和行内）</li>
-<li>参考对象为不加position之前该元素的位置</li>
-<li>元素进行相对定位后，原本的空间<strong>依然存在于文档流中</strong>，文档流其他元素不会占用该空间</li>
-</ol>
-<h3 id="position-fixed-固定定位："><a href="#position-fixed-固定定位：" class="headerlink" title="position : fixed | 固定定位："></a><strong><em>position : fixed</em></strong> | <strong>固定定位：</strong></h3><ol>
-<li>元素脱离标准文档流</li>
-<li>页面滚动，元素位置固定不动（如某些网站的返回顶部按键</li>
-<li>参考对象为父级容器</li>
-</ol>
-<ul>
-<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
-<li>用来划分各元素之间的堆叠顺序，z-index默认为1</li>
-</ul>
-</li>
-<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
-</li>
-</ul>
-<ul>
-<li><h2 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h2><ul>
-<li>指定该元素的左侧或右侧不允许有元素浮动（即<strong>消除其左侧或右侧元素的浮动效果</strong></li>
-<li>属性值：left / rigth / both / none(默认值) / inherit(继承父元素的clear属性)</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><ul>
-<li>当子元素超出父元素的显示范围时，可以通过overflow来设置显示方式</li>
-<li>属性值：<ul>
-<li>visible((默认值)所有内容都显示) </li>
-<li>auto(超出范围时显示滚动条)</li>
-<li>hidden(隐藏超出范围的内容)</li>
-<li>scroll(不论是否超出范围都显示滚动条)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>CSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript 定时器</title>
-    <url>/2020/04/06/2020-04-06-JavaScript-%E5%AE%9A%E6%97%B6%E5%99%A8/</url>
-    <content><![CDATA[<h1 id="Javascript-定时器"><a href="#Javascript-定时器" class="headerlink" title="Javascript | 定时器"></a>Javascript | 定时器</h1><ul>
-<li><h2 id="setInterval"><a href="#setInterval" class="headerlink" title="setInterval()"></a>setInterval()</h2><p><strong><em>setInterval（ function， time(ms)）</em></strong></p>
-<p>每隔time毫秒执行一次function，function可以是函数名、匿名函数或者一行代码（需用’’）</p>
-<p><strong>返回值：</strong> 一个数字id，用于传给clearInterval()使其失效</p>
-</li>
-</ul>
-<ul>
-<li><h2 id="setTimeout"><a href="#setTimeout" class="headerlink" title="setTimeout()"></a>setTimeout()</h2><p><strong><em>setTimeout( function, time(ms))</em></strong></p>
-<p>页面开启time毫秒以后，执行function，function可以使函数名、匿名函数或一行代码</p>
-<p><strong>返回值：</strong> 一个数字id，用于传给clearTimeout()使其失效</p>
-<p>可以在递归函数中调用，使其每隔time毫秒执行一次function</p>
-<p>​    比起使用setInterval()，该方法可以通过设置条件使其停止执行，而不是调用clearTimeout()方法</p>
-</li>
-</ul>
-<ul>
-<li><p>一般情况下setTimeout用于延迟执行某方法或功能，</p>
-</li>
-<li><p>setInterval则一般用于刷新表单，对于一些表单的假实时指定时间刷新同步</p>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>JavaScript 运动</title>
-    <url>/2020/04/08/2020-04-08-JavaScript-%E8%BF%90%E5%8A%A8/</url>
-    <content><![CDATA[<h1 id="JavaScript-运动"><a href="#JavaScript-运动" class="headerlink" title="JavaScript | 运动"></a>JavaScript | 运动</h1><ul>
-<li><h2 id="运动基础"><a href="#运动基础" class="headerlink" title="运动基础"></a>运动基础</h2><ul>
-<li><p>让 DIV 动起来</p>
-<ul>
-<li>利用定时器</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	oDiv.style.left = oDiv.offsetLeft + speed + <span class="string">'px'</span>; <span class="comment">//speed为每30ms移动的距离</span></span><br><span class="line">&#125;, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>通过控制 oDiv.offestLeft 的值，使用 clearInterval() 来让其停止运动</li>
-<li>每次启动定时器前需使用 clearInterval() 将上一次启动的定时器关闭，以免出现电子次数越多移动越快的情况</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h2 id="运动框架"><a href="#运动框架" class="headerlink" title="运动框架"></a>运动框架</h2><ul>
-<li>开始运动时，关闭已有定时器</li>
-<li>把运动和停止隔开(if … else)</li>
-</ul>
-</li>
-<li><h2 id="缓冲效果"><a href="#缓冲效果" class="headerlink" title="缓冲效果"></a>缓冲效果</h2><ul>
-<li><p>speed 与距离成正比，与目标距离越近，速度越慢</p>
-</li>
-<li><p>speed = (目标距离 - oDiv.offsetLeft) / 减缓倍率（防止速度过快一下子直接到达目标距离）</p>
-</li>
-<li><p>由于 px 的值不能 &lt;1，当 speed&lt;1 时，div会停止不动。为了让 div 精准停在想要的位置，需要使用 <strong><em>Math.ceil( )</em></strong> 向上取整。</p>
-<ul>
-<li><strong><em>Math.floor()</em></strong> 是向下取整</li>
-<li><strong><em>Math.abs()</em></strong> 取绝对值</li>
-<li><strong><em>Math.round()</em></strong> 四舍五入</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">speed=speed &gt;<span class="number">0</span> ? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);</span><br><span class="line">   speed=<span class="built_in">Math</span>.ceil(<span class="built_in">Math</span>.abs(speed));</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><h2 id="多物体运动框架"><a href="#多物体运动框架" class="headerlink" title="多物体运动框架"></a>多物体运动框架</h2><ul>
-<li>参数：物体，运动属性，目标参数</li>
-<li>定时器作为运动对象的属性（JavaScript允许通过 adiv[i].timer=null; 这样的方式为对象增添新的属性）</li>
-<li>如果一个物体需要同时改变多个属性，则每个运动的属性都需要一个单独的定时器<ul>
-<li>如，要让宽度和透明度同时改变，需要两个定时器，若使用一个定时器则会相互清除</li>
-</ul>
-</li>
-<li>对于不同的属性，使用getStyle()获取该属性的值</li>
-<li>框架如下：</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Move</span>(<span class="params">obj, attr, iTarget</span>)	//三个参数，物体、变更的属性、目标值</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	clearInterval(obj.timer1);		<span class="comment">//清除上一个定时器，避免多次点击重复触发</span></span><br><span class="line">	obj.timer1 = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> cur = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度需要单独处理</span></span><br><span class="line">            cur = <span class="built_in">parseFloat</span>(getStyle(obj, attr))*<span class="number">100</span>;	<span class="comment">//为了方便处理，透明度1按100算</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        	cur = <span class="built_in">parseInt</span>(getStyle(obj, attr));</span><br><span class="line">		<span class="keyword">var</span> speed = (iTarget - cur)/<span class="number">10</span>;			<span class="comment">//确定速度的值，改10可以变更其缓冲速度</span></span><br><span class="line">		speed = speed&gt;<span class="number">0</span>? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);	<span class="comment">//速度最小为1</span></span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">parseInt</span>(getStyle(obj, attr)) == iTarget)			<span class="comment">//到达目标位置</span></span><br><span class="line">				clearInterval(obj.timer1);						<span class="comment">//清除定时器</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度，速度单独处理</span></span><br><span class="line">            &#123;</span><br><span class="line">            	obj.style.filter = <span class="string">'aplha(opacity:'</span>+ cur + speed +<span class="string">')'</span>;	<span class="comment">//IE下</span></span><br><span class="line">          	obj.style.opacity = (cur + speed)/<span class="number">100</span>;				<span class="comment">//chrome、Firefox</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            	obj.style[attr] = <span class="built_in">parseInt</span>(getStyle(obj, attr)) + speed + <span class="string">'px'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;, <span class="number">30</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取样式属性的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj, attr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.currentStyle) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[attr];				<span class="comment">//IE下</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj,<span class="literal">null</span>)[attr];	<span class="comment">//Chrome、FireFox等</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -361,6 +235,73 @@
       </tags>
   </entry>
   <entry>
+    <title>CSS 定位</title>
+    <url>/2020/04/03/2020-04-03-CSS-%E5%AE%9A%E4%BD%8D/</url>
+    <content><![CDATA[<h1 id="CSS-定位"><a href="#CSS-定位" class="headerlink" title="CSS | 定位"></a>CSS | 定位</h1><ul>
+<li><h2 id="position"><a href="#position" class="headerlink" title="position"></a>position</h2></li>
+</ul>
+<h3 id="position-absolute-绝对定位："><a href="#position-absolute-绝对定位：" class="headerlink" title="position : absolute | 绝对定位："></a><em>position : absolute</em> | 绝对定位：</h3><ol>
+<li><p>使元素脱离标准文档流</p>
+</li>
+<li><p><em>top / buttom / left / right</em> 各属性含义为此边距离参考对象的此边的距离</p>
+</li>
+<li><p>参考对象默认为body，也可以设置为别的元素</p>
+</li>
+<li><p>给父级加定位属性<strong>(position)</strong>就可以将其作为参考对象</p>
+<p>注意，此时position属性不可为<strong>static</strong></p>
+</li>
+<li><p>可以让行内元素变为块级元素，即拥有width和height属性</p>
+<ul>
+<li>这种块级元素不独占一行</li>
+<li>宽度默认为0</li>
+</ul>
+</li>
+</ol>
+<h3 id="position-relative-相对定位："><a href="#position-relative-相对定位：" class="headerlink" title="position : relative | 相对定位："></a><strong><em>position : relative</em></strong> | 相对定位：</h3><ol>
+<li>元素不脱离标准文档流</li>
+<li>不会改变元素本身的特性（块内和行内）</li>
+<li>参考对象为不加position之前该元素的位置</li>
+<li>元素进行相对定位后，原本的空间<strong>依然存在于文档流中</strong>，文档流其他元素不会占用该空间</li>
+</ol>
+<h3 id="position-fixed-固定定位："><a href="#position-fixed-固定定位：" class="headerlink" title="position : fixed | 固定定位："></a><strong><em>position : fixed</em></strong> | <strong>固定定位：</strong></h3><ol>
+<li>元素脱离标准文档流</li>
+<li>页面滚动，元素位置固定不动（如某些网站的返回顶部按键</li>
+<li>参考对象为父级容器</li>
+</ol>
+<ul>
+<li><h2 id="z-index"><a href="#z-index" class="headerlink" title="z-index"></a>z-index</h2><ul>
+<li>用来划分各元素之间的堆叠顺序，z-index默认为1</li>
+</ul>
+</li>
+<li><p>数值越大，层次越靠前，高层元素会将低层元素覆盖</p>
+</li>
+</ul>
+<ul>
+<li><h2 id="clear"><a href="#clear" class="headerlink" title="clear"></a>clear</h2><ul>
+<li>指定该元素的左侧或右侧不允许有元素浮动（即<strong>消除其左侧或右侧元素的浮动效果</strong></li>
+<li>属性值：left / rigth / both / none(默认值) / inherit(继承父元素的clear属性)</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="overflow"><a href="#overflow" class="headerlink" title="overflow"></a>overflow</h2><ul>
+<li>当子元素超出父元素的显示范围时，可以通过overflow来设置显示方式</li>
+<li>属性值：<ul>
+<li>visible((默认值)所有内容都显示) </li>
+<li>auto(超出范围时显示滚动条)</li>
+<li>hidden(隐藏超出范围的内容)</li>
+<li>scroll(不论是否超出范围都显示滚动条)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTML input</title>
     <url>/2020/04/07/2020-04-07-HTML-input/</url>
     <content><![CDATA[<h1 id="HTML-input"><a href="#HTML-input" class="headerlink" title="HTML | input"></a>HTML | input</h1><ul>
@@ -395,6 +336,65 @@
       </tags>
   </entry>
   <entry>
+    <title>JavaScript 运动</title>
+    <url>/2020/04/08/2020-04-08-JavaScript-%E8%BF%90%E5%8A%A8/</url>
+    <content><![CDATA[<h1 id="JavaScript-运动"><a href="#JavaScript-运动" class="headerlink" title="JavaScript | 运动"></a>JavaScript | 运动</h1><ul>
+<li><h2 id="运动基础"><a href="#运动基础" class="headerlink" title="运动基础"></a>运动基础</h2><ul>
+<li><p>让 DIV 动起来</p>
+<ul>
+<li>利用定时器</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	oDiv.style.left = oDiv.offsetLeft + speed + <span class="string">'px'</span>; <span class="comment">//speed为每30ms移动的距离</span></span><br><span class="line">&#125;, <span class="number">30</span>)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过控制 oDiv.offestLeft 的值，使用 clearInterval() 来让其停止运动</li>
+<li>每次启动定时器前需使用 clearInterval() 将上一次启动的定时器关闭，以免出现电子次数越多移动越快的情况</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h2 id="运动框架"><a href="#运动框架" class="headerlink" title="运动框架"></a>运动框架</h2><ul>
+<li>开始运动时，关闭已有定时器</li>
+<li>把运动和停止隔开(if … else)</li>
+</ul>
+</li>
+<li><h2 id="缓冲效果"><a href="#缓冲效果" class="headerlink" title="缓冲效果"></a>缓冲效果</h2><ul>
+<li><p>speed 与距离成正比，与目标距离越近，速度越慢</p>
+</li>
+<li><p>speed = (目标距离 - oDiv.offsetLeft) / 减缓倍率（防止速度过快一下子直接到达目标距离）</p>
+</li>
+<li><p>由于 px 的值不能 &lt;1，当 speed&lt;1 时，div会停止不动。为了让 div 精准停在想要的位置，需要使用 <strong><em>Math.ceil( )</em></strong> 和  <strong><em>Math.floor()</em></strong> ，让speed最小值为1。</p>
+<ul>
+<li><strong><em>Math.floor()</em></strong> 是向下取整</li>
+<li><strong><em>Math.abs()</em></strong> 取绝对值</li>
+<li><strong><em>Math.round()</em></strong> 四舍五入</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">speed=speed &gt;<span class="number">0</span> ? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><h2 id="多物体运动框架"><a href="#多物体运动框架" class="headerlink" title="多物体运动框架"></a>多物体运动框架</h2><ul>
+<li>参数：物体，运动属性，目标参数</li>
+<li>定时器作为运动对象的属性（JavaScript允许通过 adiv[i].timer=null; 这样的方式为对象增添新的属性）</li>
+<li>如果一个物体需要同时改变多个属性，则每个运动的属性都需要一个单独的定时器<ul>
+<li>如，要让宽度和透明度同时改变，需要两个定时器，若使用一个定时器则会相互清除</li>
+</ul>
+</li>
+<li>对于不同的属性，使用getStyle()获取该属性的值</li>
+<li>框架如下：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Move</span>(<span class="params">obj, attr, iTarget</span>)	//三个参数，物体、变更的属性、目标值</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	clearInterval(obj.timer1);		<span class="comment">//清除上一个定时器，避免多次点击重复触发</span></span><br><span class="line">	obj.timer1 = setInterval(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> cur = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度需要单独处理</span></span><br><span class="line">            cur = <span class="built_in">parseFloat</span>(getStyle(obj, attr))*<span class="number">100</span>;	<span class="comment">//为了方便处理，透明度1按100算</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        	cur = <span class="built_in">parseInt</span>(getStyle(obj, attr));</span><br><span class="line">		<span class="keyword">var</span> speed = (iTarget - cur)/<span class="number">10</span>;			<span class="comment">//确定速度的值，10为其缓冲速度</span></span><br><span class="line">		speed = speed&gt;<span class="number">0</span>? <span class="built_in">Math</span>.ceil(speed) : <span class="built_in">Math</span>.floor(speed);	<span class="comment">//速度最小为1</span></span><br><span class="line">        </span><br><span class="line">		<span class="keyword">if</span>(cur == iTarget)						<span class="comment">//到达目标位置</span></span><br><span class="line">				clearInterval(obj.timer1);		<span class="comment">//清除定时器</span></span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(attr == <span class="string">'opacity'</span>)					<span class="comment">//透明度，速度单独处理</span></span><br><span class="line">            &#123;</span><br><span class="line">            	obj.style.filter = <span class="string">'aplha(opacity:'</span>+ cur + speed +<span class="string">')'</span>;	<span class="comment">//IE下</span></span><br><span class="line">          		obj.style.opacity = (cur + speed)/<span class="number">100</span>;				<span class="comment">//chrome、Firefox</span></span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            	obj.style[attr] = cur + speed + <span class="string">'px'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">	&#125;, <span class="number">30</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//获取样式属性的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getStyle</span>(<span class="params">obj, attr</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (obj.currentStyle) &#123;</span><br><span class="line">        <span class="keyword">return</span> obj.currentStyle[attr];				<span class="comment">//IE下</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> getComputedStyle(obj,<span class="literal">null</span>)[attr];	<span class="comment">//Chrome、FireFox等</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaScript | BOM</title>
     <url>/2020/04/10/2020-04-10-JavaScript--BOM/</url>
     <content><![CDATA[<h1 id="Javascript-BOM"><a href="#Javascript-BOM" class="headerlink" title="Javascript | BOM"></a>Javascript | BOM</h1><h2 id="BOM基础"><a href="#BOM基础" class="headerlink" title="BOM基础"></a>BOM基础</h2><ul>
@@ -418,14 +418,22 @@
 </li>
 </ul>
 <h2 id="尺寸和坐标"><a href="#尺寸和坐标" class="headerlink" title="尺寸和坐标"></a>尺寸和坐标</h2><ul>
-<li>可视区尺寸：<ul>
+<li><p>可视区尺寸：</p>
+<ul>
 <li>document.documentElement.clientWidth：可视区宽度</li>
 <li>document.documentElement.clientheight：可视区高度</li>
 </ul>
 </li>
-<li>滚动距离（可视区边框距页面边框的距离）：<ul>
+<li><p>滚动距离（可视区边框距页面边框的距离）：</p>
+<ul>
 <li>document.documentElement.scrollTop：滚动高度</li>
+<li>document.documentElement.scrollLeft：滚动宽度</li>
+<li>获取scrollTop（兼容性写法）:</li>
 </ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> scrollTop = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop;</span><br></pre></td></tr></table></figure>
+
+
+
 </li>
 </ul>
 <h2 id="常用事件"><a href="#常用事件" class="headerlink" title="常用事件"></a>常用事件</h2><ul>
@@ -449,7 +457,11 @@
 </ul>
 </li>
 <li><p>获取event对象</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> oEvent = ev || event;	<span class="comment">//ev为function参数</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>IE6-8 支持直接使用event</li>
+<li>火狐、IE9、Chrome支持使用ev参数获取事件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> oEvent = ev || event;	<span class="comment">//ev为function参数，如odiv.onclick=function(ev)</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>事件流</p>
 <ul>
@@ -466,14 +478,130 @@
 <li><strong><em>onmouseover :</em></strong> 鼠标移入</li>
 <li><strong><em>onmouseout :</em></strong> 鼠标移出</li>
 <li><strong><em>onclick :</em></strong>鼠标点击</li>
+<li><strong><em>ondbclick ：</em></strong> 鼠标双击</li>
 <li><strong><em>onmousemove :</em></strong> 鼠标移动</li>
 </ul>
 </li>
 <li>可视区坐标：clientX、clientY</li>
+<li>获取鼠标的绝对位置：</li>
 </ul>
-<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2>]]></content>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPos</span>(<span class="params">ev</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> scrollTop = <span class="built_in">document</span>.documentElement.scrollTop || <span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">    <span class="keyword">var</span> scrollLeft = <span class="built_in">document</span>.documenteElement.scrollLeft || <span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="attr">x</span>:scrollLeft + ev.sclientX, <span class="attr">y</span>:scrollTop + ev.sclientY&#125;;	<span class="comment">//返回一个保存坐标的json</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h2><ul>
+<li>常用事件<ul>
+<li><strong><em>onkeydown()</em></strong></li>
+<li><strong><em>onkeyup()</em></strong></li>
+<li><strong><em>keycode :</em></strong> 返回该按键的ASCII码值</li>
+<li><strong><em>ctrlkey / shiftkey / altkey :</em></strong> 按下ctrl/shift/alt时，该值为真</li>
+</ul>
+</li>
+</ul>
+<h2 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h2><ul>
+<li><strong><em>addEventListener（事件名（不带on），函数）：</em></strong> 为事件添加函数，多次使用可以添加多个函数<ul>
+<li>事件名不加on，如 ‘onclick’ 写成 ‘click’</li>
+<li>封装函数(兼容性写法)：</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myAddEvent</span>(<span class="params">obj, ev, fn</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(obj.attchEvent)</span><br><span class="line">		obj.attcheEvent(<span class="string">'on'</span>+ev, fn);	<span class="comment">//IE版本，逆序添加</span></span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		obj.addEventListener(ev, fn);	<span class="comment">//Chrome、FF等，正序添加</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong><em>removeEventListener（事件， 函数）：</em></strong> 解除绑定</li>
+</ul>
+]]></content>
       <tags>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JavaScript Object</title>
+    <url>/2020/04/14/2020-04-14-JavaScript-Object/</url>
+    <content><![CDATA[<h1 id="Javascript-Object"><a href="#Javascript-Object" class="headerlink" title="Javascript | Object"></a>Javascript | Object</h1><h2 id="object："><a href="#object：" class="headerlink" title="object："></a>object：</h2><ul>
+<li><p>一个没有内容的空白对象/类</p>
+</li>
+<li><p>可以用于创建自己的对象，添加自定义的属性和方法</p>
+</li>
+<li><h3 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//也可以使用构造函数创建自定义对象，避免资源浪费</span></span><br><span class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> Constructor(parm1, parm2……);</span><br><span class="line"><span class="comment">//构造函数中添加自定义属性和方法要使用this指针</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Constructor</span>(<span class="params">parm1, parm2……</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.Parm1 = parm1;</span><br><span class="line">    <span class="keyword">this</span>.showParm2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        alert(<span class="keyword">this</span>.parm1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><ul>
+<li>在一个已存在的对象构造器中不能添加新的属性，如要在上述构造的Constructor中添加新的属性和方法，需要在构造函数中声明，而不能在构造函数外部使用 Constructor.parm3 = 5; 这种形式</li>
+<li>如果非要在外部添加，需要使用 <strong><em>prototype</em></strong> </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">Consructor.prototype.parm3 = <span class="number">5</span>;	<span class="comment">//合法</span></span><br><span class="line">Constuctor.parm3 = <span class="number">5</span>; <span class="comment">//非法</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="面向过程-→-面向对象"><a href="#面向过程-→-面向对象" class="headerlink" title="面向过程 → 面向对象"></a>面向过程 → 面向对象</h2><ul>
+<li><p>window.onload → 构造函数</p>
+</li>
+<li><p>变量    →    属性</p>
+</li>
+<li><p>函数    →    方法</p>
+</li>
+</ul>
+<p>注意，函数在改为方法时，若使用this指针需要将对象作为参数传入，否则this指向实例对象</p>
+<p>构造函数中，最好事先将指向该对象的this指针保存起来，以防属性使用函数而找不到该对象的this指针</p>
+<h2 id="JSON的对象"><a href="#JSON的对象" class="headerlink" title="JSON的对象"></a>JSON的对象</h2><p>简单，但不适合多个对象，亦称为 <strong><em>单体</em></strong></p>
+<ul>
+<li>适用情况：整个程序只有一个实例对象</li>
+<li><strong><em>call()：</em></strong> 第一个参数作为函数执行时的this</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">show</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	alert(<span class="keyword">this</span> + <span class="string">'a is'</span> + a);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">show(<span class="number">1</span>);	<span class="comment">//弹出：object window a is 1</span></span><br><span class="line">show.call(<span class="string">'abc'</span>);	<span class="comment">//弹出 abc a is undefined</span></span><br><span class="line">show.call(<span class="string">'abc'</span>, <span class="number">1</span>);	<span class="comment">//弹出 abc a is 1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="类的继承"><a href="#类的继承" class="headerlink" title="类的继承"></a>类的继承</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//假设现在已有一个类A，需要让类B继承A</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">B</span>(<span class="params"></span>)	//继承属性</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	A.call(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i <span class="keyword">in</span> A.prototype)	<span class="comment">//继承方法</span></span><br><span class="line">	B.prototype[i] = A.prototpye[i];</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="系统对象"><a href="#系统对象" class="headerlink" title="系统对象"></a>系统对象</h2><ul>
+<li><h3 id="本地对象-非静态对象"><a href="#本地对象-非静态对象" class="headerlink" title="本地对象 / 非静态对象"></a>本地对象 / 非静态对象</h3><ul>
+<li>可以使用new实例化的对象</li>
+<li>如：Array、Object、Funciton、String、Boolean、Number、Date、RegExp、Error</li>
+</ul>
+</li>
+<li><h3 id="内置对象-静态对象"><a href="#内置对象-静态对象" class="headerlink" title="内置对象 / 静态对象"></a>内置对象 / 静态对象</h3><ul>
+<li>不能new的对象</li>
+<li>Math、Global</li>
+</ul>
+</li>
+<li><h3 id="宿主对象"><a href="#宿主对象" class="headerlink" title="宿主对象"></a>宿主对象</h3><ul>
+<li>由浏览器提供的对象</li>
+<li>BOM、DOM</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>大数据</title>
+    <url>/2020/04/20/2020-04-20-%E5%A4%A7%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<h1 id="大数据"><a href="#大数据" class="headerlink" title="大数据"></a>大数据</h1><h2 id="典型计算模式"><a href="#典型计算模式" class="headerlink" title="典型计算模式"></a>典型计算模式</h2><ul>
+<li>批处理计算：MapReduce、Spark</li>
+<li>流计算（时效性）：S4 + Storm + Flume</li>
+<li>图计算：Google Pregel</li>
+<li>查询分析计算：Dremel、Hive、Cassandra</li>
+</ul>
+<p><img src="C:%5CUsers%5Casus%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200420154853147.png" alt="image-20200420154853147"></p>
+]]></content>
+      <tags>
+        <tag>大数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 命令</title>
+    <url>/2020/04/20/2020-04-20-Linux-%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="Linux-命令"><a href="#Linux-命令" class="headerlink" title="Linux | 命令"></a>Linux | 命令</h1><p>命令 含义</p>
+<p>cd /home/hadoop —— #把/home/hadoop设置为当前目录<br>cd ..  —— #返回上一级目录<br>cd ~ —— #进入到当前Linux系统登录用户的主目录（或主文件夹）。在 Linux 系统中，<del>代表的是用户的主文件夹，即“/home/用户名”这个目录，如果当前登录用户名为 hadoop，则</del>就代表“/home/hadoop/”这个目录<br>ls —— #查看当前目录中的文件<br>ls -l —— #查看文件和目录的权限信息<br>mkdir input —— #在当前目录下创建input子目录<br>mkdir -p src/main/scala —— #在当前目录下，创建多级子目录src/main/scala<br>cat /proc/version  —— #查看Linux系统内核版本信息<br>cat /home/hadoop/word.txt  —— #把/home/hadoop/word.txt这个文件全部内容显示到屏幕上<br>cat file1 file2 &gt; file3  —— #把当前目录下的file1和file2两个文件进行合并生成文件file3<br>head -5 word.txt  —— #把当前目录下的word.txt文件中的前5行内容显示到屏幕上<br>cp /home/hadoop/word.txt /usr/local/  —— #把/home/hadoop/word.txt文件复制到“/usr/local”目录下<br>rm ./word.txt  —— #删除当前目录下的word.txt文件<br>rm –r ./test  —— #删除当前目录下的test目录及其下面的所有文件<br>rm –r test*  —— #删除当面目录下所有以test开头的目录和文件</p>
+<p>tar -zxf ~/下载/spark-2.1.0.tgz -C /usr/local/  —— #把spark-2.1.0.tgz这个压缩文件解压到/usr/local目录下<br>mv spark-2.1.0 spark  —— #把spark-2.1.0目录重新命名为spark<br>chown -R hadoop:hadoop ./spark  —— # hadoop是当前登录Linux系统的用户名，把当前目录下的spark子目录的所有权限，赋予给用户hadoop<br>ifconfig  —— #查看本机IP地址信息<br>exit  —— #退出并关闭Linux终端</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -483,6 +611,129 @@
 <p>通常 function1 比 function2 更实用</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if（function1）</span><br><span class="line">	function1；</span><br><span class="line">else</span><br><span class="line">	function2；</span><br></pre></td></tr></table></figure>
 
+]]></content>
+  </entry>
+  <entry>
+    <title>正则表达式</title>
+    <url>/2020/04/16/2020-04-16-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+    <content><![CDATA[<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">.search(str)	<span class="comment">//返回子串在父串中的位置</span></span><br><span class="line">.subsreing(n,m)	<span class="comment">//截取字符串，不包括结束位置.只有一个参数时截取起始位置后的所有字符串</span></span><br><span class="line">.charAt(str)	<span class="comment">//返回字符串所在位置	</span></span><br><span class="line">.split(str)		<span class="comment">//用str将字符串切分，返回一个数组</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="RegExp"><a href="#RegExp" class="headerlink" title="RegExp"></a>RegExp</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> re = <span class="built_in">RegExp</span>(<span class="string">'正则表达式'</span>);	<span class="comment">//js风格</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/正则表达式/</span>	<span class="comment">//perl风格</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h2><ul>
+<li>\d：数字——[0-9]</li>
+<li>\w：英文、下划线——[a-z0-9_]</li>
+<li>\s：空白字符</li>
+<li>\D：非数字——[ ^0-9 ]</li>
+<li>\W：非英文、数字、下划线——[ ^0-9a-z_ ]</li>
+<li>\S：非空白字符</li>
+</ul>
+<h2 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h2><ul>
+<li><p>{n}——正好出现n次</p>
+</li>
+<li><p>{n, m}——最少n次，最多m次</p>
+</li>
+<li><p>{n, }——至少n次</p>
+</li>
+<li><p>+——最少一次——{1,}</p>
+</li>
+<li><p>? ——最多一次——{0,1}</p>
+</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul>
+<li><p>^：在[]里——排除 / 不在[]里——行首</p>
+</li>
+<li><p>$：行尾</p>
+</li>
+</ul>
+<blockquote>
+<p>加在校验序列首位，避免出现模糊搜素的情况，即校验是否为’apple’，但’pineapple’也通过了的现象</p>
+</blockquote>
+<ul>
+<li>re .test(str)：检验 str 是否满足 正则表达式re 的要求</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Spark master参数</title>
+    <url>/2020/04/24/2020-04-24-Spark-master%E5%8F%82%E6%95%B0/</url>
+    <content><![CDATA[<h1 id="Spark启动时的master参数以及Spark的部署方式"><a href="#Spark启动时的master参数以及Spark的部署方式" class="headerlink" title="Spark启动时的master参数以及Spark的部署方式"></a>Spark启动时的master参数以及Spark的部署方式</h1><p>我们在初始化SparkConf时，或者提交Spark任务时，都会有master参数需要设置，如下：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">conf = SparkConf().setAppName(appName).setMaster(master)</span><br><span class="line">sc = SparkContext(conf=conf)</span><br></pre></td></tr></table></figure>
+
+<p>master的值与spark的部署方式有关</p>
+<p>以下为Saprk的几种部署方式：</p>
+<h2 id="Local模式"><a href="#Local模式" class="headerlink" title="Local模式"></a>Local模式</h2><p>Local模式就是运行在一台计算机上的模式，通常就是用于在本机上练手和测试。它可以通过以下集中方式设置master。</p>
+<ul>
+<li>local: 所有计算都运行在一个线程当中，没有任何并行计算，通常我们在本机执行一些测试代码，或者练手，就用这种模式。</li>
+<li>local[K]: 指定使用几个线程来运行计算，比如local[4]就是运行4个worker线程。通常我们的cpu有几个core，就指定几个线程，最大化利用cpu的计算能力</li>
+<li>local[*]: 这种模式直接帮你按照cpu最多cores来设置线程数了。</li>
+</ul>
+<h2 id="cluster模式"><a href="#cluster模式" class="headerlink" title="cluster模式"></a>cluster模式</h2><p>cluster模式肯定就是运行很多机器上了，但是它又分为以下三种模式，区别在于谁去管理资源调度。（说白了，就好像后勤管家，哪里需要资源，后勤管家要负责调度这些资源）</p>
+<h4 id="standalone模式"><a href="#standalone模式" class="headerlink" title="standalone模式"></a>standalone模式</h4><p>这种模式下，Spark会自己负责资源的管理调度。它将cluster中的机器分为master机器和worker机器，master通常就一个，可以简单的理解为那个后勤管家，worker就是负责干计算任务活的苦劳力。</p>
+<p>–master就是指定master那台机器的地址和端口，我想这也正是–master参数名称的由来吧。</p>
+<h4 id="mesos模式"><a href="#mesos模式" class="headerlink" title="mesos模式"></a>mesos模式</h4><p>这里就很好理解了，如果使用mesos来管理资源调度，自然就应该用mesos模式了</p>
+<h4 id="yarn模式"><a href="#yarn模式" class="headerlink" title="yarn模式"></a>yarn模式</h4><p>同样，如果采用yarn来管理资源调度，就应该用yarn模式，由于很多时候我们需要和mapreduce使用同一个集群，所以都采用Yarn来管理资源调度，这也是生产环境大多采用yarn模式的原因。yarn模式又分为yarn cluster模式和yarn client模式：</p>
+<ul>
+<li>yarn cluster: 这个就是生产环境常用的模式，所有的资源调度和计算都在集群环境上运行。</li>
+<li>yarn client: 这个是说Spark Driver和ApplicationMaster进程均在本机运行，而计算任务在cluster上。</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Spark</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>jQuery</title>
+    <url>/2020/04/21/2020-04-20-jQuery/</url>
+    <content><![CDATA[<h1 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery"></a>jQuery</h1><h2 id="入口函数"><a href="#入口函数" class="headerlink" title="入口函数"></a>入口函数</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);	<span class="comment">//等价于 window.onload = function()&#123;&#125;;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>原生js入口函数：<ul>
+<li>在页面DOM元素以及图片完全加载完毕之后执行</li>
+<li>重复编写时，后者覆盖前者</li>
+</ul>
+</li>
+<li>jQuery入口函数：<ul>
+<li>在DOM元素加载完毕，但图片等未加载完毕时执行</li>
+<li>重复编写时，所有入口函数都会执行</li>
+</ul>
+</li>
+</ul>
+<h2 id="获取DOM"><a href="#获取DOM" class="headerlink" title="获取DOM"></a>获取DOM</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> $div1 = $(<span class="string">'div'</span>)[<span class="number">0</span>];	<span class="comment">//getelementsByTagname('div')[0];</span></span><br><span class="line"><span class="keyword">var</span> $div2 = $(<span class="string">'#div2'</span>);		<span class="comment">//getElementById('div2');</span></span><br><span class="line"><span class="keyword">var</span> $div3 = $(<span class="string">'.div3'</span>)[<span class="number">0</span>];	<span class="comment">//getElementsByClassname('div3')[0];</span></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++  引用</title>
+    <url>/2020/04/08/C++%20%20%E5%BC%95%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="C-引用、const、static"><a href="#C-引用、const、static" class="headerlink" title="C++ | 引用、const、static"></a>C++ | 引用、const、static</h1><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int &amp;n &#x3D; m;</span><br></pre></td></tr></table></figure>
+
+<p>​    n为m的别名，内存中占有<strong>同一块空间</strong>（与指针的区别）</p>
+<h2 id="与指针的比较"><a href="#与指针的比较" class="headerlink" title="与指针的比较"></a>与指针的比较</h2><ol>
+<li>引用被创建时必须同时被初始化；指针可以在任何时候初始化</li>
+<li>不能有NULL引用；指针可以有NULL指针</li>
+<li>一旦引用被初始化，就不能改变引用关系；指针可以改变所指对象</li>
+</ol>
+<h2 id="引用的主要功能"><a href="#引用的主要功能" class="headerlink" title="引用的主要功能"></a>引用的主要功能</h2><ul>
+<li><h3 id="传递函数的参数"><a href="#传递函数的参数" class="headerlink" title="传递函数的参数"></a>传递函数的参数</h3><p>C++中，传参有三种方式：值传递、指针传递、引用传递</p>
+<p>如果只需要借用 某个对象的“别名”，那就用引用而非指针，因为使用指针的能力更大，权力更高，可能会产生一些不当的操作（如果不是借用别名，而是权力更大的操作（对内存进行操作），如new一个对象，还是使用指针）</p>
+</li>
+</ul>
+<h1 id="const"><a href="#const" class="headerlink" title="const"></a>const</h1><h2 id="const-和-define"><a href="#const-和-define" class="headerlink" title="const 和 #define"></a>const 和 #define</h2><ol>
+<li>const常量有数据类型，#define没有数据类型（类型安全检查）</li>
+<li>const常量可以调试，#define常量不能调试</li>
+</ol>
+<h2 id="const提高程序健壮性"><a href="#const提高程序健壮性" class="headerlink" title="const提高程序健壮性"></a>const提高程序健壮性</h2><ol>
+<li></li>
+</ol>
+<h1 id="static类成员变量与函数"><a href="#static类成员变量与函数" class="headerlink" title="static类成员变量与函数"></a>static类成员变量与函数</h1><p>静态成员函数与变量属于类本身，可以通过A::方式访问，与java中的类函数和类属性相同</p>
+<p>使用静态成员变量时，需要在使用前在类的外部进行初始化</p>
 ]]></content>
   </entry>
   <entry>
@@ -535,77 +786,6 @@
 ]]></content>
       <tags>
         <tag>ASM</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++  引用</title>
-    <url>/2020/04/08/C++%20%20%E5%BC%95%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="C-引用、const、static"><a href="#C-引用、const、static" class="headerlink" title="C++ | 引用、const、static"></a>C++ | 引用、const、static</h1><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int &amp;n &#x3D; m;</span><br></pre></td></tr></table></figure>
-
-<p>​    n为m的别名，内存中占有<strong>同一块空间</strong>（与指针的区别）</p>
-<h2 id="与指针的比较"><a href="#与指针的比较" class="headerlink" title="与指针的比较"></a>与指针的比较</h2><ol>
-<li>引用被创建时必须同时被初始化；指针可以在任何时候初始化</li>
-<li>不能有NULL引用；指针可以有NULL指针</li>
-<li>一旦引用被初始化，就不能改变引用关系；指针可以改变所指对象</li>
-</ol>
-<h2 id="引用的主要功能"><a href="#引用的主要功能" class="headerlink" title="引用的主要功能"></a>引用的主要功能</h2><ul>
-<li><h3 id="传递函数的参数"><a href="#传递函数的参数" class="headerlink" title="传递函数的参数"></a>传递函数的参数</h3><p>C++中，传参有三种方式：值传递、指针传递、引用传递</p>
-<p>如果只需要借用 某个对象的“别名”，那就用引用而非指针，因为使用指针的能力更大，权力更高，可能会产生一些不当的操作（如果不是借用别名，而是权力更大的操作（对内存进行操作），如new一个对象，还是使用指针）</p>
-</li>
-</ul>
-<h1 id="const"><a href="#const" class="headerlink" title="const"></a>const</h1><h2 id="const-和-define"><a href="#const-和-define" class="headerlink" title="const 和 #define"></a>const 和 #define</h2><ol>
-<li>const常量有数据类型，#define没有数据类型（类型安全检查）</li>
-<li>const常量可以调试，#define常量不能调试</li>
-</ol>
-<h2 id="const提高程序健壮性"><a href="#const提高程序健壮性" class="headerlink" title="const提高程序健壮性"></a>const提高程序健壮性</h2><ol>
-<li></li>
-</ol>
-<h1 id="static类成员变量与函数"><a href="#static类成员变量与函数" class="headerlink" title="static类成员变量与函数"></a>static类成员变量与函数</h1><p>静态成员函数与变量属于类本身，可以通过A::方式访问，与java中的类函数和类属性相同</p>
-<p>使用静态成员变量时，需要在使用前在类的外部进行初始化</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>JavaScript 表格和表单</title>
-    <url>/2020/04/07/JavaScript%20%20%E8%A1%A8%E5%8D%95/</url>
-    <content><![CDATA[<h1 id="JavaScript-表单"><a href="#JavaScript-表单" class="headerlink" title="JavaScript | 表单"></a>JavaScript | 表单</h1><h2 id="表格的一些便捷操作："><a href="#表格的一些便捷操作：" class="headerlink" title="表格的一些便捷操作："></a>表格的一些便捷操作：</h2><ul>
-<li><p><strong><em>getElementsByTagName(‘tbody’) = tBodies</em></strong></p>
-</li>
-<li><p><strong><em>getElementsByTagName(‘tr’) = rows</em></strong></p>
-</li>
-<li><p><strong><em>getElementsByTagName(‘td’) = cells</em></strong></p>
-</li>
-</ul>
-<ul>
-<li><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ul>
-<li><p><strong><em>.search(‘Str’) :</em></strong> </p>
-<ul>
-<li>返回-1：查找失败</li>
-<li>返回0、1、2……：str在该字符串的第几个位置</li>
-</ul>
-</li>
-<li><p><strong><em>.split(‘Str’) :</em></strong> 用Str将该字符串分离成数组</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var otxt&#x3D;&#39;abc def ghe&#39;;</span><br><span class="line">var aspt&#x3D;otxt.split(&#39; &#39;);</span><br><span class="line">aspt &#x3D; [&#39;abc&#39;, &#39;def&#39;, &#39;ghe&#39;]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong><em>.toLowerCase/toUpperCase :</em></strong> 将字符串变为小写/大写</p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
-<li>关键：使用 <strong><em>appendChild()</em></strong> 方法</li>
-<li>因为 appendchild() 原理是将所选的节点移除原本的父节点并添加在该节点的尾部</li>
-<li>利用这一点，将表中各行按顺序依次使用appendchild移至表尾，完成排序</li>
-</ul>
-</li>
-</ul>
-<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
-<li><strong><em>onsubmit ：</em></strong> 与 onclick 用法一样，在提交表单时触发</li>
-<li><strong><em>onreset ：</em></strong> 同上，在重置时发生</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -693,6 +873,138 @@
       </tags>
   </entry>
   <entry>
+    <title>HDFS</title>
+    <url>/2020/04/21/HDFS/</url>
+    <content><![CDATA[<h1 id="HDFS"><a href="#HDFS" class="headerlink" title="HDFS"></a>HDFS</h1><h2 id="实现目标"><a href="#实现目标" class="headerlink" title="实现目标"></a>实现目标</h2><ul>
+<li>兼容廉价硬件设备</li>
+<li>实现流数据读写（批量处理）</li>
+<li>支持大数据集（容量大）</li>
+<li>支持简单文件模型（高效）</li>
+<li>跨平台兼容</li>
+</ul>
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><ul>
+<li>不适合低延迟数据访问（批量处理数据）</li>
+<li>无法高效存储大量小文件（数据结构复杂）</li>
+<li>不支持多用户写入及修改文件（只允许追加）</li>
+</ul>
+<h2 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h2><ul>
+<li><p>块</p>
+<ul>
+<li>比普通文件系统的块容量大（寻址开销较小）</li>
+<li>支持大规模文件存储（分布存储多节点）</li>
+<li>简化系统设计</li>
+<li>适合数据备份</li>
+</ul>
+</li>
+<li><p>名称节点</p>
+<ul>
+<li>元数据<ul>
+<li>文件内容</li>
+<li>文件分为多少块</li>
+<li>每个块和文件是怎么映射的</li>
+<li>每个块被存储在哪个机器上</li>
+</ul>
+</li>
+<li>FsImage（保存系统文件树）<ul>
+<li>文件由那些块构成</li>
+<li>复制等级</li>
+<li>修改和访问时间</li>
+<li>访问权限</li>
+</ul>
+</li>
+<li><h2 id="EditLog（记录对数据的操作）"><a href="#EditLog（记录对数据的操作）" class="headerlink" title="EditLog（记录对数据的操作）"></a>EditLog（记录对数据的操作）</h2></li>
+</ul>
+</li>
+<li><p>数据节点</p>
+<ul>
+<li>存储具体数据</li>
+</ul>
+</li>
+<li><p>HDFS体系结构图</p>
+</li>
+</ul>
+<p><img src="C:%5CUsers%5Casus%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20200421210105432.png" alt="image-20200421210105432"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>JavaScript 表格和表单</title>
+    <url>/2020/04/07/JavaScript%20%20%E8%A1%A8%E5%8D%95/</url>
+    <content><![CDATA[<h1 id="JavaScript-表单"><a href="#JavaScript-表单" class="headerlink" title="JavaScript | 表单"></a>JavaScript | 表单</h1><h2 id="表格的一些便捷操作："><a href="#表格的一些便捷操作：" class="headerlink" title="表格的一些便捷操作："></a>表格的一些便捷操作：</h2><ul>
+<li><p><strong><em>getElementsByTagName(‘tbody’) = tBodies</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘tr’) = rows</em></strong></p>
+</li>
+<li><p><strong><em>getElementsByTagName(‘td’) = cells</em></strong></p>
+</li>
+</ul>
+<ul>
+<li><h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><ul>
+<li><p><strong><em>.search(‘Str’) :</em></strong> </p>
+<ul>
+<li>返回-1：查找失败</li>
+<li>返回0、1、2……：str在该字符串的第几个位置</li>
+</ul>
+</li>
+<li><p><strong><em>.split(‘Str’) :</em></strong> 用Str将该字符串分离成数组</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">var otxt&#x3D;&#39;abc def ghe&#39;;</span><br><span class="line">var aspt&#x3D;otxt.split(&#39; &#39;);</span><br><span class="line">aspt &#x3D; [&#39;abc&#39;, &#39;def&#39;, &#39;ghe&#39;]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong><em>.toLowerCase/toUpperCase :</em></strong> 将字符串变为小写/大写</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><ul>
+<li>关键：使用 <strong><em>appendChild()</em></strong> 方法</li>
+<li>因为 appendchild() 原理是将所选的节点移除原本的父节点并添加在该节点的尾部</li>
+<li>利用这一点，将表中各行按顺序依次使用appendchild移至表尾，完成排序</li>
+</ul>
+</li>
+</ul>
+<h2 id="表单事件"><a href="#表单事件" class="headerlink" title="表单事件"></a>表单事件</h2><ul>
+<li><strong><em>onsubmit ：</em></strong> 与 onclick 用法一样，在提交表单时触发</li>
+<li><strong><em>onreset ：</em></strong> 同上，在重置时发生</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java | 错误：GBK编码GBK的不可映射字符</title>
+    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
+    <content><![CDATA[<h1 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h1><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
+<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
+<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><ol>
+<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
+<li>将编辑器的默认编码格式改为ANSI</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/04/01/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>java | 包</title>
     <url>/2020/04/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="Java-包"><a href="#Java-包" class="headerlink" title="Java | 包"></a>Java | 包</h1><h3 id="包的声明"><a href="#包的声明" class="headerlink" title="包的声明"></a>包的声明</h3><p>​                <em>package 包名;</em></p>
@@ -715,20 +1027,6 @@
       </tags>
   </entry>
   <entry>
-    <title>java | 错误：GBK编码GBK的不可映射字符</title>
-    <url>/2020/04/02/java%20%20%E9%94%99%E8%AF%AF%EF%BC%9AGBK%E7%BC%96%E7%A0%81GBK%E7%9A%84%E4%B8%8D%E5%8F%AF%E6%98%A0%E5%B0%84%E5%AD%97%E7%AC%A6/</url>
-    <content><![CDATA[<h1 id="java-错误：GBK编码GBK的不可映射字符"><a href="#java-错误：GBK编码GBK的不可映射字符" class="headerlink" title="java | 错误：GBK编码GBK的不可映射字符"></a>java | 错误：GBK编码GBK的不可映射字符</h1><p>​        此错误的产生是因为在编写java时使用了中文，并且源文件的编码格式不是ANSI编码格式。</p>
-<p>​        java在编译时需要使用JDK开发包中的javac.exe命令，JDK语言为国际版，默认编码格式为<strong>UNICODE</strong>。在未指定源文件的编码格式情况下，JDK会优先获取操作系统的file.encoding参数作为源文件的编码格式，然后JDK就把我们的JAVA源程序从<strong><em>file.encoding编码格式</em></strong>转化为JAVA内部默认的<strong>UNICODE格式</strong>放到内存中。然后，javac把转换后的<strong>UNICODE</strong>格式的文件进行编译成class类文件，此时.class文件是<strong>UNICODE</strong>编码的，它暂放在内存中，之后，JDK将此以UNICODE编码编译后的.class文件保存到操作系统中形成我们见到的.class文件。</p>
-<h2 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h2><ol>
-<li>编译时使用命令 javac -encoding <em>utf-8</em>(此处为源文件的编码格式) xx.java</li>
-<li>将编辑器的默认编码格式改为ANSI</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>替换算法</title>
     <url>/2020/04/02/%E6%9B%BF%E6%8D%A2%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="替换算法"><a href="#替换算法" class="headerlink" title="替换算法"></a>替换算法</h1><p><em>cache数据区满时，采取的替换方案</em></p>
@@ -743,26 +1041,6 @@
       <tags>
         <tag>计算机基本原理</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/04/01/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="AswarS"><a href="#AswarS" class="headerlink" title="AswarS"></a>AswarS</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>虚拟存储器</title>
