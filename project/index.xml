@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on Academic group Home</title>
-    <link>https://AswarS.github.io/project/</link>
-    <description>Recent content in Projects on Academic group Home</description>
+    <title>Projects on Academic group name</title>
+    <link>http://localhost:1313/project/</link>
+    <description>Recent content in Projects on Academic group name</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>&amp;copy; Your Name, 2024 </copyright>
-    <lastBuildDate>Tue, 12 Jul 2016 16:10:22 +0200</lastBuildDate>
-    <atom:link href="https://AswarS.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/project/deeplearning/</link>
-      <pubDate>Tue, 12 Jul 2016 16:10:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/project/deeplearning/</guid>
-      <description>Et sensus uncos Troiaeque mori candidaque ostentis Litusque praemia Lorem markdownum natus, regis cecidere. Sinebat pudoris terque si commune pendebat ubi dubio cibique pontum virentem Nestora gaudia decebat quoniam eunt: graves. Teleste est colebat iamque ullis terra neque limen Nabataeus viribus ait.&#xA;encoding_install_autoresponder = ultra.osiComputer(host.ccdColdWddm(fsb,&#xD;compressionAlignment), 324317, adsl_application);&#xD;if (exbibyte(remoteCopy.pplVirtualUrl(3, hardOopBoot), solid, 46)) {&#xD;eide_podcast(trinitron.statusRawApple(class, cmyk_gigabit));&#xD;ddrEcc(maximizeRw, appletPersonal);&#xD;hdd_null = pretest_window_rup;&#xD;} else {&#xD;system += hdd + 396409 - firewallLanMedia;&#xD;}&#xD;var firmware_wan = api(boot_winsock_us, 1, domainNetbios) + web_veronica_sql&#xD;+ javascriptCtrPppoe.</description>
-    </item>
-    <item>
-      <title>Wide Learning</title>
-      <link>https://AswarS.github.io/project/widelearning/</link>
-      <pubDate>Tue, 12 Jul 2016 16:10:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/project/widelearning/</guid>
-      <description>Et sensus uncos Troiaeque mori candidaque ostentis Litusque praemia Lorem markdownum natus, regis cecidere. Sinebat pudoris terque si commune pendebat ubi dubio cibique pontum virentem Nestora gaudia decebat quoniam eunt: graves. Teleste est colebat iamque ullis terra neque limen Nabataeus viribus ait.&#xA;encoding_install_autoresponder = ultra.osiComputer(host.ccdColdWddm(fsb,&#xD;compressionAlignment), 324317, adsl_application);&#xD;if (exbibyte(remoteCopy.pplVirtualUrl(3, hardOopBoot), solid, 46)) {&#xD;eide_podcast(trinitron.statusRawApple(class, cmyk_gigabit));&#xD;ddrEcc(maximizeRw, appletPersonal);&#xD;hdd_null = pretest_window_rup;&#xD;} else {&#xD;system += hdd + 396409 - firewallLanMedia;&#xD;}&#xD;var firmware_wan = api(boot_winsock_us, 1, domainNetbios) + web_veronica_sql&#xD;+ javascriptCtrPppoe.</description>
-    </item>
+    <copyright>&amp;copy; Nlp Group Bit, 2024</copyright>
+    <atom:link href="http://localhost:1313/project/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

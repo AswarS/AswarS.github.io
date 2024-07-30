@@ -1,34 +1,153 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Publications on Academic group Home</title>
-    <link>https://AswarS.github.io/publication/</link>
-    <description>Recent content in Publications on Academic group Home</description>
+    <title>Publications on Academic group name</title>
+    <link>http://AswarS.github.io/publication/</link>
+    <description>Recent content in Publications on Academic group name</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>&amp;copy; Your Name, 2024 </copyright>
-    <lastBuildDate>Tue, 12 Jul 2016 16:37:31 +0200</lastBuildDate>
-    <atom:link href="https://AswarS.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; Nlp Group Bit, 2024</copyright>
+    <lastBuildDate>Fri, 21 Jun 2024 02:15:49 +0000</lastBuildDate>
+    <atom:link href="http://AswarS.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC-2/</link>
-      <pubDate>Tue, 12 Jul 2016 16:37:31 +0200</pubDate>
-      <guid>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC-2/</guid>
-      <description>You can add information in $\LaTeX$ and Markdown here.</description>
+      <title>Word Matters: What Influences Domain Adaptation in Summarization?</title>
+      <link>http://AswarS.github.io/publication/paper1/</link>
+      <pubDate>Fri, 21 Jun 2024 02:15:49 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper1/</guid>
+      <description></description>
     </item>
     <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC/</link>
-      <pubDate>Tue, 12 Jul 2016 16:37:31 +0200</pubDate>
-      <guid>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC/</guid>
-      <description>You can add information in $\LaTeX$ and Markdown here.</description>
+      <title>Fundamental Capabilities of Large Language Models and their Applications in Domain Scenarios: A Survey</title>
+      <link>http://AswarS.github.io/publication/paper3/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper3/</guid>
+      <description></description>
     </item>
     <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/publication/learning/</link>
-      <pubDate>Tue, 12 Jul 2016 16:37:31 +0200</pubDate>
-      <guid>https://AswarS.github.io/publication/learning/</guid>
-      <description>You can add information in $\LaTeX$ and Markdown here.</description>
+      <title>Stage-wise Stylistic Headline Generation: Style Generation and Summarized Content Insertion</title>
+      <link>http://AswarS.github.io/publication/paper4/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DRMSpell: Dynamically Reweighting Multimodality for  Chinese Spelling Correction</title>
+      <link>http://AswarS.github.io/publication/paper8/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latent representation discretization for unsupervised text style generation</title>
+      <link>http://AswarS.github.io/publication/paper17/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper17/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MindLLM: Pre-training Lightweight Large Language Model from Scratch, Evaluations and Domain Applications</title>
+      <link>http://AswarS.github.io/publication/paper2/</link>
+      <pubDate>Fri, 06 Oct 2023 02:15:49 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain adaptation and Summary Distillation for Unsupervised Query Focused Summarization</title>
+      <link>http://AswarS.github.io/publication/paper6/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TemplateGEC: Improving Grammatical Error Correction with Detection Template</title>
+      <link>http://AswarS.github.io/publication/paper7/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TopicBERT: A Topic-Enhanced Neural Language Model Fine-Tuned for Sentiment Classification</title>
+      <link>http://AswarS.github.io/publication/paper16/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper16/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interpretable modular knowledge reasoning for machine reading comprehension</title>
+      <link>http://AswarS.github.io/publication/paper14/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper14/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Building Knowledge-Grounded Dialogue Systems with Graph-Based Semantic Modeling</title>
+      <link>http://AswarS.github.io/publication/paper11/</link>
+      <pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PSP: Pre-trained Soft Prompts for Few-Shot Abstractive Summarization</title>
+      <link>http://AswarS.github.io/publication/paper9/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCM-SD: A Benchmark for Probing Syndrome Differentiation via Natural Language Processing</title>
+      <link>http://AswarS.github.io/publication/paper12/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper12/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unifying Cross-lingual Summarization and Machine Translation with Compression Rate</title>
+      <link>http://AswarS.github.io/publication/paper5/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SKR-QA: Semantic ranking and knowledge revise for multi-choice question answering</title>
+      <link>http://AswarS.github.io/publication/paper15/</link>
+      <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper15/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cross-Lingual Abstractive Summarization with Limited Parallel Resources</title>
+      <link>http://AswarS.github.io/publication/paper10/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Extracting salient features from convolutional discriminative filters</title>
+      <link>http://AswarS.github.io/publication/paper20/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper20/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jointly Learning Topics in Sentence Embedding for Document Summarization</title>
+      <link>http://AswarS.github.io/publication/paper18/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper18/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concept Pointer Network for Abstractive Summarization</title>
+      <link>http://AswarS.github.io/publication/paper13/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper13/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neural Variational Correlated Topic Modeling</title>
+      <link>http://AswarS.github.io/publication/paper19/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper19/</guid>
+      <description></description>
     </item>
   </channel>
 </rss>

@@ -1,138 +1,327 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic group Home</title>
-    <link>https://AswarS.github.io/</link>
-    <description>Recent content on Academic group Home</description>
+    <title>Academic group name</title>
+    <link>http://AswarS.github.io/</link>
+    <description>Recent content on Academic group name</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>&amp;copy; Your Name, 2024 </copyright>
+    <copyright>&amp;copy; Nlp Group Bit, 2024</copyright>
     <lastBuildDate>Fri, 12 Jul 2024 16:50:58 +0200</lastBuildDate>
-    <atom:link href="https://AswarS.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://AswarS.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test post please ignore</title>
-      <link>https://AswarS.github.io/post/post3/</link>
+      <link>http://AswarS.github.io/post/post3/</link>
       <pubDate>Fri, 12 Jul 2024 16:50:58 +0200</pubDate>
-      <guid>https://AswarS.github.io/post/post3/</guid>
+      <guid>http://AswarS.github.io/post/post3/</guid>
       <description>Est Procrin Terrigenam rorant colla victoria per monstra obiecit Lorem markdownum, Circaea: neque Phrygiae et bacarum caelo, iniectos. Ut tenvit per coniecta? Vagantem aut nunc velocibus praenuntia tenuit a Phoebi convicia mentis, conveniunt hunc! Supervolat domitis pronusque in artus, postquam videt et mediis. Pectine rigorem aethera, signum, saucia Salmacis si facibus pectore aversos gentes neve, et usus siqua.&#xA;Aestuque deceant fuerat quam iura Rabie intus fugio potentia, protecta proculcat pelle, membris in praesens lustrantem ignis inmemores puer mitissima tenent.</description>
+    </item>
+    <item>
+      <title>Word Matters: What Influences Domain Adaptation in Summarization?</title>
+      <link>http://AswarS.github.io/publication/paper1/</link>
+      <pubDate>Fri, 21 Jun 2024 02:15:49 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fundamental Capabilities of Large Language Models and their Applications in Domain Scenarios: A Survey</title>
+      <link>http://AswarS.github.io/publication/paper3/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stage-wise Stylistic Headline Generation: Style Generation and Summarized Content Insertion</title>
+      <link>http://AswarS.github.io/publication/paper4/</link>
+      <pubDate>Sat, 01 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DRMSpell: Dynamically Reweighting Multimodality for  Chinese Spelling Correction</title>
+      <link>http://AswarS.github.io/publication/paper8/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latent representation discretization for unsupervised text style generation</title>
+      <link>http://AswarS.github.io/publication/paper17/</link>
+      <pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper17/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>MindLLM: Pre-training Lightweight Large Language Model from Scratch, Evaluations and Domain Applications</title>
+      <link>http://AswarS.github.io/publication/paper2/</link>
+      <pubDate>Fri, 06 Oct 2023 02:15:49 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Domain adaptation and Summary Distillation for Unsupervised Query Focused Summarization</title>
+      <link>http://AswarS.github.io/publication/paper6/</link>
+      <pubDate>Tue, 18 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TemplateGEC: Improving Grammatical Error Correction with Detection Template</title>
+      <link>http://AswarS.github.io/publication/paper7/</link>
+      <pubDate>Sat, 01 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TopicBERT: A Topic-Enhanced Neural Language Model Fine-Tuned for Sentiment Classification</title>
+      <link>http://AswarS.github.io/publication/paper16/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper16/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interpretable modular knowledge reasoning for machine reading comprehension</title>
+      <link>http://AswarS.github.io/publication/paper14/</link>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper14/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Building Knowledge-Grounded Dialogue Systems with Graph-Based Semantic Modeling</title>
+      <link>http://AswarS.github.io/publication/paper11/</link>
+      <pubDate>Wed, 27 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PSP: Pre-trained Soft Prompts for Few-Shot Abstractive Summarization</title>
+      <link>http://AswarS.github.io/publication/paper9/</link>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TCM-SD: A Benchmark for Probing Syndrome Differentiation via Natural Language Processing</title>
+      <link>http://AswarS.github.io/publication/paper12/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper12/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unifying Cross-lingual Summarization and Machine Translation with Compression Rate</title>
+      <link>http://AswarS.github.io/publication/paper5/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SKR-QA: Semantic ranking and knowledge revise for multi-choice question answering</title>
+      <link>http://AswarS.github.io/publication/paper15/</link>
+      <pubDate>Tue, 12 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper15/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cross-Lingual Abstractive Summarization with Limited Parallel Resources</title>
+      <link>http://AswarS.github.io/publication/paper10/</link>
+      <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Extracting salient features from convolutional discriminative filters</title>
+      <link>http://AswarS.github.io/publication/paper20/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper20/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jointly Learning Topics in Sentence Embedding for Document Summarization</title>
+      <link>http://AswarS.github.io/publication/paper18/</link>
+      <pubDate>Wed, 01 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper18/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Concept Pointer Network for Abstractive Summarization</title>
+      <link>http://AswarS.github.io/publication/paper13/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper13/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neural Variational Correlated Topic Modeling</title>
+      <link>http://AswarS.github.io/publication/paper19/</link>
+      <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://AswarS.github.io/publication/paper19/</guid>
+      <description></description>
     </item>
     <item>
       <title>Test post please ignore</title>
-      <link>https://AswarS.github.io/post/post2/</link>
+      <link>http://AswarS.github.io/post/post2/</link>
       <pubDate>Tue, 12 Jul 2016 16:50:58 +0200</pubDate>
-      <guid>https://AswarS.github.io/post/post2/</guid>
+      <guid>http://AswarS.github.io/post/post2/</guid>
       <description>Est Procrin Terrigenam rorant colla victoria per monstra obiecit Lorem markdownum, Circaea: neque Phrygiae et bacarum caelo, iniectos. Ut tenvit per coniecta? Vagantem aut nunc velocibus praenuntia tenuit a Phoebi convicia mentis, conveniunt hunc! Supervolat domitis pronusque in artus, postquam videt et mediis. Pectine rigorem aethera, signum, saucia Salmacis si facibus pectore aversos gentes neve, et usus siqua.&#xA;Aestuque deceant fuerat quam iura Rabie intus fugio potentia, protecta proculcat pelle, membris in praesens lustrantem ignis inmemores puer mitissima tenent.</description>
     </item>
     <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC-2/</link>
-      <pubDate>Tue, 12 Jul 2016 16:37:31 +0200</pubDate>
-      <guid>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC-2/</guid>
-      <description>You can add information in $\LaTeX$ and Markdown here.</description>
-    </item>
-    <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC/</link>
-      <pubDate>Tue, 12 Jul 2016 16:37:31 +0200</pubDate>
-      <guid>https://AswarS.github.io/publication/learning---%E5%89%AF%E6%9C%AC/</guid>
-      <description>You can add information in $\LaTeX$ and Markdown here.</description>
-    </item>
-    <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/publication/learning/</link>
-      <pubDate>Tue, 12 Jul 2016 16:37:31 +0200</pubDate>
-      <guid>https://AswarS.github.io/publication/learning/</guid>
-      <description>You can add information in $\LaTeX$ and Markdown here.</description>
-    </item>
-    <item>
-      <title>Deep Learning</title>
-      <link>https://AswarS.github.io/project/deeplearning/</link>
-      <pubDate>Tue, 12 Jul 2016 16:10:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/project/deeplearning/</guid>
-      <description>Et sensus uncos Troiaeque mori candidaque ostentis Litusque praemia Lorem markdownum natus, regis cecidere. Sinebat pudoris terque si commune pendebat ubi dubio cibique pontum virentem Nestora gaudia decebat quoniam eunt: graves. Teleste est colebat iamque ullis terra neque limen Nabataeus viribus ait.&#xA;encoding_install_autoresponder = ultra.osiComputer(host.ccdColdWddm(fsb,&#xD;compressionAlignment), 324317, adsl_application);&#xD;if (exbibyte(remoteCopy.pplVirtualUrl(3, hardOopBoot), solid, 46)) {&#xD;eide_podcast(trinitron.statusRawApple(class, cmyk_gigabit));&#xD;ddrEcc(maximizeRw, appletPersonal);&#xD;hdd_null = pretest_window_rup;&#xD;} else {&#xD;system += hdd + 396409 - firewallLanMedia;&#xD;}&#xD;var firmware_wan = api(boot_winsock_us, 1, domainNetbios) + web_veronica_sql&#xD;+ javascriptCtrPppoe.</description>
-    </item>
-    <item>
-      <title>Wide Learning</title>
-      <link>https://AswarS.github.io/project/widelearning/</link>
-      <pubDate>Tue, 12 Jul 2016 16:10:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/project/widelearning/</guid>
-      <description>Et sensus uncos Troiaeque mori candidaque ostentis Litusque praemia Lorem markdownum natus, regis cecidere. Sinebat pudoris terque si commune pendebat ubi dubio cibique pontum virentem Nestora gaudia decebat quoniam eunt: graves. Teleste est colebat iamque ullis terra neque limen Nabataeus viribus ait.&#xA;encoding_install_autoresponder = ultra.osiComputer(host.ccdColdWddm(fsb,&#xD;compressionAlignment), 324317, adsl_application);&#xD;if (exbibyte(remoteCopy.pplVirtualUrl(3, hardOopBoot), solid, 46)) {&#xD;eide_podcast(trinitron.statusRawApple(class, cmyk_gigabit));&#xD;ddrEcc(maximizeRw, appletPersonal);&#xD;hdd_null = pretest_window_rup;&#xD;} else {&#xD;system += hdd + 396409 - firewallLanMedia;&#xD;}&#xD;var firmware_wan = api(boot_winsock_us, 1, domainNetbios) + web_veronica_sql&#xD;+ javascriptCtrPppoe.</description>
-    </item>
-    <item>
-      <title>Member 1</title>
-      <link>https://AswarS.github.io/member/member1/</link>
+      <title>Member 01</title>
+      <link>http://AswarS.github.io/member/member1/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/member/member1/</guid>
-      <description>You can write $\LaTeX$ and Markdown here.&#xA;Minyae adgnoscitque fugiebat parentis ausum superos huius Ait erili meruisse iactatis omnibus erat Lorem markdownum natis, ipsi ipsi aut relictus saxo comitantibus aegro amori verba fugisse mira mortisque leones! Prior sui liquidissimus leve properandum totidem studio, refert magno, me quibus. Sternitur discordia summaque, si deus in undam et vulnere dirusque est felices pallam miserere curvamine comites. Tegumenque decipit suis, poscitur una dea sumus adnuerant, gerebat est edam plura.</description>
+      <guid>http://AswarS.github.io/member/member1/</guid>
+      <description>Yang Gao, Doctoral Supervisor, primarily engages in large model training, automatic text generation technologies, and the application and transformation of these technologies. She has published over 60 high-quality papers in international journals and conferences, including ACL, AAAI, WWW, IJCAI, EMNLP, and TKDE. She serves as a chair in the text generation field for conferences such as EMNLP and COLING, an editorial board member for journals such as Web Intelligence and Natural Language Processing Journal, a program committee member for international conferences including AAAI, ACL, EMNLP, NAACL, and ICDM, and a reviewer for journals such as TNNLS and Computing Surveys.</description>
     </item>
     <item>
-      <title>Member 2</title>
-      <link>https://AswarS.github.io/member/member2/</link>
+      <title>Member 02</title>
+      <link>http://AswarS.github.io/member/member2/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/member/member2/</guid>
-      <description>You can write $\LaTeX$ and Markdown here.&#xA;Minyae adgnoscitque fugiebat parentis ausum superos huius Ait erili meruisse iactatis omnibus erat Lorem markdownum natis, ipsi ipsi aut relictus saxo comitantibus aegro amori verba fugisse mira mortisque leones! Prior sui liquidissimus leve properandum totidem studio, refert magno, me quibus. Sternitur discordia summaque, si deus in undam et vulnere dirusque est felices pallam miserere curvamine comites. Tegumenque decipit suis, poscitur una dea sumus adnuerant, gerebat est edam plura.</description>
+      <guid>http://AswarS.github.io/member/member2/</guid>
+      <description>I am a sixth-year PhD student. I am interested in instruction fine-tuning and in-context learning. I often exercise and read to enrich my extracurricular life.</description>
     </item>
     <item>
-      <title>Member 3</title>
-      <link>https://AswarS.github.io/member/member3/</link>
+      <title>Member 03</title>
+      <link>http://AswarS.github.io/member/member3/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/member/member3/</guid>
-      <description>You can write $\LaTeX$ and Markdown here.&#xA;Minyae adgnoscitque fugiebat parentis ausum superos huius Ait erili meruisse iactatis omnibus erat Lorem markdownum natis, ipsi ipsi aut relictus saxo comitantibus aegro amori verba fugisse mira mortisque leones! Prior sui liquidissimus leve properandum totidem studio, refert magno, me quibus. Sternitur discordia summaque, si deus in undam et vulnere dirusque est felices pallam miserere curvamine comites. Tegumenque decipit suis, poscitur una dea sumus adnuerant, gerebat est edam plura.</description>
+      <guid>http://AswarS.github.io/member/member3/</guid>
+      <description>I used to study Cross-lingual Summarization to investigate how to better generate text with low-resource data. As large language models (LLMs) continue to gain popularity, I am curious about why they are competent in so many challenging tasks. Hence, I have begun to think of LLMs as natural objects. By studying their working mechanisms and characteristics, I aim to understand these models more deeply and use these insights to improve them in terms of their generation quality, controllability, and safety.</description>
     </item>
     <item>
-      <title>Member 4</title>
-      <link>https://AswarS.github.io/member/member4/</link>
+      <title>Member 04</title>
+      <link>http://AswarS.github.io/member/member4/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>https://AswarS.github.io/member/member4/</guid>
-      <description>You can write $\LaTeX$ and Markdown here.&#xA;Minyae adgnoscitque fugiebat parentis ausum superos huius Ait erili meruisse iactatis omnibus erat Lorem markdownum natis, ipsi ipsi aut relictus saxo comitantibus aegro amori verba fugisse mira mortisque leones! Prior sui liquidissimus leve properandum totidem studio, refert magno, me quibus. Sternitur discordia summaque, si deus in undam et vulnere dirusque est felices pallam miserere curvamine comites. Tegumenque decipit suis, poscitur una dea sumus adnuerant, gerebat est edam plura.</description>
+      <guid>http://AswarS.github.io/member/member4/</guid>
+      <description>Hi, my name is Yuhang Liu. My research primarily focuses on knowledge conflict in LLMs, model calibration, and retrieval-augmented generation. I am passionate about advancing the capabilities and understanding of AI, and I aspire to become an outstanding contributor in this field.</description>
+    </item>
+    <item>
+      <title>Member 05</title>
+      <link>http://AswarS.github.io/member/member5/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member5/</guid>
+      <description>Yizhe Yang (杨毅哲) is a third-year Ph.D. student at the School of Computer Science and Technology, Beijing Institute of Technology (2021-present), where he is under the guidance of Prof. Heyan Huang and Prof. Yang Gao. He earned his bachelor&amp;rsquo;s degree from Beijing Institute of Technology (2016-2020). Following his bachelor’s, he pursued a master&amp;rsquo;s degree (2020-2021) before transitioning into a combined master-doctoral program. During his studies, he fortunately had the opportunity to work under the supervision of Prof.</description>
+    </item>
+    <item>
+      <title>Member 06</title>
+      <link>http://AswarS.github.io/member/member6/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member6/</guid>
+      <description>Hi, I am Jiawei Li. My research has been primarily focused on the reasoning capabilities of LLMs, the efficient tuning of LLMs, and the model evolution. I hope I can be a reliable person. Thank you.</description>
+    </item>
+    <item>
+      <title>Member 09</title>
+      <link>http://AswarS.github.io/member/member9/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member9/</guid>
+      <description>Hi, my name is Bowen Ren. I am currently focused on research in LLM training and self-evolution, and I have a strong interest in agents and LLM applications. I hope to make meaningful discoveries in my research.</description>
+    </item>
+    <item>
+      <title>Member 10</title>
+      <link>http://AswarS.github.io/member/member10/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member10/</guid>
+      <description>👋🏻I&amp;rsquo;m Huashan Sun.🥹My research currently specializes in continual learning and language style modeling for LLMs, with a keen interest in model interpretability and trustworthiness.I&amp;rsquo;m an INTJ🤫, passionate about 📸photography and 🥾travel, investing my time in activities that captivate my interest.</description>
+    </item>
+    <item>
+      <title>Member 11</title>
+      <link>http://AswarS.github.io/member/member11/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member11/</guid>
+      <description>Hi, I am Xinyue Liang. My current research interests lie in the mathematical reasoning abilities of LLMs and reinforcement learning. I am an ISTJ/INTJ who enjoys sports and movies, with a enthusiasm for badminton.</description>
+    </item>
+    <item>
+      <title>Member 12</title>
+      <link>http://AswarS.github.io/member/member12/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member12/</guid>
+      <description>I am Siming Liu and I am currently studying the alignment of LLMs while exploring its multi-task abilities. I am also working on a codebase for LLM alignment. Besides study and research, I developed a consuming passion in music.</description>
+    </item>
+    <item>
+      <title>Member 13</title>
+      <link>http://AswarS.github.io/member/member13/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member13/</guid>
+      <description>Hello, my name is Yuhao Ye. My current research focuses on studying the shifts in the output distribution of large language models after fine-tuning, and exploring methods to analyze these shifts. In addition to research, I am interested in table tennis. I hope to make meaningful discoveries in my research.</description>
+    </item>
+    <item>
+      <title>Member 14</title>
+      <link>http://AswarS.github.io/member/member14/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member14/</guid>
+      <description>Hello, my name is Siyu Miao. My current research focuses on the factors affecting domain transferring of large language models after fine-tuning, and exploring methods to quantify these shifts. In addition to research, I am interested in badminton. I hope to make meaningful discoveries in my research.</description>
+    </item>
+    <item>
+      <title>Member 15</title>
+      <link>http://AswarS.github.io/member/member15/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member15/</guid>
+      <description>Hello, my name is Xingpeng Si. My current research focuses on studying the shifts in the output distribution of large language models after fine-tuning, and exploring methods to analyze these shifts. In addition to research, I am interested in table tennis. I hope to make meaningful discoveries in my research.</description>
+    </item>
+    <item>
+      <title>Member 16</title>
+      <link>http://AswarS.github.io/member/member16/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member16/</guid>
+      <description>Hello, my name is Yixiao Wu. My current research focuses on language style modeling for LLMs. I hope to make meaningful discoveries in my research.</description>
+    </item>
+    <item>
+      <title>Member 17</title>
+      <link>http://AswarS.github.io/member/member17/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member17/</guid>
+      <description>Hello, my name is Si Xingpeng. My current research focuses on improving the generalization ability of large language models on downstream tasks. In addition for the sake of my research, I am interested in table tennis. I hope to make meaningful discoveries in my research.</description>
+    </item>
+    <item>
+      <title>Member 18</title>
+      <link>http://AswarS.github.io/member/member18/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>http://AswarS.github.io/member/member18/</guid>
+      <description>Hi, I am Yiguan Lin. My current research mainly focuses on parameter merging in large language models, exploring ways to enhance the capabilities of large models without the need for additional training.</description>
     </item>
     <item>
       <title>Jupyter Notebook</title>
-      <link>https://AswarS.github.io/post/notebook/</link>
+      <link>http://AswarS.github.io/post/notebook/</link>
       <pubDate>Tue, 12 Jul 2016 15:50:58 +0200</pubDate>
-      <guid>https://AswarS.github.io/post/notebook/</guid>
+      <guid>http://AswarS.github.io/post/notebook/</guid>
       <description>An IJulia Preview This notebook is a preview demo of IJulia: a Julia-language backend combined with the IPython interactive environment. This combination allows you to interact with the Julia language using IPython&amp;rsquo;s powerful graphical notebook, which combines code, formatted text, math, and multimedia in a single document.&#xA;Note: this is a preview, because it relies on pre-release bleeding-edge versions of Julia, IPython, and several Julia packages, as explained on the IJulia github page, and functionality is evolving rapidly.</description>
     </item>
     <item>
       <title>Markdown ipsum</title>
-      <link>https://AswarS.github.io/post/post1/</link>
+      <link>http://AswarS.github.io/post/post1/</link>
       <pubDate>Tue, 12 Jul 2016 15:50:58 +0200</pubDate>
-      <guid>https://AswarS.github.io/post/post1/</guid>
+      <guid>http://AswarS.github.io/post/post1/</guid>
       <description>Magorum notissima limite sua pars simus sumptis Incessit ignota coniunx serpunt Lorem markdownum ab cunas, semine commissus matrona manibusque plumis, nova sub Spartana loca ignibus. In partibus muneris, paludes rara, plectrumque, fontis, concubitus a locoque demptos exclamat conde ab aethera nihil.&#xA;Quamquam abit vulnere nec intus decidit clamor Nocuit quae tamen timent aperta Cervice preces totumque postquam nunc iacit sive Potestas te sis putaret sceleri totiens Retro profundo ad sede Iovem in este In ait flumina intrare Troiae Ut fatis praecordia alvum iamque, adeo tympana male silvas.</description>
     </item>
     <item>
       <title></title>
-      <link>https://AswarS.github.io/about/</link>
+      <link>http://AswarS.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AswarS.github.io/about/</guid>
+      <guid>http://AswarS.github.io/about/</guid>
       <description>Sed extemplo conantur et Cnosia harundine lyra Agros metitur venatibus catenis quippe honorem tuorum Lorem markdownum finemque prunaque longe et sunt. Sed super aulaea in Paridis noctisque cubile? Iacit coetus, vastatoremque dedit; Vidi magna, recurvatis copia. Quod sit; per cingo tamen Hyperionis si vacat inclitus instabat curaque arma saxea, naturaeque pondere quaeque aer!&#xA;Agros apertum aliis dominaeque rapidus Prima nulla est Hortatibus voto Anum istis praefertur est Quaque coeptis lumina mea nuda dentes semine agitavit, caesique voluptas.</description>
     </item>
     <item>
       <title></title>
-      <link>https://AswarS.github.io/approach/</link>
+      <link>http://AswarS.github.io/approach/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AswarS.github.io/approach/</guid>
+      <guid>http://AswarS.github.io/approach/</guid>
       <description>Et malis vellet tellus deseruere in credant Inde sidera moenia lacertis nomen nostra membra Lorem markdownum miranti. Sonus faciunt omnibus frustra: illa possem ad regio Anubis tamen. Sustulerat debent fluviis herbis attollere rogus et formae nitentem avellere motis clipeus Achilles felix videam undas. Posuit haec ipse posse.&#xA;Ore fame mons Olympi tantae stringit columbas proxima habebat, longius alta non. Haeserat gerunt detinuit genis est huc, dixit tam dumque nitidum.&#xA;Cristata causam Triones moenia habentem subito utentem Astraea castris contentus nisi leve eum invia Inferiusque capta cognoscenda flaventi locuta notavi fallere Moriens scripsi ictus tuo cum Tarpeias insurgens summo sinistra vertice, in neve utroque exempla Cyparissus tanta tecti terras.</description>
     </item>
     <item>
       <title></title>
-      <link>https://AswarS.github.io/mission/</link>
+      <link>http://AswarS.github.io/mission/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AswarS.github.io/mission/</guid>
+      <guid>http://AswarS.github.io/mission/</guid>
       <description>Auras queritur facientes dixit venti sustinui E in mora Lorem markdownum poenaque nuper destituit silendo quoniam, nec ait consorte membra, figuram hanc cum. Manifesta vitae facies exiguumque iunctam dictis. Vidit eadem, hanc cum descendit sinu misit quem fecit, positisque pastorve. Missus solos potentia in erant noctem est!&#xA;if (dvdProcessorVolume &amp;lt; mpegProcess(slashdot, gigahertz)) {&#xD;transferAnsiBotnet.and(logSoftware, hsfClipboardSubnet.queue_publishing(&#xD;systemMemory, 5, yahoo));&#xD;} else {&#xD;swappableIpv -= spoolingAdwareCrossplatform;&#xD;extranetAppArchitecture(1, dtd_rpc_font(45, 67, development_sli));&#xD;}&#xD;antivirus_ipv = touchscreenFiosGrep.</description>
     </item>
     <item>
       <title></title>
-      <link>https://AswarS.github.io/research/</link>
+      <link>http://AswarS.github.io/research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AswarS.github.io/research/</guid>
+      <guid>http://AswarS.github.io/research/</guid>
       <description>Modo est Non sub haedum tenet Lorem markdownum esse diversa quoque vocavit, quam! Vires tibi axis dum spolium vaticinor fulminis, a dixere attrahit generisque tamen?&#xA;Petit invergens iram praetendat iam Mecum res curva iunctura silvis hoc leonum Iacent gemitum quos Non est duram mitis sonat proculcat tumulos Alce bimembres Dauni, cur ex voces referam adunco in sors. Manibusque poples prodidit lata tantum quem suos ratae Aeginae sederunt degenerat Bacchus descendere, patriisque ieiunia.</description>
     </item>
     <item>
       <title></title>
-      <link>https://AswarS.github.io/vacancy/vacancy1/</link>
+      <link>http://AswarS.github.io/vacancy/vacancy1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://AswarS.github.io/vacancy/vacancy1/</guid>
+      <guid>http://AswarS.github.io/vacancy/vacancy1/</guid>
       <description>You can write $\LaTeX$ and Markdown here.&#xA;Minyae adgnoscitque fugiebat parentis ausum superos huius Ait erili meruisse iactatis omnibus erat Lorem markdownum natis, ipsi ipsi aut relictus saxo comitantibus aegro amori verba fugisse mira mortisque leones! Prior sui liquidissimus leve properandum totidem studio, refert magno, me quibus. Sternitur discordia summaque, si deus in undam et vulnere dirusque est felices pallam miserere curvamine comites. Tegumenque decipit suis, poscitur una dea sumus adnuerant, gerebat est edam plura.</description>
     </item>
   </channel>
