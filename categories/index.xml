@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Academic group name</title>
-    <link>http://AswarS.github.io/categories/</link>
+    <link>https://aswars.github.io/categories/</link>
     <description>Recent content in Categories on Academic group name</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; Nlp Group Bit, 2024</copyright>
-    <atom:link href="http://AswarS.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aswars.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

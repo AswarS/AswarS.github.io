@@ -2,123 +2,123 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Members on Academic group name</title>
-    <link>http://AswarS.github.io/member/</link>
+    <link>https://aswars.github.io/member/</link>
     <description>Recent content in Members on Academic group name</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&amp;copy; Nlp Group Bit, 2024</copyright>
     <lastBuildDate>Tue, 12 Jul 2016 15:52:22 +0200</lastBuildDate>
-    <atom:link href="http://AswarS.github.io/member/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://aswars.github.io/member/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Member 01</title>
-      <link>http://AswarS.github.io/member/member1/</link>
+      <link>https://aswars.github.io/member/member1/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member1/</guid>
+      <guid>https://aswars.github.io/member/member1/</guid>
       <description>Yang Gao, Doctoral Supervisor, primarily engages in large model training, automatic text generation technologies, and the application and transformation of these technologies. She has published over 60 high-quality papers in international journals and conferences, including ACL, AAAI, WWW, IJCAI, EMNLP, and TKDE. She serves as a chair in the text generation field for conferences such as EMNLP and COLING, an editorial board member for journals such as Web Intelligence and Natural Language Processing Journal, a program committee member for international conferences including AAAI, ACL, EMNLP, NAACL, and ICDM, and a reviewer for journals such as TNNLS and Computing Surveys.</description>
     </item>
     <item>
       <title>Member 02</title>
-      <link>http://AswarS.github.io/member/member2/</link>
+      <link>https://aswars.github.io/member/member2/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member2/</guid>
+      <guid>https://aswars.github.io/member/member2/</guid>
       <description>I am a sixth-year PhD student. I am interested in instruction fine-tuning and in-context learning. I often exercise and read to enrich my extracurricular life.</description>
     </item>
     <item>
       <title>Member 03</title>
-      <link>http://AswarS.github.io/member/member3/</link>
+      <link>https://aswars.github.io/member/member3/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member3/</guid>
+      <guid>https://aswars.github.io/member/member3/</guid>
       <description>I used to study Cross-lingual Summarization to investigate how to better generate text with low-resource data. As large language models (LLMs) continue to gain popularity, I am curious about why they are competent in so many challenging tasks. Hence, I have begun to think of LLMs as natural objects. By studying their working mechanisms and characteristics, I aim to understand these models more deeply and use these insights to improve them in terms of their generation quality, controllability, and safety.</description>
     </item>
     <item>
       <title>Member 04</title>
-      <link>http://AswarS.github.io/member/member4/</link>
+      <link>https://aswars.github.io/member/member4/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member4/</guid>
+      <guid>https://aswars.github.io/member/member4/</guid>
       <description>Hi, my name is Yuhang Liu. My research primarily focuses on knowledge conflict in LLMs, model calibration, and retrieval-augmented generation. I am passionate about advancing the capabilities and understanding of AI, and I aspire to become an outstanding contributor in this field.</description>
     </item>
     <item>
       <title>Member 05</title>
-      <link>http://AswarS.github.io/member/member5/</link>
+      <link>https://aswars.github.io/member/member5/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member5/</guid>
+      <guid>https://aswars.github.io/member/member5/</guid>
       <description>Yizhe Yang (杨毅哲) is a third-year Ph.D. student at the School of Computer Science and Technology, Beijing Institute of Technology (2021-present), where he is under the guidance of Prof. Heyan Huang and Prof. Yang Gao. He earned his bachelor&amp;rsquo;s degree from Beijing Institute of Technology (2016-2020). Following his bachelor’s, he pursued a master&amp;rsquo;s degree (2020-2021) before transitioning into a combined master-doctoral program. During his studies, he fortunately had the opportunity to work under the supervision of Prof.</description>
     </item>
     <item>
       <title>Member 06</title>
-      <link>http://AswarS.github.io/member/member6/</link>
+      <link>https://aswars.github.io/member/member6/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member6/</guid>
+      <guid>https://aswars.github.io/member/member6/</guid>
       <description>Hi, I am Jiawei Li. My research has been primarily focused on the reasoning capabilities of LLMs, the efficient tuning of LLMs, and the model evolution. I hope I can be a reliable person. Thank you.</description>
     </item>
     <item>
       <title>Member 09</title>
-      <link>http://AswarS.github.io/member/member9/</link>
+      <link>https://aswars.github.io/member/member9/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member9/</guid>
+      <guid>https://aswars.github.io/member/member9/</guid>
       <description>Hi, my name is Bowen Ren. I am currently focused on research in LLM training and self-evolution, and I have a strong interest in agents and LLM applications. I hope to make meaningful discoveries in my research.</description>
     </item>
     <item>
       <title>Member 10</title>
-      <link>http://AswarS.github.io/member/member10/</link>
+      <link>https://aswars.github.io/member/member10/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member10/</guid>
+      <guid>https://aswars.github.io/member/member10/</guid>
       <description>👋🏻I&amp;rsquo;m Huashan Sun.🥹My research currently specializes in continual learning and language style modeling for LLMs, with a keen interest in model interpretability and trustworthiness.I&amp;rsquo;m an INTJ🤫, passionate about 📸photography and 🥾travel, investing my time in activities that captivate my interest.</description>
     </item>
     <item>
       <title>Member 11</title>
-      <link>http://AswarS.github.io/member/member11/</link>
+      <link>https://aswars.github.io/member/member11/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member11/</guid>
+      <guid>https://aswars.github.io/member/member11/</guid>
       <description>Hi, I am Xinyue Liang. My current research interests lie in the mathematical reasoning abilities of LLMs and reinforcement learning. I am an ISTJ/INTJ who enjoys sports and movies, with a enthusiasm for badminton.</description>
     </item>
     <item>
       <title>Member 12</title>
-      <link>http://AswarS.github.io/member/member12/</link>
+      <link>https://aswars.github.io/member/member12/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member12/</guid>
+      <guid>https://aswars.github.io/member/member12/</guid>
       <description>I am Siming Liu and I am currently studying the alignment of LLMs while exploring its multi-task abilities. I am also working on a codebase for LLM alignment. Besides study and research, I developed a consuming passion in music.</description>
     </item>
     <item>
       <title>Member 13</title>
-      <link>http://AswarS.github.io/member/member13/</link>
+      <link>https://aswars.github.io/member/member13/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member13/</guid>
+      <guid>https://aswars.github.io/member/member13/</guid>
       <description>Hello, my name is Yuhao Ye. My current research focuses on studying the shifts in the output distribution of large language models after fine-tuning, and exploring methods to analyze these shifts. In addition to research, I am interested in table tennis. I hope to make meaningful discoveries in my research.</description>
     </item>
     <item>
       <title>Member 14</title>
-      <link>http://AswarS.github.io/member/member14/</link>
+      <link>https://aswars.github.io/member/member14/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member14/</guid>
+      <guid>https://aswars.github.io/member/member14/</guid>
       <description>Hello, my name is Siyu Miao. My current research focuses on the factors affecting domain transferring of large language models after fine-tuning, and exploring methods to quantify these shifts. In addition to research, I am interested in badminton. I hope to make meaningful discoveries in my research.</description>
     </item>
     <item>
       <title>Member 15</title>
-      <link>http://AswarS.github.io/member/member15/</link>
+      <link>https://aswars.github.io/member/member15/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member15/</guid>
+      <guid>https://aswars.github.io/member/member15/</guid>
       <description>Hello, my name is Xingpeng Si. My current research focuses on studying the shifts in the output distribution of large language models after fine-tuning, and exploring methods to analyze these shifts. In addition to research, I am interested in table tennis. I hope to make meaningful discoveries in my research.</description>
     </item>
     <item>
       <title>Member 16</title>
-      <link>http://AswarS.github.io/member/member16/</link>
+      <link>https://aswars.github.io/member/member16/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member16/</guid>
+      <guid>https://aswars.github.io/member/member16/</guid>
       <description>Hello, my name is Yixiao Wu. My current research focuses on language style modeling for LLMs. I hope to make meaningful discoveries in my research.</description>
     </item>
     <item>
       <title>Member 17</title>
-      <link>http://AswarS.github.io/member/member17/</link>
+      <link>https://aswars.github.io/member/member17/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member17/</guid>
+      <guid>https://aswars.github.io/member/member17/</guid>
       <description>Hello, my name is Si Xingpeng. My current research focuses on improving the generalization ability of large language models on downstream tasks. In addition for the sake of my research, I am interested in table tennis. I hope to make meaningful discoveries in my research.</description>
     </item>
     <item>
       <title>Member 18</title>
-      <link>http://AswarS.github.io/member/member18/</link>
+      <link>https://aswars.github.io/member/member18/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>http://AswarS.github.io/member/member18/</guid>
+      <guid>https://aswars.github.io/member/member18/</guid>
       <description>Hi, I am Yiguan Lin. My current research mainly focuses on parameter merging in large language models, exploring ways to enhance the capabilities of large models without the need for additional training.</description>
     </item>
   </channel>
