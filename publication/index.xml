@@ -66,6 +66,20 @@
       <description></description>
     </item>
     <item>
+      <title>Ask to Understand: Question Generation for Multi-hop Question Answering</title>
+      <link>https://aswars.github.io/publication/paper23/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper23/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unsupervised Style Transfer in News Headlines via Discrete Style Space</title>
+      <link>https://aswars.github.io/publication/paper24/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper24/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>TopicBERT: A Topic-Enhanced Neural Language Model Fine-Tuned for Sentiment Classification</title>
       <link>https://aswars.github.io/publication/paper16/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
@@ -101,6 +115,13 @@
       <description></description>
     </item>
     <item>
+      <title>To be Closer: Learning to Link up Aspects with Opinions</title>
+      <link>https://aswars.github.io/publication/paper27/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper27/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Unifying Cross-lingual Summarization and Machine Translation with Compression Rate</title>
       <link>https://aswars.github.io/publication/paper5/</link>
       <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
@@ -119,6 +140,13 @@
       <link>https://aswars.github.io/publication/paper10/</link>
       <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       <guid>https://aswars.github.io/publication/paper10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Extracting salient features from convolutional discriminative filter</title>
+      <link>https://aswars.github.io/publication/paper26/</link>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper26/</guid>
       <description></description>
     </item>
     <item>
@@ -147,6 +175,27 @@
       <link>https://aswars.github.io/publication/paper19/</link>
       <pubDate>Mon, 13 May 2019 00:00:00 +0000</pubDate>
       <guid>https://aswars.github.io/publication/paper19/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Task-oriented Word Embedding for Text Classification</title>
+      <link>https://aswars.github.io/publication/paper22/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper22/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Semantic Structure-Based Word Embedding by Incorporating Concept Convergence and Word Divergence</title>
+      <link>https://aswars.github.io/publication/paper25/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper25/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pattern-based Topics for Document Modelling in Information Filtering</title>
+      <link>https://aswars.github.io/publication/paper21/</link>
+      <pubDate>Fri, 19 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper21/</guid>
       <description></description>
     </item>
   </channel>

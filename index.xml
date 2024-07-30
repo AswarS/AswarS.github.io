@@ -73,6 +73,20 @@
       <description></description>
     </item>
     <item>
+      <title>Ask to Understand: Question Generation for Multi-hop Question Answering</title>
+      <link>https://aswars.github.io/publication/paper23/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper23/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unsupervised Style Transfer in News Headlines via Discrete Style Space</title>
+      <link>https://aswars.github.io/publication/paper24/</link>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper24/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>TopicBERT: A Topic-Enhanced Neural Language Model Fine-Tuned for Sentiment Classification</title>
       <link>https://aswars.github.io/publication/paper16/</link>
       <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
@@ -108,6 +122,13 @@
       <description></description>
     </item>
     <item>
+      <title>To be Closer: Learning to Link up Aspects with Opinions</title>
+      <link>https://aswars.github.io/publication/paper27/</link>
+      <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper27/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Unifying Cross-lingual Summarization and Machine Translation with Compression Rate</title>
       <link>https://aswars.github.io/publication/paper5/</link>
       <pubDate>Fri, 15 Oct 2021 00:00:00 +0000</pubDate>
@@ -126,6 +147,13 @@
       <link>https://aswars.github.io/publication/paper10/</link>
       <pubDate>Fri, 28 May 2021 00:00:00 +0000</pubDate>
       <guid>https://aswars.github.io/publication/paper10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Extracting salient features from convolutional discriminative filter</title>
+      <link>https://aswars.github.io/publication/paper26/</link>
+      <pubDate>Sun, 02 May 2021 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper26/</guid>
       <description></description>
     </item>
     <item>
@@ -157,11 +185,32 @@
       <description></description>
     </item>
     <item>
+      <title>Task-oriented Word Embedding for Text Classification</title>
+      <link>https://aswars.github.io/publication/paper22/</link>
+      <pubDate>Sun, 01 Apr 2018 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper22/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Semantic Structure-Based Word Embedding by Incorporating Concept Convergence and Word Divergence</title>
+      <link>https://aswars.github.io/publication/paper25/</link>
+      <pubDate>Fri, 02 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper25/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Member 01</title>
-      <link>https://aswars.github.io/member/member1/</link>
+      <link>https://aswars.github.io/leader/leader1/</link>
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
-      <guid>https://aswars.github.io/member/member1/</guid>
-      <description>Yang Gao, Doctoral Supervisor, primarily engages in large model training, automatic text generation technologies, and the application and transformation of these technologies. She has published over 60 high-quality papers in international journals and conferences, including ACL, AAAI, WWW, IJCAI, EMNLP, and TKDE. She serves as a chair in the text generation field for conferences such as EMNLP and COLING, an editorial board member for journals such as Web Intelligence and Natural Language Processing Journal, a program committee member for international conferences including AAAI, ACL, EMNLP, NAACL, and ICDM, and a reviewer for journals such as TNNLS and Computing Surveys.</description>
+      <guid>https://aswars.github.io/leader/leader1/</guid>
+      <description>Yang Gao, Doctoral Supervisor, primarily engages in large language model training, automatic text generation technologies, and the application and transformation of these technologies. She has published over 60 high-level papers in international journals and conferences, including ACL, AAAI, WWW, IJCAI, EMNLP, TKDE and others. She has served as a chair in the text generation area for conferences like EMNLP and COLING, as an editorial board member for journals like Web Intelligence and Natural Language Processing Journal, as a program committee member for international conferences such as AAAI, ACL, EMNLP, NAACL, ICDM, and as a reviewer for journals including TNNLS and Computing Surveys.</description>
+    </item>
+    <item>
+      <title>Member 01</title>
+      <link>https://aswars.github.io/member/leader1/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>https://aswars.github.io/member/leader1/</guid>
+      <description>Yang Gao, Doctoral Supervisor, primarily engages in large language model training, automatic text generation technologies, and the application and transformation of these technologies. She has published over 60 high-level papers in international journals and conferences, including ACL, AAAI, WWW, IJCAI, EMNLP, TKDE and others. She has served as a chair in the text generation area for conferences like EMNLP and COLING, as an editorial board member for journals like Web Intelligence and Natural Language Processing Journal, as a program committee member for international conferences such as AAAI, ACL, EMNLP, NAACL, ICDM, and as a reviewer for journals including TNNLS and Computing Surveys.</description>
     </item>
     <item>
       <title>Member 02</title>
@@ -267,6 +316,13 @@
       <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
       <guid>https://aswars.github.io/member/member18/</guid>
       <description>Hi, I am Yiguan Lin. My current research mainly focuses on parameter merging in large language models, exploring ways to enhance the capabilities of large models without the need for additional training.</description>
+    </item>
+    <item>
+      <title>Pattern-based Topics for Document Modelling in Information Filtering</title>
+      <link>https://aswars.github.io/publication/paper21/</link>
+      <pubDate>Fri, 19 Dec 2014 00:00:00 +0000</pubDate>
+      <guid>https://aswars.github.io/publication/paper21/</guid>
+      <description></description>
     </item>
     <item>
       <title></title>

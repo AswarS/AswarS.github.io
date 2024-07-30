@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Leaders on Academic group name</title>
+    <link>https://aswars.github.io/leader/</link>
+    <description>Recent content in Leaders on Academic group name</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&amp;copy; Nlp Group Bit, 2024</copyright>
+    <lastBuildDate>Tue, 12 Jul 2016 15:52:22 +0200</lastBuildDate>
+    <atom:link href="https://aswars.github.io/leader/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Member 01</title>
+      <link>https://aswars.github.io/leader/leader1/</link>
+      <pubDate>Tue, 12 Jul 2016 15:52:22 +0200</pubDate>
+      <guid>https://aswars.github.io/leader/leader1/</guid>
+      <description>Yang Gao, Doctoral Supervisor, primarily engages in large language model training, automatic text generation technologies, and the application and transformation of these technologies. She has published over 60 high-level papers in international journals and conferences, including ACL, AAAI, WWW, IJCAI, EMNLP, TKDE and others. She has served as a chair in the text generation area for conferences like EMNLP and COLING, as an editorial board member for journals like Web Intelligence and Natural Language Processing Journal, as a program committee member for international conferences such as AAAI, ACL, EMNLP, NAACL, ICDM, and as a reviewer for journals including TNNLS and Computing Surveys.</description>
+    </item>
+  </channel>
+</rss>
